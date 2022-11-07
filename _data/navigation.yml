@@ -1,0 +1,8 @@
+- name: home
+  link: /index.html
+- name: portfolio
+  link: /projects.html
+- name: about
+  link: /about.html
+- name: contact
+  link: /contact.html

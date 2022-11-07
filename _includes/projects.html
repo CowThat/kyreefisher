@@ -1,0 +1,19 @@
+{% for project in site.projects %}
+
+  {%- assign project_id    = project.name | slugify -%}
+  {%- assign project_img   = project.image -%}
+  {%- assign project_name  = project.name -%}
+  {%- assign project_desc  = project.description -%}
+  {%- assign project_tools = project.tools -%}
+  {%- assign project_url   = project.url | relative_url -%}     <!-- make the url for the project -->
+
+  {%- if project.external_url -%}                               <!-- only adds external url if it exists -->
+    {%- assign project_external = project.external_url -%}      <!-- link out to other websites -->
+    {%- assign external    = true -%}
+  {%- else -%}
+    {%- assign external    = false -%}
+  {%- endif -%}
+
+  {% include projects/project-card.html %}
+
+{% endfor %}
