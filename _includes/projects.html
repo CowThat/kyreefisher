@@ -7,7 +7,7 @@
     <div class="portfolio-card" id="{{ project_id }}"> <!--class="wow animated fadeIn" data-wow-delay=".15s"-->
       <a href="{{ project_url }}">
         {%- if project_img -%}
-        <img id="{{ project_id }}-img" src="/assets/images/{{ project_img }}" alt="{{ project_name }}. {{project_desc}}" />
+        <img id="{{ project_id }}-img" src="{{ site.baseurl }}/assets/images/{{ project_img }}" alt="{{ project_name }} – {{project_desc}}" />
         {%- endif -%}
         <div class="portfolio-card-body">
           <h3 id="{{ project_id }}-name">
