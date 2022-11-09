@@ -1,0 +1,18 @@
+<div> <!--class="wow animated fadeIn" data-wow-delay=".15s"-->
+  <a href="{{ project_url }}" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%}>
+    {%- if project_img -%}
+    <img id="{{ project_id }}-img" src="{{ project_img }}" alt="{{ project_name }}" />
+    {%- endif -%}
+    <div class="card-body">
+      <h5 id="{{ project_id }}-name">
+        {{ project_name }}
+      </h5>
+      <p id="{{ project_id }}-desc">{{ project_desc }}</p>
+      <p id="{{ project_id }}-tools">
+        {%- for tool in project_tools -%}
+        <span>{{ tool }}</span>
+        {%- endfor -%}
+      </p>
+    </div>
+  </a>
+</div>

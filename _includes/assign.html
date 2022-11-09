@@ -1,0 +1,20 @@
+{% assign project_id    = project.name | slugify %}
+{% assign project_img   = project.image %}
+{% assign project_name  = project.name %}
+{% assign project_desc  = project.description %}
+{% assign project_tools = project.tools %}
+{% assign project_url   = project.url | relative_url %}     <!-- make the url for the project -->
+{% assign project_external = project.external_url %}
+
+{% if project.external_url %}
+  {% assign external    = true %}
+{% else %}
+  {% assign external    = false %}
+{% endif %}
+
+{% assign project_fullname  = project.full_name %}
+{% assign project_datesem  = project.date_sem %}
+{% assign project_year  = project.year %}
+{% assign project_med  = project.medium %}
+{% assign project_dim  = project.dimensions %}
+{% assign project_type  = project.type %}

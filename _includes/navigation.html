@@ -4,11 +4,7 @@
   </div>
   <div class="nav-buttons">
     {% for item in site.data.navigation %}
-      {% if item.url contains "https" %}
-        <a href="{{ item.link }}">{{ item.name }}</a>
-      {% else %}
         <a href="{{ baseurl }}{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}s>{{ item.name }}</a>
-      {% endif %}
     {% endfor %}
   </div>
 </nav>

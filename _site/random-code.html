@@ -1,0 +1,9 @@
+{% if tool == "illustrator" %}
+  <span class="tool illustrator">{{ tool }}</span>
+{% elsif tool == "inDesign" %}
+  <span class="tool indesign">{{ tool }}</span>
+{% elsif tool = "photoshop"%}
+  <span class="tool photoshop">{{ tool }}</span>
+{% else %}
+  <span class="tool">{{ tool }}</span>
+{% endif %}

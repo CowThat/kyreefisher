@@ -1,19 +1,37 @@
-{% for project in site.projects %}
+<div class="portfolio-container">
 
-  {%- assign project_id    = project.name | slugify -%}
-  {%- assign project_img   = project.image -%}
-  {%- assign project_name  = project.name -%}
-  {%- assign project_desc  = project.description -%}
-  {%- assign project_tools = project.tools -%}
-  {%- assign project_url   = project.url | relative_url -%}     <!-- make the url for the project -->
+  {% for project in site.projects %}
 
-  {%- if project.external_url -%}                               <!-- only adds external url if it exists -->
-    {%- assign project_external = project.external_url -%}      <!-- link out to other websites -->
-    {%- assign external    = true -%}
-  {%- else -%}
-    {%- assign external    = false -%}
-  {%- endif -%}
+    {% include assign.html %}
 
-  {% include projects/project-card.html %}
+    <div class="portfolio-card" id="{{ project_id }}"> <!--class="wow animated fadeIn" data-wow-delay=".15s"-->
+      <a href="{{ project_url }}">
+        {%- if project_img -%}
+        <img id="{{ project_id }}-img" src="/assets/images/{{ project_img }}" alt="{{ project_name }}. {{project_desc}}" />
+        {%- endif -%}
+        <div class="portfolio-card-body">
+          <h3 id="{{ project_id }}-name">
+            {{ project_name }}
+          </h3>
+          <p id="{{ project_id }}-desc">{{ project_desc }}</p>
+          <p id="{{ project_id }}-tools">
+            {%- for tool in project_tools -%}
+            {% if tool contains "Illustrator" %}
+              <span class="tool illustrator">{{ tool }}</span>
+            {% elsif tool contains "inDesign" %}
+              <span class="tool indesign">{{ tool }}</span>
+            {% elsif tool contains "Photoshop"%}
+              <span class="tool photoshop">{{ tool }}</span>
+            {% else %}
+              <span class="tool">{{ tool }}</span>
+            {% endif %}            {%- endfor -%}
+          </p>
+        </div>
+      </a>
+    </div>
 
-{% endfor %}
+  {% endfor %}
+
+</div>
+
+ <!-- {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%} -->

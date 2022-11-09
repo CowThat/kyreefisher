@@ -1,22 +1,27 @@
-baseurl: "/home-radar"
+baseurl: "/kyreefisher"
 url: http://cowthat.github.io
 
 
 collections:
-  authors:
+  projects:
     output: true
+    permalink: /projects/:name
+    order:
+      - vcuarts-gift-guide.html
+      - guide-to-gdes.html
+
 
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "project"
     values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+      layout: "project"
+  # - scope:
+  #     path: ""
+  #     type: "posts"
+  #   values:
+  #     layout: "post"
   - scope:
       path: ""
     values:
