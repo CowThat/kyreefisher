@@ -6,9 +6,11 @@
 
     <div class="portfolio-card" id="{{ project_id }}"> <!--class="wow animated fadeIn" data-wow-delay=".15s"-->
       <a href="{{ project_url }}">
+
         {%- if project_img -%}
-        <img id="{{ project_id }}-img" src="{{ site.baseurl }}/assets/images/{{ project_img }}" alt="{{ project_name }} – {{project_desc}}" />
+          <img id="{{ project_id }}-img" src="{{ site.baseurl }}/assets/images/{{ project_img }}" alt="{{ project_name }} – {{project_desc}}" />
         {%- endif -%}
+
         <div class="portfolio-card-body">
           <h3 id="{{ project_id }}-name">
             {{ project_name }}
@@ -16,17 +18,19 @@
           <p id="{{ project_id }}-desc">{{ project_desc }}</p>
           <p id="{{ project_id }}-tools">
             {%- for tool in project_tools -%}
-            {% if tool contains "Illustrator" %}
-              <span class="tool illustrator">{{ tool }}</span>
-            {% elsif tool contains "inDesign" %}
-              <span class="tool indesign">{{ tool }}</span>
-            {% elsif tool contains "Photoshop"%}
-              <span class="tool photoshop">{{ tool }}</span>
-            {% else %}
-              <span class="tool">{{ tool }}</span>
-            {% endif %}            {%- endfor -%}
+              {% if tool contains "Illustrator" %}
+                <span class="tool illustrator">{{ tool }}</span>
+              {% elsif tool contains "inDesign" %}
+                <span class="tool indesign">{{ tool }}</span>
+              {% elsif tool contains "Photoshop"%}
+                <span class="tool photoshop">{{ tool }}</span>
+              {% else %}
+                <span class="tool">{{ tool }}</span>
+              {% endif %}
+            {%- endfor -%}
           </p>
         </div>
+
       </a>
     </div>
 
