@@ -4,13 +4,13 @@
     <h4 class="nav-logo-name">Kyree Fisher</h4>
   </div>
 
-  <div class="nav-buttons">
+  <div class="nav-button-container">
     {% for item in site.data.navigation %}
 
     {% assign page_name = item.name | slugify %}
 
-    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" {% if page.url==item.link %}class="current" {% endif
-      %} id="{{ page_name }}">{{ item.name }}</a>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" class="nav-button {% if page.url == item.link %}current{% endif
+      %}" id="{{ page_name }}">{{ item.name }}</a>
     {% endfor %}
   </div>
 

@@ -28,7 +28,7 @@
   }
 }
 
-.nav-buttons {
+.nav-button-container {
   font-family: $raleway;
   height: 80%;
   position: relative;
@@ -55,23 +55,6 @@
   }
 }
 
-#home.current {
-  background: $pink;
-}
-
-#portfolio.current {
-  background: $blue;
-}
-
-#about.current {
-  background: $seafoam;
-}
-
-#contact.current {
-  background: $purple;
-}
-
-
 a.current {
   background: $pink;
   color: $dark-gray-2;
@@ -83,10 +66,39 @@ a.current {
   padding: 15px 20px;
   position: relative;
   top: 10px;
-
-  &:hover {
-    background: $white;
+  
+  &#home {
+    background: $pink;
+  
+    &:hover {
+      background: $white;
+    }
   }
+  
+  &#portfolio {
+    background: $blue;
+  
+    &:hover {
+      background: $white;
+    }
+  }
+  
+  &#about {
+    background: $seafoam;
+  
+    &:hover {
+      background: $white;
+    }
+  }
+  
+  &#contact {
+    background: $purple;
+  
+    &:hover {
+      background: $white;
+    }
+  }
+  
 }
 
 #home:not(.current):hover {

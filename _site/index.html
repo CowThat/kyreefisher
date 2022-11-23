@@ -34,27 +34,27 @@
     <h4 class="nav-logo-name">Kyree Fisher</h4>
   </div>
 
-  <div class="nav-buttons">
+  <div class="nav-button-container">
     
 
     
 
-    <a href="http://localhost:4000/" class="current"  id="home">home</a>
+    <a href="http://localhost:4000/" class="nav-button current" id="home">home</a>
     
 
     
 
-    <a href="http://localhost:4000/portfolio.html"  id="portfolio">portfolio</a>
+    <a href="http://localhost:4000/portfolio.html" class="nav-button " id="portfolio">portfolio</a>
     
 
     
 
-    <a href="http://localhost:4000/about.html"  id="about">about</a>
+    <a href="http://localhost:4000/about.html" class="nav-button " id="about">about</a>
     
 
     
 
-    <a href="http://localhost:4000/contact.html"  id="contact">contact</a>
+    <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
     
   </div>
 
@@ -1060,13 +1060,9 @@
 </div>
 
 
-<script type="text/javascript" src="http://localhost:4000/assets/js/jquery-3.6.0.js"></script>
+<!-- <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-3.6.0.js"></script> -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script>
-<script>
-  var throttledEvent = _.throttle(function(div){
-   debounceColor = globalColor;
-  }, frequency*5, {'trailing': true});
-  </script>
 
 <script>
 const container = $(".home-other-scroll")
@@ -1082,6 +1078,20 @@ $(".home-other-scroll").on('scroll', function() {
   clone.css({
     left: - offset
   })
+})
+</script>
+
+<script>
+  $(window).load(function() {
+    $('#home').effect("bounce", {
+        times: 4,
+        distance: 200
+    }, 400).click(function() {
+        $(this).effect("bounce", {
+            times: 4,
+            distance: 200
+        }, 400);
+    });
 })
 </script>
       <footer>

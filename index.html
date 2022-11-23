@@ -56,13 +56,9 @@ title: Home
 </div>
 
 
-<script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script>
+<!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script> -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script>
-<script>
-  var throttledEvent = _.throttle(function(div){
-   debounceColor = globalColor;
-  }, frequency*5, {'trailing': true});
-  </script>
 
 <script>
 const container = $(".home-other-scroll")
@@ -78,5 +74,19 @@ $(".home-other-scroll").on('scroll', function() {
   clone.css({
     left: - offset
   })
+})
+</script>
+
+<script>
+  $(window).load(function() {
+    $('#home').effect("bounce", {
+        times: 4,
+        distance: 200
+    }, 400).click(function() {
+        $(this).effect("bounce", {
+            times: 4,
+            distance: 200
+        }, 400);
+    });
 })
 </script>
