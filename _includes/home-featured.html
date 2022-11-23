@@ -1,0 +1,19 @@
+{% for project in site.projects %}
+
+  {% include assign.html %}
+
+  <div class="home-featured">
+    {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "guide-to-gdes" or project_id == "kyree-s-squishies" %}
+
+
+      <div class="home-featured-card" id="{{ project_id }}">
+        <h2>{{ project_name }}</h2>
+        <p>{{ project_desc }}</p>
+        <a></a>
+      </div>
+
+
+    {% endif %}
+  </div>
+
+{% endfor %}

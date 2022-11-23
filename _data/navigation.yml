@@ -1,5 +1,5 @@
 - name: home
-  link: /index.html
+  link: /
 - name: portfolio
   link: /portfolio.html
 - name: about

@@ -1,0 +1,55 @@
+.navigation {
+  // background: $dark-gray-2;
+  // box-shadow: 0 0 10px 0 $purple;
+  width: 100vw;
+  height: 80px;
+  padding: 10px 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+}
+
+.nav-buttons {
+  font-family: $raleway;
+
+  a{
+    // background: $blue;
+    color: $white;
+    font-size: 18px;
+    padding: 15px;
+    margin: 0;
+    transition: ease .3s;
+
+    &:hover {
+      background: $dark-gray-2;
+      color: $white;
+    }
+
+    .current {
+      background: $blue;
+      color: $dark-gray-2;
+
+      &:hover {
+        background: $dark-gray-1;
+      }
+    }
+  }
+}
+
+.nav-logo {
+  background: $pink;
+  color: $white;
+  border-radius: 0 0 10px 10px;
+  font-family: $raleway;
+  font-size: 20px;
+  height: 70px;
+  padding: 10px 25px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  bottom: 10px;
+}

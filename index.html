@@ -2,7 +2,34 @@
 layout: default
 title: Home
 ---
-<h1>hello (:!</h1>
-<p>
+<!-- hey there!<br> -->
 
-{% include home.html %}
+<div class="home-intro">
+  <h1 class="dash"><span class="pink">–</span><span class="blue">–</span><span class="seafoam">–</span></h1>
+  <h1 class="home-hello">hey, i'm <span class="blue">Kyree!:)</span></h1>
+  <h1 class="home-blurb">i'm a web, graphic,<br>& UI/UX designer.</h1>
+  <h3 class="home-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum urna libero, quis aliquam erat gravida a. Mauris porttitor mauris non massa convallis ultrices.</h3>
+  <div class="scroll-down">
+  </div>
+</div>
+
+<div class="home-featured-container">
+  <div class="home-featured-desc">
+    <h3><span class="pink">–</span></h3>
+    <h3><span class="blue">featured</span> projects</h3>
+  </div>
+  {% include home-featured.html %}
+</div>
+
+<div class="home-other-container">
+  <div class="">
+    <h3><span class="pink">–</span></h3>
+    <h3><span class="seafoam">other</span> projects</h3>
+  </div>
+  <div class="home-other-scroll">
+    {% include home-other.html %}
+  </div>
+  <div>
+    <h3>see more</h3>
+  </div>
+</div>

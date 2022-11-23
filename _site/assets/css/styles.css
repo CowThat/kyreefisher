@@ -1,98 +1,72 @@
-/*
-
-
-
-
-IMPORT
-
-
-
-
-*/
 @import url("https://fonts.googleapis.com/css2?family=Jost&family=Raleway:wght@500;600;700&display=swap");
-/*
+@font-face { font-family: 'JostRegular'; src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype"); }
 
+@font-face { font-family: 'RalewayBold'; src: url("../fonts/Raleway/static/Raleway-bold.ttf") format("truetype"); }
 
-
-
-
-
-
-
-AUTO SETTINGS
-
-
-
-
-
-
-
-
-*/
 * { box-sizing: border-box; }
 
 html { padding: 0; margin: 0; }
 
-body { background: #161616; padding: 0; margin: 0; }
+body { background: #111111; padding: 0; margin: 0; }
 
-h1, h2, h3, h4, h5, h6 { font-family: Raleway; color: white; }
+h1, h2, h3, h4, h5, h6 { font-family: Raleway, "RalewayBold"; color: white; margin: 0; }
 
-p { font-family: Jost; color: white; padding: 0; margin: 0; }
+h1 { font-size: 80px; }
+
+h2 { font-size: 50px; }
+
+h3 { font-size: 30px; }
+
+h4 { font-size: 28px; }
+
+h5 { font-size: 24px; }
+
+h6 { font-size: 20px; }
+
+p { font-family: Jost, "JostRegular"; color: white; }
 
 a { text-decoration: none; }
 
-/*
+.pink { color: #FF6B6B; }
 
+.blue { color: #25A0F8; }
 
+.seafoam { color: #59C9A5; }
 
+.underline { text-decoration: underline dotted; }
 
+.navigation { width: 100vw; height: 80px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
+.nav-buttons { font-family: Raleway, "RalewayBold"; }
 
-
-
-NAVIGATION
-
-
-
-
-
-
-
-
-*/
-.navigation { background: #111111; width: 100vw; height: 110px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
-
-.nav-buttons { font-family: Raleway; }
-
-.nav-buttons a { color: white; font-size: 20px; padding: 15px; margin: 0; transition: ease .3s; }
+.nav-buttons a { color: white; font-size: 18px; padding: 15px; margin: 0; transition: ease .3s; }
 
 .nav-buttons a:hover { background: #111111; color: white; }
 
-.nav-logo { font-family: Raleway; font-size: 30px; line-height: 40px; color: white; }
+.nav-buttons a .current { background: #25A0F8; color: #111111; }
 
-.current { background: #161616; color: white !important; }
+.nav-buttons a .current:hover { background: #161616; }
 
-.current a:hover { background: #161616; }
+.nav-logo { background: #FF6B6B; color: white; border-radius: 0 0 10px 10px; font-family: Raleway, "RalewayBold"; font-size: 20px; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; position: relative; bottom: 10px; }
 
-/*
+.home-intro { width: 100vw; height: 80vh; padding: 75px 200px; margin: 10px; position: relative; }
 
+.home-intro > * { width: 75%; }
 
+.dash { position: relative; top: 20px; }
 
+.home-blurb { margin-top: 80px; }
 
+.scroll-down { border-radius: 50%; width: 60px; height: 60px; background: white; position: absolute; left: 50%; bottom: 20px; transform: translate(-50%, -50%); }
 
+.home-featured { display: flex; justify-content: center; }
 
+.home-featured-card { background: #FF6B6B; border-radius: 40px; width: calc(100vw - 20px); max-width: 1600px; height: 80vh; padding: 50px; margin: 10px; }
 
+.home-other-scroll { display: flex; wrap: nowrap; overflow-x: scroll; overflow-y: hidden; }
 
-CONTENT
+.home-other-card { width: 30vw; height: 60vh; background: #FF6B6B; border-radius: 40px; padding: 50px; margin: 10px; }
 
-
-
-
-
-
-
-
-*/
 div.content { max-width: 100vw; position: relative; top: 110px; overflow: hidden; }
 
 .portfolio-container { margin: 0 18vw; column-count: 3; column-gap: 10px; position: relative; display: block; }

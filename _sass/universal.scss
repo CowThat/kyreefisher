@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $dark-gray-2;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $raleway;
+  color: $white;
+  margin: 0;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+p {
+  font-family: $jost;
+  color: $white;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+.pink {
+  color: $pink;
+}
+
+.blue {
+  color: $blue;
+}
+
+.seafoam {
+  color: $seafoam;
+}
+
+.underline {
+  text-decoration: underline dotted;
+}

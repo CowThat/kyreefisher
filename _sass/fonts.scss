@@ -1,5 +1,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jost&family=Raleway:wght@500;600;700&display=swap');
 
-$raleway: Raleway;
-$jost: Jost;
+@font-face {
+  font-family: 'JostRegular';
+  src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'RalewayBold';
+  src: url("../fonts/Raleway/static/Raleway-bold.ttf") format("truetype");
+}
+
+$raleway: Raleway, 'RalewayBold';
+$jost: Jost, 'JostRegular';
