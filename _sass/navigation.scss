@@ -2,8 +2,8 @@
   // background: $dark-gray-2;
   // box-shadow: 0 0 10px 0 $purple;
   width: 100vw;
-  height: 80px;
-  padding: 10px 80px;
+  height: 60px;
+  padding: 0 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,27 +15,34 @@
 
 .nav-logo {
   background: $blue;
-  // color: $dark-gray-2 !important;
   border-radius: 0 0 10px 10px;
-  font-family: $raleway;
-  font-size: 20px;
+  box-shadow: 0 0 2px 0 $dark-gray-2;
   height: 70px;
   padding: 10px 25px;
   display: flex;
   align-items: flex-end;
-  position: relative;
-  bottom: 15px;
+
+  & > * {
+    color: $dark-gray-2;
+    font-family: $raleway;
+  }
 }
 
 .nav-buttons {
   font-family: $raleway;
+  height: 80%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 
-  a{
+  // top: 20px;
+
+  a {
     color: $white;
     font-size: 18px;
-    padding: 15px;
+    padding: 10px 20px;
     margin: 0;
-    transition: ease .3s;
+    transition: ease 0.3s;
 
     // &:hover {
     //   background: $dark-gray-2;
@@ -49,12 +56,13 @@ a.current {
   color: $dark-gray-2;
   font-family: $ralewayBold;
   border-radius: 0 0 10px 10px;
-  height: 70px;
-  padding: 10px 25px;
-  // display: flex;
-  // align-items: flex-end;
-  // position: relative;
-  // bottom: 15px;
+  box-shadow: 0 0 2px 0 $dark-gray-2;
+  height: 80px;
+  padding: 15px 20px;
+  position: relative;
+  top: 10px;
+  display: flex;
+  align-items: flex-end;
 
   // &:hover {
   //   background: $dark-gray-1;

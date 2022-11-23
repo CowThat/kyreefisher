@@ -1,19 +1,16 @@
 {% for project in site.projects %}
 
-  {% include assign.html %}
+{% include assign.html %}
 
-  <div class="home-other">
-    {% if project_id == "chatty-catty" or project_id == "guide-to-gdes" or project_id == "kyree-s-squishies" or project_id == "billionaires-and-the-wealth-gap" %}
+  {% if project_id == "chatty-catty" or project_id == "guide-to-gdes" or project_id == "kyree-s-squishies" or project_id
+  == "billionaires-and-the-wealth-gap" %}
 
-
-      <div class="home-other-card" id="{{ project_id }}">
-        <h2>{{ project_name }}</h2>
-        <p>{{ project_desc }}</p>
-        <a></a>
-      </div>
-
-
-    {% endif %}
+  <div class="home-other-card" id="{{ project_id }}">
+    <h2>{{ project_name }}</h2>
+    <p>{{ project_desc }}</p>
+    <a></a>
   </div>
+
+  {% endif %}
 
 {% endfor %}

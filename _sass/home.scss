@@ -1,27 +1,32 @@
-.home-intro {
+.home-intro-container {
   width: 100vw;
-  // max-width: 1200px;
-  height: 80vh;
-  padding: 75px 200px;
+  // max-width: 1600px;
+  height: calc(100vh - 80px);
+  // padding: 75px 200px;
   margin: 10px;
   position: relative;
-  // overflow: hidden;
+   // overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 
-  &>* {
+  .home-intro-content {
     width: 75%;
+    min-width: 500px;
+    position: relative;
+    bottom: 4vh;
   }
 }
 
-.dash {
-  position: relative;
-  top: 20px;
+
+.home-dash {
+  display: flex;
 }
 
-//
-// .home-hello {
-//   position: relative;
-//   right: 68px;
-// }
+.home-hello {
+  margin: 20px 0;
+}
 
 .home-blurb {
   margin-top: 80px;
@@ -38,6 +43,14 @@
   transform: translate(-50%, -50%);
 }
 
+.home-featured-container {
+  padding-top: 100px;
+}
+
+.home-featured-desc, .home-other-desc {
+  margin-left: 12.5%;
+}
+
 .home-featured {
   display: flex;
   justify-content: center;
@@ -46,26 +59,95 @@
 .home-featured-card {
   background: $pink;
   border-radius: 40px;
-  width: calc(100vw - 20px);
-  max-width: 1600px;
-  height: 80vh;
+  width: 100vw;
+  max-width: 1200px;
+  height: 50vh;
   padding: 50px;
   margin: 10px;
 }
 
+.home-other-container {
+  margin-top: 40px;
+}
 
 .home-other-scroll {
   display: flex;
-  wrap: nowrap;
+  flex-wrap: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
 }
 
 .home-other-card {
-  width: 30vw;
-  height: 60vh;
+  min-width: 25vw;
+  height: 50vh;
   background: $pink;
   border-radius: 40px;
   padding: 50px;
   margin: 10px;
+  // position: relative;
+  // left: 10vw;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
+
+
+// .home-other-wrapper {
+//   width: 100vw;
+//   max-width: 1200px;
+
+//   .home-other-container {
+
+//     .home-other-child {
+//       width: 150%;
+//       display: flex;
+//     }
+//   }
+// }
+
+
+    .home-other-wrapper {
+        margin: 0 auto;
+        height: 53vh;
+        width: 100vw;   
+        max-width: 1200px;    
+        position: relative;
+    }
+
+    .home-other-scroll {
+        margin: 0 auto;
+        height: 53vh;
+        width: 100%;
+        overflow-x: scroll;
+        z-index: 10;
+    }
+
+    .home-other-child {
+        height: 50vh;
+        width: 150%;
+        position: relative;
+        display: flex;
+    }
+
+    .home-other-card {
+        background: $pink;
+        height: 50vh;
+        min-width: 400px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    .clone {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+
+    .transparent {
+        background: transparent;
+    }

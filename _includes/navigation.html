@@ -1,12 +1,13 @@
 <nav class="navigation">
 
   <div class="nav-logo">
-    <h4 class="home-radar">Kyree Fisher</h4>
+    <h4 class="nav-logo-name">Kyree Fisher</h4>
   </div>
-  
+
   <div class="nav-buttons">
     {% for item in site.data.navigation %}
-        <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}s>{{ item.name }}</a>
+    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" {% if page.url==item.link %}class="current" {% endif
+      %}s>{{ item.name }}</a>
     {% endfor %}
   </div>
 

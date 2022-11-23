@@ -5,11 +5,13 @@
 
 @font-face { font-family: 'Raleway-Bold'; src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype"); }
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box; scroll-behavior: smooth; }
 
 html { padding: 0; margin: 0; }
 
-body { background: #111111; padding: 0; margin: 0; }
+body { background: #111111; padding: 0; margin: 0; position: relative; }
+
+div.content { max-width: 100vw; position: relative; top: 60px; display: block; overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 { font-family: Raleway, "Raleway"; color: white; margin: 0; }
 
@@ -29,58 +31,92 @@ p { font-family: Jost, "JostRegular"; color: white; }
 
 a { text-decoration: none; }
 
-.pink { color: #FF6B6B; }
+.pink { color: #ff6b6b; }
 
-.blue { color: #25A0F8; }
+.blue { color: #13d0ff; }
 
-.seafoam { color: #59C9A5; }
+.seafoam { color: #59c9a5; }
 
 .underline { text-decoration: underline dotted; }
 
-.navigation { width: 100vw; height: 80px; padding: 10px 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
+.dash-pink { border-top: 12px solid #ff6b6b; width: 45px; margin-right: 5px; }
 
-.nav-logo { background: #25A0F8; border-radius: 0 0 10px 10px; font-family: Raleway, "Raleway"; font-size: 20px; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; position: relative; bottom: 15px; }
+.dash-blue { border-top: 12px solid #13d0ff; width: 45px; margin-right: 5px; }
 
-.nav-buttons { font-family: Raleway, "Raleway"; }
+.dash-seafoam { border-top: 12px solid #59c9a5; width: 45px; margin-right: 5px; }
 
-.nav-buttons a { color: white; font-size: 18px; padding: 15px; margin: 0; transition: ease .3s; }
+.dash-pink-mini { border-top: 6px solid #ff6b6b; width: 20px; margin-bottom: 5px; }
 
-a.current { background: #FF6B6B; color: #111111; font-family: "Raleway-Bold", Raleway; border-radius: 0 0 10px 10px; height: 70px; padding: 10px 25px; }
+.navigation { width: 100vw; height: 60px; padding: 0 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
-.home-intro { width: 100vw; height: 80vh; padding: 75px 200px; margin: 10px; position: relative; }
+.nav-logo { background: #13d0ff; border-radius: 0 0 10px 10px; box-shadow: 0 0 2px 0 #111111; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; }
 
-.home-intro > * { width: 75%; }
+.nav-logo > * { color: #111111; font-family: Raleway, "Raleway"; }
 
-.dash { position: relative; top: 20px; }
+.nav-buttons { font-family: Raleway, "Raleway"; height: 80%; position: relative; display: flex; align-items: flex-end; }
+
+.nav-buttons a { color: white; font-size: 18px; padding: 10px 20px; margin: 0; transition: ease 0.3s; }
+
+a.current { background: #ff6b6b; color: #111111; font-family: "Raleway-Bold", Raleway; border-radius: 0 0 10px 10px; box-shadow: 0 0 2px 0 #111111; height: 80px; padding: 15px 20px; position: relative; top: 10px; display: flex; align-items: flex-end; }
+
+.home-intro-container { width: 100vw; height: calc(100vh - 80px); margin: 10px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.home-intro-container .home-intro-content { width: 75%; min-width: 500px; position: relative; bottom: 4vh; }
+
+.home-dash { display: flex; }
+
+.home-hello { margin: 20px 0; }
 
 .home-blurb { margin-top: 80px; }
 
 .scroll-down { border-radius: 50%; width: 60px; height: 60px; background: white; position: absolute; left: 50%; bottom: 20px; transform: translate(-50%, -50%); }
 
+.home-featured-container { padding-top: 100px; }
+
+.home-featured-desc, .home-other-desc { margin-left: 12.5%; }
+
 .home-featured { display: flex; justify-content: center; }
 
-.home-featured-card { background: #FF6B6B; border-radius: 40px; width: calc(100vw - 20px); max-width: 1600px; height: 80vh; padding: 50px; margin: 10px; }
+.home-featured-card { background: #ff6b6b; border-radius: 40px; width: 100vw; max-width: 1200px; height: 50vh; padding: 50px; margin: 10px; }
 
-.home-other-scroll { display: flex; wrap: nowrap; overflow-x: scroll; overflow-y: hidden; }
+.home-other-container { margin-top: 40px; }
 
-.home-other-card { width: 30vw; height: 60vh; background: #FF6B6B; border-radius: 40px; padding: 50px; margin: 10px; }
+.home-other-scroll { display: flex; flex-wrap: nowrap; overflow-x: scroll; }
 
-div.content { max-width: 100vw; position: relative; top: 110px; overflow: hidden; }
+.home-other-card { min-width: 25vw; height: 50vh; background: #ff6b6b; border-radius: 40px; padding: 50px; margin: 10px; }
+
+.home-other-card:first-child { margin-left: 0; }
+
+.home-other-card:last-child { margin-right: 0; }
+
+.home-other-wrapper { margin: 0 auto; height: 53vh; width: 100vw; max-width: 1200px; position: relative; }
+
+.home-other-scroll { margin: 0 auto; height: 53vh; width: 100%; overflow-x: scroll; z-index: 10; }
+
+.home-other-child { height: 50vh; width: 150%; position: relative; display: flex; }
+
+.home-other-card { background: #ff6b6b; height: 50vh; min-width: 400px; width: 100px; margin: 10px; }
+
+.clone { position: absolute; z-index: -1; left: 0; top: 0; }
+
+.transparent { background: transparent; }
 
 .portfolio-container { margin: 0 18vw; column-count: 3; column-gap: 10px; position: relative; display: block; }
 
-.portfolio-container .portfolio-card { background: #2B2B2B; border: 1px solid #111111; border-radius: 20px; width: 20vw; max-width: 500px; min-width: 200px; height: min-content; margin: 5px; position: relative; flex: 1 1 160px; break-inside: avoid; }
+.portfolio-container .portfolio-card { background: #2b2b2b; border: 1px solid #111111; border-radius: 20px; width: 20vw; max-width: 500px; min-width: 200px; height: min-content; margin: 5px; position: relative; flex: 1 1 160px; break-inside: avoid; }
 
 .portfolio-container .portfolio-card img { max-width: 100%; object-fit: contain; border-radius: 20px 20px 0 0; }
 
 .portfolio-container .portfolio-card .portfolio-card-body { margin: 20px; }
 
-.portfolio-container .portfolio-card span.tool { border: 1px solid #25A0F8; border-radius: 16px; padding: 2px 12px; margin: 4px 2px; display: inline-block; }
+.portfolio-container .portfolio-card span.tool { border: 1px solid #13d0ff; border-radius: 16px; padding: 2px 12px; margin: 4px 2px; display: inline-block; }
 
 .portfolio-container .portfolio-card span.illustrator { border: 1px solid #f8a829 !important; }
 
-.portfolio-container .portfolio-card span.indesign { border: 1px solid #FF3366 !important; }
+.portfolio-container .portfolio-card span.indesign { border: 1px solid #ff3366 !important; }
 
-.portfolio-container .portfolio-card span.photoshop { border: 1px solid #4FCCFE !important; }
+.portfolio-container .portfolio-card span.photoshop { border: 1px solid #4fccfe !important; }
+
+footer { background: #ff6b6b; width: 100vw; height: 30px; margin-top: 40px; }
 
 /*# sourceMappingURL=styles.css.map */

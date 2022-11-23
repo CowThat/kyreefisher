@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script> -->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.1" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/test.html" />
+<meta property="og:url" content="http://localhost:4000/test.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","url":"http://localhost:4000/test.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navigation">
+
+  <div class="nav-logo">
+    <h4 class="nav-logo-name">Kyree Fisher</h4>
+  </div>
+
+  <div class="nav-buttons">
+    
+    <a href="http://localhost:4000/" s>home</a>
+    
+    <a href="http://localhost:4000/portfolio.html" s>portfolio</a>
+    
+    <a href="http://localhost:4000/about.html" s>about</a>
+    
+    <a href="http://localhost:4000/contact.html" s>contact</a>
+    
+  </div>
+
+</nav>
+    <div class="content">
+      <style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .wrapper {
+        margin: 0 auto;
+        height: 200px;
+        width: 90vw;       
+        position: relative;
+    }
+
+    .container {
+        margin: 0 auto;
+        height: 150px;
+        width: 90vw;
+        border: solid red 0px;
+        overflow-x: scroll;
+        z-index: 10;
+    }
+
+    .child {
+        height: 100px;
+        width: 150%;
+        position: relative;
+        display: flex;
+    }
+
+    .card {
+        background: pink;
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    .clone {
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+    }
+
+    .transparent {
+        background: transparent;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="child">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="http://localhost:4000/assets/js/jquery-3.6.0.js"></script>
+
+<script>
+const container = $(".container")
+const child = container.find('.child');
+const clone = child.clone();
+const border = 0;
+
+clone.addClass('clone');
+child.addClass('transparent');
+container.css('border-width', border);
+container.before(clone)
+
+$(".container").on('scroll', function() {
+  const offset = $(this).scrollLeft() - border;
+  clone.css({
+    left: - offset
+  })
+})
+</script>
+      <footer>
+    
+</footer>
+    </div>
+  </body>
+</html>

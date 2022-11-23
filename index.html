@@ -2,34 +2,76 @@
 layout: default
 title: Home
 ---
-<!-- hey there!<br> -->
 
-<div class="home-intro">
-  <h1 class="dash"><span class="pink">–</span><span class="blue">–</span><span class="seafoam">–</span></h1>
-  <h1 class="home-hello">hey, i'm <span class="blue">Kyree!:)</span></h1>
-  <h1 class="home-blurb">i'm a web, graphic,<br>& UI/UX designer.</h1>
-  <h3 class="home-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque condimentum urna libero, quis aliquam erat gravida a. Mauris porttitor mauris non massa convallis ultrices.</h3>
-  <div class="scroll-down">
+<div class="home-intro-container">
+
+  <div class="home-intro-content">
+
+    <div class="home-dash">
+      <div class="dash-pink"></div>
+      <div class="dash-blue"></div>
+      <div class="dash-seafoam"></div>
+    </div>
+
+    <!-- <h1><span class="pink">–</span><span class="blue">–</span><span class="seafoam">–</span></h1> -->
+    <h1 class="home-hello">hey, i'm <span class="blue">Kyree!:)</span></h1>
+    <h1 class="home-blurb">i'm a web, graphic,<br>& UI/UX designer.</h1>
+    <p class="home-desc">this site is a work in progress. it's made using <span class="tools">Jekyll</span>, <span
+        class="tools">GitHub Pages</span>, and a whole lot of long nights.</p>
   </div>
+
+  <a class="scroll-down" href="#home-featured-container"></a>
+
 </div>
 
-<div class="home-featured-container">
+<div class="home-featured-container" id="home-featured-container">
+
   <div class="home-featured-desc">
-    <h3><span class="pink">–</span></h3>
+    <div class="dash-pink-mini"></div>
     <h3><span class="blue">featured</span> projects</h3>
   </div>
+
   {% include home-featured.html %}
+
 </div>
 
 <div class="home-other-container">
-  <div class="">
-    <h3><span class="pink">–</span></h3>
+  <div class="home-other-desc">
+    <div class="dash-pink-mini"></div>
     <h3><span class="seafoam">other</span> projects</h3>
   </div>
-  <div class="home-other-scroll">
-    {% include home-other.html %}
+
+  <div class="home-other-wrapper">
+    <div class="home-other-scroll">
+      <div class="home-other-child">
+       {% include home-other.html %}
+      </div>
+    </div>
   </div>
-  <div>
+
+  <div class="home-see-more">
     <h3>see more</h3>
   </div>
+
 </div>
+
+
+<script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script>
+<script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script>
+
+<script>
+const container = $(".home-other-scroll")
+const child = container.find('.home-other-child');
+const clone = child.clone();
+
+clone.addClass('clone');
+child.addClass('transparent');
+container.before(clone)
+
+$(".home-other-scroll").on('scroll', function() {
+  const offset = $(this).scrollLeft();
+  clone.css({
+    left: - offset
+  })
+})
+</script>
