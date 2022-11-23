@@ -16,7 +16,7 @@
 .nav-logo {
   background: $blue;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 0 2px 0 $dark-gray-2;
+  box-shadow: 0 0 5px 0 $dark-gray-2-50;
   height: 70px;
   padding: 10px 25px;
   display: flex;
@@ -39,32 +39,76 @@
 
   a {
     color: $white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 2px 0 $dark-gray-2-50;
     font-size: 18px;
-    padding: 10px 20px;
-    margin: 0;
+    padding: 15px 20px;
+    margin: 0 5px;
+    display: flex;
+    align-items: flex-end;
     transition: ease 0.3s;
 
-    // &:hover {
-    //   background: $dark-gray-2;
-    //   color: $white;
-    // }
+    &:not(.current) {
+      background: $med-gray-1;
+      height: 80px;
+    }
   }
 }
+
+#home.current {
+  background: $pink;
+}
+
+#portfolio.current {
+  background: $blue;
+}
+
+#about.current {
+  background: $seafoam;
+}
+
+#contact.current {
+  background: $purple;
+}
+
 
 a.current {
   background: $pink;
   color: $dark-gray-2;
   font-family: $ralewayBold;
+  font-size: 20px;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 0 2px 0 $dark-gray-2;
+  box-shadow: 0 0 5px 0 $dark-gray-2-50;
   height: 80px;
   padding: 15px 20px;
   position: relative;
   top: 10px;
-  display: flex;
-  align-items: flex-end;
 
-  // &:hover {
-  //   background: $dark-gray-1;
-  // }
+  &:hover {
+    background: $white;
+  }
+}
+
+#home:not(.current):hover {
+  background: $pink;
+  color: $dark-gray-2;
+  transform: translateY(10px);
+}
+
+#portfolio:not(.current):hover {
+  background: $blue;
+  color: $dark-gray-2;
+  transform: translateY(10px);
+}
+
+#about:not(.current):hover {
+  background: $seafoam;
+  color: $dark-gray-2;
+  transform: translateY(10px);
+}
+
+#contact:not(.current):hover {
+  background: $purple;
+  color: $dark-gray-2;
+  transform: translateY(10px);
 }

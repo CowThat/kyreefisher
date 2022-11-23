@@ -49,15 +49,35 @@ a { text-decoration: none; }
 
 .navigation { width: 100vw; height: 60px; padding: 0 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
-.nav-logo { background: #13d0ff; border-radius: 0 0 10px 10px; box-shadow: 0 0 2px 0 #111111; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; }
+.nav-logo { background: #13d0ff; border-radius: 0 0 10px 10px; box-shadow: 0 0 5px 0 #11111175; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; }
 
 .nav-logo > * { color: #111111; font-family: Raleway, "Raleway"; }
 
 .nav-buttons { font-family: Raleway, "Raleway"; height: 80%; position: relative; display: flex; align-items: flex-end; }
 
-.nav-buttons a { color: white; font-size: 18px; padding: 10px 20px; margin: 0; transition: ease 0.3s; }
+.nav-buttons a { color: white; border-radius: 0 0 10px 10px; box-shadow: 0 0 2px 0 #11111175; font-size: 18px; padding: 15px 20px; margin: 0 5px; display: flex; align-items: flex-end; transition: ease 0.3s; }
 
-a.current { background: #ff6b6b; color: #111111; font-family: "Raleway-Bold", Raleway; border-radius: 0 0 10px 10px; box-shadow: 0 0 2px 0 #111111; height: 80px; padding: 15px 20px; position: relative; top: 10px; display: flex; align-items: flex-end; }
+.nav-buttons a:not(.current) { background: #212121; height: 80px; }
+
+#home.current { background: #ff6b6b; }
+
+#portfolio.current { background: #13d0ff; }
+
+#about.current { background: #59c9a5; }
+
+#contact.current { background: #a96df3; }
+
+a.current { background: #ff6b6b; color: #111111; font-family: "Raleway-Bold", Raleway; font-size: 20px; border-radius: 0 0 10px 10px; box-shadow: 0 0 5px 0 #11111175; height: 80px; padding: 15px 20px; position: relative; top: 10px; }
+
+a.current:hover { background: white; }
+
+#home:not(.current):hover { background: #ff6b6b; color: #111111; transform: translateY(10px); }
+
+#portfolio:not(.current):hover { background: #13d0ff; color: #111111; transform: translateY(10px); }
+
+#about:not(.current):hover { background: #59c9a5; color: #111111; transform: translateY(10px); }
+
+#contact:not(.current):hover { background: #a96df3; color: #111111; transform: translateY(10px); }
 
 .home-intro-container { width: 100vw; height: calc(100vh - 80px); margin: 10px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 

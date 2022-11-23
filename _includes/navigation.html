@@ -6,8 +6,11 @@
 
   <div class="nav-buttons">
     {% for item in site.data.navigation %}
+
+    {% assign page_name = item.name | slugify %}
+
     <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" {% if page.url==item.link %}class="current" {% endif
-      %}s>{{ item.name }}</a>
+      %} id="{{ page_name }}">{{ item.name }}</a>
     {% endfor %}
   </div>
 
