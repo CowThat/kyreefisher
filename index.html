@@ -58,6 +58,11 @@ title: Home
 
 <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script>
+<script>
+  var throttledEvent = _.throttle(function(div){
+   debounceColor = globalColor;
+  }, frequency*5, {'trailing': true});
+  </script>
 
 <script>
 const container = $(".home-other-scroll")

@@ -1050,6 +1050,11 @@
 
 <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-3.6.0.js"></script>
 <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+<script>
+  var throttledEvent = _.throttle(function(div){
+   debounceColor = globalColor;
+  }, frequency*5, {'trailing': true});
+  </script>
 
 <script>
 const container = $(".home-other-scroll")
