@@ -13,36 +13,9 @@
   z-index: 999;
 }
 
-.nav-buttons {
-  font-family: $raleway;
-
-  a{
-    // background: $blue;
-    color: $white;
-    font-size: 18px;
-    padding: 15px;
-    margin: 0;
-    transition: ease .3s;
-
-    &:hover {
-      background: $dark-gray-2;
-      color: $white;
-    }
-
-    .current {
-      background: $blue;
-      color: $dark-gray-2;
-
-      &:hover {
-        background: $dark-gray-1;
-      }
-    }
-  }
-}
-
 .nav-logo {
-  background: $pink;
-  color: $white;
+  background: $blue;
+  // color: $dark-gray-2 !important;
   border-radius: 0 0 10px 10px;
   font-family: $raleway;
   font-size: 20px;
@@ -51,5 +24,39 @@
   display: flex;
   align-items: flex-end;
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
+}
+
+.nav-buttons {
+  font-family: $raleway;
+
+  a{
+    color: $white;
+    font-size: 18px;
+    padding: 15px;
+    margin: 0;
+    transition: ease .3s;
+
+    // &:hover {
+    //   background: $dark-gray-2;
+    //   color: $white;
+    // }
+  }
+}
+
+a.current {
+  background: $pink;
+  color: $dark-gray-2;
+  font-family: $ralewayBold;
+  border-radius: 0 0 10px 10px;
+  height: 70px;
+  padding: 10px 25px;
+  // display: flex;
+  // align-items: flex-end;
+  // position: relative;
+  // bottom: 15px;
+
+  // &:hover {
+  //   background: $dark-gray-1;
+  // }
 }

@@ -2,14 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&family=Raleway:wght@500;600;700&display=swap');
 
 @font-face {
-  font-family: 'JostRegular';
+  font-family: 'Jost-Regular';
   src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'RalewayBold';
-  src: url("../fonts/Raleway/static/Raleway-bold.ttf") format("truetype");
+  font-family: 'Raleway';
+  src: url("../fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
 }
 
-$raleway: Raleway, 'RalewayBold';
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+}
+
+$raleway: Raleway, 'Raleway';
 $jost: Jost, 'JostRegular';
+
+$ralewayBold: 'Raleway-Bold', Raleway;
