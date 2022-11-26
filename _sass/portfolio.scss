@@ -40,26 +40,25 @@
     .portfolio-card-body {
       margin: 20px;
     }
-
-    span.tool {
-      border: 1px solid $blue;
-      border-radius: 16px;
-      padding: 2px 12px;
-      margin: 4px 2px;
-      display: inline-block;
-    }
-
-    span.illustrator {
-      border: 1px solid $illustrator !important;
-    }
-
-    span.indesign {
-      border: 1px solid $indesign !important;
-    }
-
-    span.photoshop {
-      border: 1px solid $photoshop !important;
-    }
-
   }
+}
+
+span.tool {
+  border: 1px solid $blue;
+  border-radius: 16px;
+  padding: 2px 12px;
+  margin: 4px 2px;
+  display: inline-block;
+}
+
+span.illustrator {
+  border: 1px solid $illustrator !important;
+}
+
+span.indesign {
+  border: 1px solid $indesign !important;
+}
+
+span.photoshop {
+  border: 1px solid $photoshop !important;
 }

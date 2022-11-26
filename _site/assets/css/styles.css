@@ -27,7 +27,7 @@ h5 { font-size: 24px; }
 
 h6 { font-size: 20px; }
 
-p { font-family: Jost, "JostRegular"; color: white; }
+p { font-size: 18px; font-family: Jost, "JostRegular"; color: white; }
 
 a { text-decoration: none; }
 
@@ -47,11 +47,15 @@ a { text-decoration: none; }
 
 .dash-pink-mini { border-top: 6px solid #ff6b6b; width: 20px; margin-bottom: 5px; }
 
+.none { display: none; }
+
 .navigation { width: 100vw; height: 60px; padding: 0 80px; position: fixed; top: 0; left: 0; display: flex; justify-content: space-between; align-items: center; z-index: 999; }
 
-.nav-logo { background: #13d0ff; border-radius: 0 0 10px 10px; box-shadow: 0 0 5px 0 #11111175; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; }
+.nav-logo { background: #13d0ff; border-radius: 0 0 10px 10px; box-shadow: 0 0 5px 0 #11111175; height: 70px; padding: 10px 25px; display: flex; align-items: flex-end; transition: ease .3s; }
 
-.nav-logo > * { color: #111111; font-family: Raleway, "Raleway"; }
+.nav-logo h4 { color: #111111; font-family: Raleway, "Raleway"; }
+
+.nav-logo:hover { background: white; }
 
 .nav-button-container { font-family: Raleway, "Raleway"; height: 80%; position: relative; display: flex; align-items: flex-end; }
 
@@ -93,7 +97,7 @@ a#contact.current:hover { background: white; }
 
 .home-hello { margin: 20px 0; }
 
-.home-blurb { margin-top: 80px; }
+.home-blurb { margin: 60px 0 40px 0; }
 
 .scroll-down { border-radius: 50%; width: 60px; height: 60px; background: white; position: absolute; left: 50%; bottom: 20px; transform: translate(-50%, -50%); }
 
@@ -135,13 +139,13 @@ a#contact.current:hover { background: white; }
 
 .portfolio-container .portfolio-card .portfolio-card-body { margin: 20px; }
 
-.portfolio-container .portfolio-card span.tool { border: 1px solid #13d0ff; border-radius: 16px; padding: 2px 12px; margin: 4px 2px; display: inline-block; }
+span.tool { border: 1px solid #13d0ff; border-radius: 16px; padding: 2px 12px; margin: 4px 2px; display: inline-block; }
 
-.portfolio-container .portfolio-card span.illustrator { border: 1px solid #f8a829 !important; }
+span.illustrator { border: 1px solid #f8a829 !important; }
 
-.portfolio-container .portfolio-card span.indesign { border: 1px solid #ff3366 !important; }
+span.indesign { border: 1px solid #ff3366 !important; }
 
-.portfolio-container .portfolio-card span.photoshop { border: 1px solid #4fccfe !important; }
+span.photoshop { border: 1px solid #4fccfe !important; }
 
 footer { background: #ff6b6b; width: 100vw; height: 30px; margin-top: 40px; }
 

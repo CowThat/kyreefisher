@@ -54,6 +54,7 @@ h6 {
 }
 
 p {
+  font-size: 18px;
   font-family: $jost;
   color: $white;
 
@@ -101,4 +102,8 @@ a {
   border-top: 6px solid $pink;
   width: 20px;
   margin-bottom: 5px;
+}
+
+.none {
+  display: none;
 }

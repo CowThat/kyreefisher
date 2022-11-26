@@ -21,10 +21,15 @@
   padding: 10px 25px;
   display: flex;
   align-items: flex-end;
+  transition: ease .3s;
 
-  & > * {
+  h4 {
     color: $dark-gray-2;
     font-family: $raleway;
+  }
+
+  &:hover {
+    background: $white;
   }
 }
 
