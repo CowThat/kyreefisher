@@ -1,30 +1,29 @@
+.portfolio-body {
+  margin: 40px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1 1 33%;
+}
+
 .portfolio-container{
-  // display: flex;
-  // justify-content: center;
-  // align-items: flex-start;
-  // flex-wrap: wrap;
-  // // margin: 0 10vw;
-  // // align-content: stretch;
-  // // flex-direction: column;
-  // max-height: 70vh;
-  // flex: 1 1 33%;
-
-  margin: 0 18vw;
-  column-count: 3;
-  column-gap: 10px;
-
+  width: 100%;
+  max-width: 1200px;
   position: relative;
   display: block;
+  column-count: 3;
+  column-gap: 16px;
 
   .portfolio-card {
     background: $gray-2;
     border: 1px solid $dark-gray-2;
-    border-radius: 20px;
-    width: 20vw;
+    border-radius: 15px;
+    width: 100%;
     max-width: 500px;
     min-width: 200px;
     height: min-content;
-    margin: 5px;
+    margin: 16px 0;
     position: relative;
     flex: 1 1 160px;
     break-inside: avoid;
@@ -32,13 +31,21 @@
     // align-items: stretch;
 
     img {
-      max-width: 100%;
+      width: 100%;
       object-fit: contain;
-      border-radius: 20px 20px 0 0;
+      border-radius: 15px 15px 0 0;
     }
 
     .portfolio-card-body {
       margin: 20px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

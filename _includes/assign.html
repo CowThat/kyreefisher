@@ -13,9 +13,19 @@
 {% endif %}
 
 {% assign project_fullname  = project.full_name %}
-{% assign project_datesem  = project.date_sem %}
-{% assign project_year  = project.year %}
-{% assign project_med  = project.medium %}
-{% assign project_dim  = project.dimensions %}
-{% assign project_type  = project.type %}
-{% assign project_vis  = project.visible %}
+{% assign project_datesem   = project.date_sem %}
+{% assign project_year      = project.year %}
+{% assign project_med       = project.medium %}
+{% assign project_dim       = project.dimensions %}
+{% assign project_type      = project.type %}
+{% assign project_vis       = project.visible %}
+
+{% if project.priority == 1 %}
+  {% assign priority        = "phase1" %}
+{% elsif project.priority == 2 %}
+  {% assign priority        = "phase2" %}
+{% elsif project.priority == 3 %}
+  {% assign priority        = "phase3" %}
+{% elsif project.priority == 4 %}
+  {% assign priority        = "phase4" %}
+{% endif %}

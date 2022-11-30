@@ -5,9 +5,10 @@
   {% if project_id == "chatty-catty" or project_id == "billionaires-and-the-wealth-gap" or project_id == "kyrees-squishies"  or project_id == "dr-yasmiyn-irizarry" or project_id == "the-world-of-asteria"%}
 
   <div class="home-other-card" id="{{ project_id }}">
-    <h2>{{ project_name }}</h2>
-    <p>{{ project_desc }}</p>
-    <a></a>
+    <a href="{{ project_url }}" class="home-other-card__content">
+      <h2>{{ project_name }}</h2>
+      <p>{{ project_desc }}</p>
+    </a>
   </div>
 
   {% endif %}

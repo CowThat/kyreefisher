@@ -17,6 +17,7 @@ body {
 
 div.content {
   max-width: 100vw;
+  min-height: calc(100vh - 60px);
   position: relative;
   top: 60px;
   display: block;
@@ -57,11 +58,14 @@ p {
   font-size: 18px;
   font-family: $jost;
   color: $white;
-
 }
 
 a {
   text-decoration: none;
+}
+
+img {
+  font-family: $jost;
 }
 
 .pink {
