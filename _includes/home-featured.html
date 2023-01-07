@@ -1,20 +1,21 @@
-{% for project in site.projects %}
+{% assign sorted_projects = site.projects | sort: 'sort_order' %}
+
+{% for project in sorted_projects %}
 
   {% include assign.html %}
 
-  <div class="home-featured">
     {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "guide-to-gdes" %}
 
-
-      <div class="home-featured-card" id="{{ project_id }}">
-        <a href="{{ project_url }}">
-        <h2>{{ project_name }}</h2>
-        <p>{{ project_desc }}</p>
+      <a href="{{ project_url }}" class="home-featured {% if project_order == 2 %}reverse-order{% endif %}">
+          <div class="home-featured_card" id="{{ project_id }}">
+            <h2 class="home-featured_project-title">{{ project_name }}</h2>
+            <p class="home-featured_project-desc">{{ project_desc }}</p>
+          </div>
+          <div class="home-featured_image">
+            <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
+          </div>
         </a>      
-      </div>
-
-
+      
     {% endif %}
-  </div>
 
 {% endfor %}

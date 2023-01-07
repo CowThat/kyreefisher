@@ -11,7 +11,7 @@ html { padding: 0; margin: 0; }
 
 body { background: #111111; padding: 0; margin: 0; position: relative; }
 
-div.content { max-width: 100vw; min-height: calc(100vh - 60px); position: relative; top: 60px; display: block; overflow-x: hidden; }
+div.content { max-width: 100vw; min-height: calc(100vh - 60px); position: relative; display: block; overflow-x: hidden; }
 
 h1, h2, h3, h4, h5, h6 { font-family: Raleway, "Raleway"; color: white; margin: 0; }
 
@@ -47,7 +47,7 @@ img { font-family: Jost, "JostRegular"; }
 
 .dash-seafoam { border-top: 12px solid #59c9a5; width: 45px; margin-right: 5px; }
 
-.dash-pink-mini { border-top: 6px solid #ff6b6b; width: 20px; margin-bottom: 5px; }
+.dash-pink-mini { border-top: 8px solid #ff6b6b; width: 28px; margin-bottom: 5px; }
 
 .none { display: none; }
 
@@ -91,6 +91,8 @@ a#contact.current:hover { background: white; }
 
 #contact:not(.current):hover { background: #a96df3; color: #111111; transform: translateY(10px); }
 
+.home-page { position: relative; margin: 60px 0 180px 0; }
+
 .home-intro-container { width: 100vw; height: calc(100vh - 80px); margin: 10px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 
 .home-intro-container .home-intro-content { width: 75%; min-width: 500px; position: relative; bottom: 4vh; }
@@ -111,31 +113,39 @@ a#contact.current:hover { background: white; }
 
 #arrow2 { animation-delay: .5s; }
 
-.home-featured-container { padding-top: 100px; }
+.home-featured_container { padding-top: 100px; }
 
-.home-featured-desc, .home-other-desc { margin-left: 12.5%; }
+.home-featured_title, .home-other_title { margin-left: 12.5%; }
 
-.home-featured { display: flex; justify-content: center; }
+.home-featured, .reverse-order { width: 100vw; max-width: 1200px; display: flex; justify-content: center; align-items: center; margin: 28vh auto; position: relative; }
 
-.home-featured-card { background: #ff6b6b; border-radius: 40px; width: 100vw; max-width: 1200px; height: 50vh; padding: 50px; margin: 10px; }
+.home-featured:first-of-type, .reverse-order:first-of-type { margin-top: 8vh; }
 
-.home-other-container { margin: 40px 0 80px 0; }
+.reverse-order { flex-direction: row-reverse; }
 
-.home-other-scroll { display: flex; flex-wrap: nowrap; overflow-x: scroll; }
+.home-featured_card { background: #ff6b6b; border-radius: 20px; width: 40%; height: 50vh; padding: 50px; margin: 0 2vw; }
 
-.home-other-card { min-width: 25vw; height: 50vh; background: #ff6b6b; border-radius: 40px; padding: 50px; margin: 10px; }
+.home-featured_image { max-width: 60%; max-height: 100%; overflow: hidden; z-index: 10; }
 
-.home-other-card:first-child { margin-left: 0; }
+.home-featured_image img { max-width: 100%; object-fit: contain; }
 
-.home-other-card:last-child { margin-right: 0; }
+.home-other_container { margin: 40px 0 80px 0; }
 
-.home-other-wrapper { margin: 0 auto; height: 53vh; width: 100vw; max-width: 1200px; position: relative; }
+.home-other_scroll { display: flex; flex-wrap: nowrap; overflow-x: scroll; }
 
-.home-other-scroll { margin: 0 auto; height: 53vh; width: 100%; overflow-x: scroll; z-index: 10; }
+.home-other { min-width: 25vw; height: 50vh; background: #ff6b6b; border-radius: 40px; padding: 50px; margin: 10px; }
 
-.home-other-child { height: 50vh; width: 150%; position: relative; display: flex; }
+.home-other:first-child { margin-left: 0; }
 
-.home-other-card { background: #ff6b6b; height: 50vh; min-width: 400px; width: 100px; margin: 10px; }
+.home-other:last-child { margin-right: 0; }
+
+.home-other_wrapper { margin: 0 auto; height: 53vh; width: 100vw; max-width: 1200px; position: relative; }
+
+.home-other_scroll { margin: 0 auto; height: 53vh; width: 100%; overflow-x: scroll; z-index: 10; }
+
+.home-other_child { height: 50vh; width: 150%; position: relative; display: flex; }
+
+.home-other { background: #ff6b6b; height: 50vh; min-width: 400px; width: 100px; margin: 10px; }
 
 .clone { position: absolute; z-index: -1; left: 0; top: 0; }
 
@@ -162,6 +172,10 @@ span.illustrator { border: 1px solid #f8a829 !important; }
 span.indesign { border: 1px solid #ff3366 !important; }
 
 span.photoshop { border: 1px solid #4fccfe !important; }
+
+.project-page { margin-bottom: 60px; }
+
+.project-page img { max-width: 100vw; }
 
 footer { background: #020202; width: 100vw; height: 60px; position: absolute; bottom: 0; }
 

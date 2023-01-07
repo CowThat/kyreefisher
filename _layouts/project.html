@@ -1,5 +1,22 @@
 ---
 layout: default
 ---
-<img class="cover-img" id="{{ project_id }}__cover-img" src="assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
-<h1>{{ page.full_name }}</h1>
+
+{% assign project_list = site.projects | nested_sort:"contents.starts_at" | reverse %}
+
+{% for project in project_list %}
+
+{% include assign.html %}
+
+    {% if project_url == page.url %}
+        <div class="project-page">
+            <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
+            <h1>{{ page.full_name }}</h1>
+            <h4>{{ page.date_sem }} {{ page.year }}</h4>
+            <h4>{{ page.medium }}</h4>
+            <h4>{{ page.dimensions }}</h4>
+            {{ content }}
+        </div>
+    {% endif %}
+
+{% endfor %}

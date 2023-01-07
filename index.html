@@ -3,72 +3,76 @@ layout: default
 title: Home
 ---
 
-<div class="home-intro-container">
+<div class="home-page">
+  <div class="home-intro-container">
 
-  <div class="home-intro-content">
+    <div class="home-intro-content">
 
-    <div class="home-dash">
-      <div class="dash-pink"></div>
-      <div class="dash-blue"></div>
-      <div class="dash-seafoam"></div>
+      <div class="home-dash">
+        <div class="dash-pink"></div>
+        <div class="dash-blue"></div>
+        <div class="dash-seafoam"></div>
+      </div>
+
+      <!-- <h1><span class="pink">–</span><span class="blue">–</span><span class="seafoam">–</span></h1> -->
+      <h1 class="home-hello">Hey, i'm <span class="blue">Kyree!:)</span></h1>
+      <h1 class="home-blurb">I'm a web, UI/UX,<br>& graphic designer.</h1>
+      <h6 class="home-desc">I create designs and experiences that are made for the <i class="pink">user</i>.<br>This portfolio site is a work in progress. It's made using <span class="tool">Jekyll</span>, <span class="tool">GitHub Pages</span>, and a whole lot of long nights.</h6>
     </div>
 
-    <!-- <h1><span class="pink">–</span><span class="blue">–</span><span class="seafoam">–</span></h1> -->
-    <h1 class="home-hello">hey, i'm <span class="blue">Kyree!:)</span></h1>
-    <h1 class="home-blurb">i'm a web, UI/UX,<br>& graphic designer.</h1>
-    <p class="home-desc">this is an intro to me as a designer. i'm going to talk a bit about my practice and interests.<br>this portfolio site is a work in progress. it's made using <span class="tool">Jekyll</span>, <span class="tool">GitHub Pages</span>, and a whole lot of long nights.</p>
+    <a class="scroll-down" href="#home-featured_container"><img src="assets/images/scroll-arrow-01.png" id="arrow1"><img src="assets/images/scroll-arrow-01.png" id="arrow2"></a>
+
   </div>
 
-  <a class="scroll-down" href="#home-featured-container"><img src="assets/images/scroll-arrow-01.png" id="arrow1"><img src="assets/images/scroll-arrow-01.png" id="arrow2"></a>
+  <div class="home-featured_container" id="home-featured_container">
 
-</div>
+    <div class="home-featured_title">
+      <div class="dash-pink-mini"></div>
+      <h2><span class="blue">featured</span> projects</h2>
+    </div>
 
-<div class="home-featured-container" id="home-featured-container">
+    {% include home-featured.html %}
 
-  <div class="home-featured-desc">
-    <div class="dash-pink-mini"></div>
-    <h3><span class="blue">featured</span> projects</h3>
   </div>
 
-  {% include home-featured.html %}
+  <div class="home-other_container">
+    <div class="home-other_title">
+      <div class="dash-pink-mini"></div>
+      <h2><span class="seafoam">other</span> projects</h2>
+    </div>
 
-</div>
-
-<div class="home-other-container">
-  <div class="home-other-desc">
-    <div class="dash-pink-mini"></div>
-    <h3><span class="seafoam">other</span> projects</h3>
-  </div>
-
-  <div class="home-other-wrapper">
-    <div class="home-other-scroll">
-      <div class="home-other-child">
-       {% include home-other.html %}
+    <div class="home-other_wrapper">
+      <div class="home-other_scroll">
+        <div class="home-other_child">
+        {% include home-other.html %}
+        </div>
       </div>
     </div>
+
+    <div class="home-see-more">
+      <h3>see more</h3>
+    </div>
   </div>
 
-  <div class="home-see-more">
-    <h3>see more</h3>
+  <div class="home-about">
+    {% include about.html %}
   </div>
-
 </div>
-
 
 <!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script> -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script> -->
 
 <script>
-const container = $(".home-other-scroll")
-const child = container.find('.home-other-child');
+const container = $(".home-other_scroll")
+const child = container.find('.home-other_child');
 const clone = child.clone();
 
 clone.addClass('clone');
 child.addClass('transparent');
 container.before(clone)
 
-$(".home-other-scroll").on('scroll', function() {
+$(".home-other_scroll").on('scroll', function() {
   const offset = $(this).scrollLeft();
   clone.css({
     left: - offset

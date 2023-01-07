@@ -3,7 +3,7 @@
 {% assign project_name  = project.name %}
 {% assign project_desc  = project.description %}
 {% assign project_tools = project.tools %}
-{% assign project_url   = project.url | relative_url %}     <!-- make the url for the project -->
+{% assign project_url   = project.url | relative_url %}
 {% assign project_external = project.external_url %}
 
 {% if project.external_url %}
@@ -17,8 +17,7 @@
 {% assign project_year      = project.year %}
 {% assign project_med       = project.medium %}
 {% assign project_dim       = project.dimensions %}
-{% assign project_type      = project.type %}
-{% assign project_vis       = project.visible %}
+{% assign project_role      = project.role %}
 
 {% if project.priority == 1 %}
   {% assign priority        = "phase1" %}
@@ -29,3 +28,6 @@
 {% elsif project.priority == 4 %}
   {% assign priority        = "phase4" %}
 {% endif %}
+
+{% assign project_order      = project.sort_order %}
+{% assign project_featured      = project.featured_image %}
