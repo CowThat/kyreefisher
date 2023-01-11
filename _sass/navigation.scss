@@ -53,6 +53,7 @@
     align-items: flex-end;
     transition: ease 0.3s;
 
+
     &:not(.current) {
       background: $med-gray-1;
       height: 80px;
@@ -72,7 +73,7 @@ a.current {
   position: relative;
   top: 10px;
   
-  &#home {
+  &#portfolio {
     background: $pink;
   
     &:hover {
@@ -80,7 +81,7 @@ a.current {
     }
   }
   
-  &#portfolio {
+  &#about {
     background: $blue;
   
     &:hover {
@@ -88,7 +89,7 @@ a.current {
     }
   }
   
-  &#about {
+  &#contact {
     background: $seafoam;
   
     &:hover {
@@ -96,7 +97,7 @@ a.current {
     }
   }
   
-  &#contact {
+  &#gallery {
     background: $purple;
   
     &:hover {
@@ -112,20 +113,41 @@ a.current {
   transform: translateY(10px);
 }
 
-#portfolio:not(.current):hover {
+#about:not(.current):hover {
   background: $blue;
   color: $dark-gray-2;
   transform: translateY(10px);
 }
 
-#about:not(.current):hover {
+#contact:not(.current):hover {
   background: $seafoam;
   color: $dark-gray-2;
   transform: translateY(10px);
 }
 
-#contact:not(.current):hover {
+#gallery:not(.current):hover {
   background: $purple;
   color: $dark-gray-2;
   transform: translateY(10px);
 }
+
+// .nav-button {
+//   animation-duration: .5s;
+//   animation-name: none;
+// }
+
+// .nav-button.bounce {
+//   animation-name: bounce;
+// }
+
+// @keyframes bounce {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   20% {
+//     transform: translateY(-20px);
+//   }
+//   40% {
+//     transform: translateY(0);
+//   }
+// }

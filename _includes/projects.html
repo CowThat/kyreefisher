@@ -5,7 +5,6 @@
 
 
     <div class="portfolio-card" id="{{ project_id }}">
-      <!--class="wow animated fadeIn" data-wow-delay=".15s"-->
       <a href="{{ project_url }}">
 
         {%- if project_img -%}
@@ -18,19 +17,9 @@
             {{ project_name }}
           </h3>
           <p id="{{ project_id }}-desc">{{ project_desc }}</p>
-          <p id="{{ project_id }}-tools">
-            {%- for tool in project_tools -%}
-              {% if tool contains "Illustrator" %}
-              <span class="tool illustrator">{{ tool }}</span>
-              {% elsif tool contains "inDesign" %}
-              <span class="tool indesign">{{ tool }}</span>
-              {% elsif tool contains "Photoshop"%}
-              <span class="tool photoshop">{{ tool }}</span>
-              {% else %}
-              <span class="tool">{{ tool }}</span>
-              {% endif %}
-            {%- endfor -%}
-          </p>
+          
+          {% include role-tools.html %}
+          
         </div>
 
       </a>

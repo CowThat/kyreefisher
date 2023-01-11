@@ -1,6 +1,42 @@
 ---
 layout: default
 ---
+<style>
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 50vw;
+}
+
+.scroll-item {
+  flex: 0 0 20%;
+  scroll-snap-align: start;
+  background-color: lightblue;
+  height: 100px;
+  width: 100px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+</style>
+
+<div class="scroll-container">
+    <div class="scroll-item">1</div>
+    <div class="scroll-item">2</div>
+    <div class="scroll-item">3</div>
+    <div class="scroll-item">4</div>
+    <div class="scroll-item">5</div>
+  </div>
+
+
+
+<!-- ---
 
 <style>
     body {
@@ -99,4 +135,4 @@ $(".container").on('scroll', function() {
     left: - offset
   })
 })
-</script>
+</script> -->

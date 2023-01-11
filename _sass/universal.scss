@@ -17,14 +17,14 @@ body {
 
 div.content {
   max-width: 100vw;
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   position: relative;
   // top: 60px;
   display: block;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   font-family: $raleway;
   color: $white;
   margin: 0;
@@ -61,6 +61,8 @@ p {
 }
 
 a {
+  font-size: 18px;
+  font-family: $raleway;
   text-decoration: none;
 }
 
@@ -80,6 +82,26 @@ img {
   color: $seafoam;
 }
 
+.purple {
+  color: $purple;
+}
+
+.white {
+  color: $white;
+}
+
+.pink-bkgd {
+  background-color: $pink;
+}
+
+.blue-bkgd {
+  background-color: $blue;
+}
+
+.seafoam-bkgd {
+  background-color: $seafoam;
+}
+
 .underline {
   text-decoration: underline dotted;
 }
@@ -93,19 +115,49 @@ img {
 .dash-blue {
   border-top: 12px solid $blue;
   width: 45px;
-  margin-right: 5px;
+  margin-bottom: 4px;
+  margin-right: 4px
 }
 
 .dash-seafoam {
   border-top: 12px solid $seafoam;
   width: 45px;
-  margin-right: 5px;
+  margin-bottom: 4px;
+  margin-right: 4px
+}
+
+.dash-purple {
+  border-top: 12px solid $purple;
+  width: 45px;
+  margin-bottom: 4px;
+  margin-right: 4px
 }
 
 .dash-pink-mini {
   border-top: 8px solid $pink;
   width: 28px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
+  margin-right: 4px
+}
+
+.dash-blue-mini {
+  border-top: 8px solid $blue;
+  width: 28px;
+  margin-bottom: 4px;
+  margin-right: 4px
+}
+
+.dash-seafoam-mini {
+  border-top: 8px solid $seafoam;
+  width: 28px;
+  margin-bottom: 4px;
+  margin-right: 4px
+}
+
+.dash-black-mini {
+  border-top: 8px solid $dark-gray-2;
+  width: 28px;
+  margin: 15px 0 5px;
 }
 
 .none {

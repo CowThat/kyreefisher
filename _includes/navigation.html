@@ -5,6 +5,22 @@
   </div>
 
   <div class="nav-button-container">
+    {% for item in site.data.navigation %}
+
+    {% assign page_name = item.name | slugify %}
+
+    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" class="nav-button {% if page.url == item.link or (item.name == "portfolio" and item.link == "/#home-featured_container" and page.url == "/") %}current{% endif %}" id="{{ page_name }}">{{ item.name }}</a>
+    {% endfor %}
+
+  </div>
+
+</nav>
+
+  <!-- <div class="nav-logo">
+    <a href="{{ site.url }}{{ site.baseurl }}"><h4 class="nav-logo-name">Kyree Fisher</h4></a>
+  </div>
+
+  <div class="nav-button-container">
     {% assign variable = 0 %}
     {% for item in site.data.navigation %}
 
@@ -12,9 +28,7 @@
     {% assign variable = variable | plus: 1 %}
 
 
-    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" class="nav-button {% if page.url == item.link %}current{% endif
+    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" class="nav-button {% if page.url == item.link or item.name == "portfolio" and item.link == "/#home-featured_container" %}current{% endif
       %}" id="{{ page_name }}">{{ item.name }}</a>
     {% endfor %}
-  </div>
-
-</nav>
+  </div> -->

@@ -10,6 +10,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     {% feed_meta %}
     {% seo %}
@@ -23,22 +24,12 @@
   </body>
 </html>
 
+<script>
+const navItems = document.querySelectorAll('.nav-button');
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-<!-- <script>
-  $(function(){
-    var str = '#len'; //increment by 1 up to 1-nelemnts
-    $(document).ready(function(){
-      var i, stop;
-      i = 1;
-      stop = 4; //num elements
-      setInterval(function(){
-        if (i > stop){
-          return;
-        }
-        $('#len'+(i++)).toggleClass('bounce');
-      }, 200)
-    });
-  });
-</script> -->
+navItems.forEach((item, index) => {
+  setTimeout(() => {
+    item.classList.add('bounce');
+  }, index * 200);
+});
+</script>

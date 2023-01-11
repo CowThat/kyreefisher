@@ -1,0 +1,7 @@
+<!-- <p id="{{ project_id }}-roles">My roles: {{project_role}}</p> -->
+<p id="{{ project_id }}-tools">
+{%- for tool in project_tools -%}
+    {% assign tool_class = tool | downcase | replace: ' ', '-' %}
+    <span class="tool {{ tool_class }}">{{ tool }}</span>
+{%- endfor -%}
+</p>

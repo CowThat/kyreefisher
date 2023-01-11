@@ -1,8 +1,8 @@
-- name: home
-  link: /
 - name: portfolio
-  link: /portfolio.html
+  link: /#home-featured_container
 - name: about
   link: /about.html
 - name: contact
   link: /contact.html
+- name: gallery
+  link: /gallery.html

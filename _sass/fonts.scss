@@ -16,7 +16,7 @@
   src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
 }
 
-$raleway: Raleway, 'Raleway';
-$jost: Jost, 'JostRegular';
+$raleway: Raleway, 'Raleway', sans-serif;
+$jost: Jost, 'JostRegular', sans-serif;
 
-$ralewayBold: 'Raleway-Bold', Raleway;
+$ralewayBold: 'Raleway-Bold', Raleway, sans-serif;

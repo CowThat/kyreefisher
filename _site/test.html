@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -30,20 +31,44 @@
 
   <div class="nav-button-container">
     
+
+    
+
+    <a href="http://localhost:4000/#home-featured_container" class="nav-button " id="portfolio">portfolio</a>
+    
+
+    
+
+    <a href="http://localhost:4000/about.html" class="nav-button " id="about">about</a>
+    
+
+    
+
+    <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
+    
+
+    
+
+    <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
+    
+
+  </div>
+
+</nav>
+
+  <!-- <div class="nav-logo">
+    <a href="http://localhost:4000"><h4 class="nav-logo-name">Kyree Fisher</h4></a>
+  </div>
+
+  <div class="nav-button-container">
+    
     
 
     
     
 
 
-    <a href="http://localhost:4000/" class="nav-button " id="home">home</a>
-    
-
-    
-    
-
-
-    <a href="http://localhost:4000/portfolio.html" class="nav-button " id="portfolio">portfolio</a>
+    <a href="http://localhost:4000/#home-featured_container" class="nav-button current" id="portfolio">portfolio</a>
     
 
     
@@ -59,11 +84,53 @@
 
     <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
     
-  </div>
 
-</nav>
+    
+    
+
+
+    <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
+    
+  </div> -->
     <div class="content">
       <style>
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  width: 50vw;
+}
+
+.scroll-item {
+  flex: 0 0 20%;
+  scroll-snap-align: start;
+  background-color: lightblue;
+  height: 100px;
+  width: 100px;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+</style>
+
+<div class="scroll-container">
+    <div class="scroll-item">1</div>
+    <div class="scroll-item">2</div>
+    <div class="scroll-item">3</div>
+    <div class="scroll-item">4</div>
+    <div class="scroll-item">5</div>
+  </div>
+
+
+
+<!-- ---
+
+<style>
     body {
         overflow-x: hidden;
     }
@@ -160,7 +227,7 @@ $(".container").on('scroll', function() {
     left: - offset
   })
 })
-</script>
+</script> -->
       <footer>
     
 </footer>
@@ -168,22 +235,12 @@ $(".container").on('scroll', function() {
   </body>
 </html>
 
+<script>
+const navItems = document.querySelectorAll('.nav-button');
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-<!-- <script>
-  $(function(){
-    var str = '#len'; //increment by 1 up to 1-nelemnts
-    $(document).ready(function(){
-      var i, stop;
-      i = 1;
-      stop = 4; //num elements
-      setInterval(function(){
-        if (i > stop){
-          return;
-        }
-        $('#len'+(i++)).toggleClass('bounce');
-      }, 200)
-    });
-  });
-</script> -->
+navItems.forEach((item, index) => {
+  setTimeout(() => {
+    item.classList.add('bounce');
+  }, index * 200);
+});
+</script>

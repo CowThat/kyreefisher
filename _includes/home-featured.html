@@ -6,15 +6,26 @@
 
     {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "guide-to-gdes" %}
 
-      <a href="{{ project_url }}" class="home-featured {% if project_order == 2 %}reverse-order{% endif %}">
-          <div class="home-featured_card" id="{{ project_id }}">
-            <h2 class="home-featured_project-title">{{ project_name }}</h2>
-            <p class="home-featured_project-desc">{{ project_desc }}</p>
+      <div href="{{ project_url }}" class="home-featured {% if project_order == 2 %}reverse-order{% endif %} {% if project_order == 1 %}first-div{% endif %}">
+
+        <div class="home-featured_card" id="{{ project_id }}">
+          <div class="home-featured_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
+          <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
+          <h2 class="home-featured_project-title">{{ project_name }}</h2>
+          <p class="home-featured_project-desc">{{ project_desc }}</p>
+          
+          {% include role-tools.html %}
+
+          <div>
+            <a class="white">See More</a>
           </div>
-          <div class="home-featured_image">
-            <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
-          </div>
-        </a>      
+        </div>
+
+        <div class="home-featured_image">
+          <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
+        </div>
+
+      </div>      
       
     {% endif %}
 

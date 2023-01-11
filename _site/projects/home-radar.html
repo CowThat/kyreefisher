@@ -7,6 +7,7 @@
     <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -14,18 +15,18 @@
 <meta name="generator" content="Jekyll v4.3.1" />
 <meta property="og:title" content="Home Radar" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA" />
-<meta property="og:description" content="15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA" />
+<meta name="description" content="15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA." />
+<meta property="og:description" content="15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA." />
 <link rel="canonical" href="http://localhost:4000/projects/home-radar" />
 <meta property="og:url" content="http://localhost:4000/projects/home-radar" />
 <meta property="og:image" content="http://localhost:4000/home-radar_cover-photo.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-01-07T18:48:23-05:00" />
+<meta property="article:published_time" content="2023-01-11T01:25:25-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/home-radar_cover-photo.png" />
 <meta property="twitter:title" content="Home Radar" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-07T18:48:23-05:00","datePublished":"2023-01-07T18:48:23-05:00","description":"15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA","headline":"Home Radar","image":"http://localhost:4000/home-radar_cover-photo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/home-radar"},"url":"http://localhost:4000/projects/home-radar"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-01-11T01:25:25-05:00","datePublished":"2023-01-11T01:25:25-05:00","description":"15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA.","headline":"Home Radar","image":"http://localhost:4000/home-radar_cover-photo.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/home-radar"},"url":"http://localhost:4000/projects/home-radar"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -38,20 +39,44 @@
 
   <div class="nav-button-container">
     
+
+    
+
+    <a href="http://localhost:4000/#home-featured_container" class="nav-button " id="portfolio">portfolio</a>
+    
+
+    
+
+    <a href="http://localhost:4000/about.html" class="nav-button " id="about">about</a>
+    
+
+    
+
+    <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
+    
+
+    
+
+    <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
+    
+
+  </div>
+
+</nav>
+
+  <!-- <div class="nav-logo">
+    <a href="http://localhost:4000"><h4 class="nav-logo-name">Kyree Fisher</h4></a>
+  </div>
+
+  <div class="nav-button-container">
+    
     
 
     
     
 
 
-    <a href="http://localhost:4000/" class="nav-button " id="home">home</a>
-    
-
-    
-    
-
-
-    <a href="http://localhost:4000/portfolio.html" class="nav-button " id="portfolio">portfolio</a>
+    <a href="http://localhost:4000/#home-featured_container" class="nav-button current" id="portfolio">portfolio</a>
     
 
     
@@ -67,9 +92,14 @@
 
     <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
     
-  </div>
 
-</nav>
+    
+    
+
+
+    <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
+    
+  </div> -->
     <div class="content">
       
 
@@ -202,12 +232,18 @@
 
 
     
-        <div class="project-page">
-            <img class="cover-img" id="home-radar_cover-img" src="../assets/portfolio/phase1/home-radar/home-radar_cover-photo.png" alt="Home Radar: 15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA" />
-            <h1>Home Radar – VCU Apartment Hunting</h1>
-            <h4>Nov, 2022</h4>
-            <h4>Hand-coded Website</h4>
-            <h4></h4>
+        <div class="project-hero">
+            <div class="project-hero_desc">
+                <h1>Home Radar – VCU Apartment Hunting</h1>
+                <h4>Nov, 2022</h4>
+                <h4>Hand-coded Website</h4>
+                <h4></h4>
+            </div>
+            <div class="project-hero_image">
+                <img class="cover-img" id="home-radar_cover-img" src="../assets/portfolio/phase1/home-radar/home-radar_cover-photo.png" alt="Home Radar: 15 week long user experience and web design project focused on finding housing solutions for people living in Richmond, VA." />
+            </div>
+        </div>
+        <div>
             
         </div>
     
@@ -324,22 +360,12 @@
   </body>
 </html>
 
+<script>
+const navItems = document.querySelectorAll('.nav-button');
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-<!-- <script>
-  $(function(){
-    var str = '#len'; //increment by 1 up to 1-nelemnts
-    $(document).ready(function(){
-      var i, stop;
-      i = 1;
-      stop = 4; //num elements
-      setInterval(function(){
-        if (i > stop){
-          return;
-        }
-        $('#len'+(i++)).toggleClass('bounce');
-      }, 200)
-    });
-  });
-</script> -->
+navItems.forEach((item, index) => {
+  setTimeout(() => {
+    item.classList.add('bounce');
+  }, index * 200);
+});
+</script>

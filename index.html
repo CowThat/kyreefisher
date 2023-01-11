@@ -57,28 +57,45 @@ title: Home
   <div class="home-about">
     {% include about.html %}
   </div>
+
+  <div class="home-contact">
+    {% include contact.html %}
+  </div>
 </div>
+
+
 
 <!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script> -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script> -->
 
 <script>
-const container = $(".home-other_scroll")
-const child = container.find('.home-other_child');
-const clone = child.clone();
+  const container = $(".home-other_scroll"),
+        child = container.find('.home-other_child'),
+        clone = child.clone();
+  
+  clone.addClass('clone').insertBefore(container);
+  child.addClass('transparent');
+  
+  container.on('scroll', function() {
+    clone.css({
+      left: -this.scrollLeft
+    });
+  });
+  </script>
+  
 
-clone.addClass('clone');
-child.addClass('transparent');
-container.before(clone)
+<!-- <script>
+$(document).ready(function() {
+  $('.nav-button').mouseenter(function() {
+    $(this).effect("nav-button", {times:4, distance: 100}, 400);
+  });
+  $('.nav-button').mouseleave(function() {
+    $(this).effect("nav-button", {times:4, distance: 100}, 400);
+  });
+});
 
-$(".home-other_scroll").on('scroll', function() {
-  const offset = $(this).scrollLeft();
-  clone.css({
-    left: - offset
-  })
-})
-</script>
+</script> -->
 
 <!-- <script>
   $(window).load(function() {
@@ -92,4 +109,4 @@ $(".home-other_scroll").on('scroll', function() {
         }, 400);
     });
 })
-</script> -->
+</> -->
