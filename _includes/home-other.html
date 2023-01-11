@@ -5,15 +5,17 @@
   {% if project_id == "chatty-catty" or project_id == "billionaires-and-the-wealth-gap" or project_id == "kyrees-squishies"  or project_id == "dr-yasmiyn-irizarry" or project_id == "the-world-of-asteria"%}
   <a href="{{ project_url }}" class="home-other">
     <div class="home-other_card" id="{{ project_id }}">
-        <h2>{{ project_name }}</h2>
-        <p>{{ project_desc }}</p>
-        
-        {% include role-tools.html %}
+      <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
+      <h3>{{ project_name }}</h3>
+      <p>{{ project_desc }}</p>
+      
+      {% include role-tools.html %}
 
-        <div>
-          <h6>See More</h6>
-        </div>
+      <div>
+        <h6>See More</h6>
+      </div>
     </div>
+    <!-- <div class="home-other_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div> -->
   </a>
 
   {% endif %}

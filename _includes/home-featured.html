@@ -10,20 +10,20 @@
 
         <div class="home-featured_card" id="{{ project_id }}">
           <div class="home-featured_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
-          <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
-          <h2 class="home-featured_project-title">{{ project_name }}</h2>
-          <p class="home-featured_project-desc">{{ project_desc }}</p>
-          
-          {% include role-tools.html %}
 
+          <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
+          <h3 class="home-featured_project-title">{{ project_name }}</h3>
+          <p class="home-featured_project-desc">{{ project_desc }}</p>
+          {% include role-tools.html %}
           <div>
             <a class="white">See More</a>
           </div>
         </div>
 
-        <div class="home-featured_image">
+
+        <a class="home-featured_image" href="{{project_url}}">
           <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
-        </div>
+        </a>
 
       </div>      
       

@@ -4,4 +4,18 @@ footer {
     height: 60px;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: auto 20px;
+    }
+
+    a {
+        color: $black;
+        background: $pink;
+        padding: 0 4px;
+        margin: auto 20px;
+    }
 }
