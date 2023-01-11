@@ -101,7 +101,7 @@ a#gallery.current { background: #b379fa; }
 
 a#gallery.current:hover { background: white; }
 
-#home:not(.current):hover { background: #ff6b6b; color: #111111; transform: translateY(10px); }
+#portfolio:not(.current):hover { background: #ff6b6b; color: #111111; transform: translateY(10px); }
 
 #about:not(.current):hover { background: #13d0ff; color: #111111; transform: translateY(10px); }
 

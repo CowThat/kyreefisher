@@ -107,7 +107,7 @@ a.current {
   
 }
 
-#home:not(.current):hover {
+#portfolio:not(.current):hover {
   background: $pink;
   color: $dark-gray-2;
   transform: translateY(10px);
