@@ -2,9 +2,9 @@
 layout: default
 ---
 
-{% assign project_list = site.projects | nested_sort:"contents.starts_at" | reverse %}
+<!-- {% assign project_list = site.projects | nested_sort: "contents.starts_at" | reverse %} -->
 
-{% for project in project_list %}
+{% for project in site.projects %}
 
 {% include assign.html %}
 
