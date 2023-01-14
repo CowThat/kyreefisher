@@ -6,14 +6,17 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-    order:
-      - vcuarts-gift-guide.html
-      - guide-to-gdes.html
+    # order:
+    #   - vcuarts-gift-guide.html
+    #   - guide-to-gdes.html
+  projects-unfinished:
+    output: true
+    permalink: /gallery/:name
 
 
 defaults:
   - scope:
-      path: ""
+      path: "_projects/"
       type: "project"
     values:
       layout: "project"
@@ -22,10 +25,10 @@ defaults:
   #     type: "posts"
   #   values:
   #     layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+  # - scope:
+  #     path: ""
+  #   values:
+  #     layout: "default"
 
 plugins:
   - jekyll-feed
