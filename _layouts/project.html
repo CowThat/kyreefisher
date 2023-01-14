@@ -2,13 +2,12 @@
 layout: default
 ---
 
-<!-- {% assign project_list = site.projects | nested_sort: "contents.starts_at" | reverse %} -->
-
 {% for project in site.projects %}
 
 {% include assign.html %}
+ 
+    {% if page.url contains project_id %}
 
-    {% if project_url == page.url %}
         <div class="project-hero">
             <div class="project-hero_desc">
                 <h2>{{ page.full_name }}</h2>

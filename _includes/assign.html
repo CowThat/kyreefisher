@@ -3,7 +3,7 @@
 {% assign project_name  = project.name %}
 {% assign project_desc  = project.description %}
 {% assign project_tools = project.tools %}
-{% assign project_url   = project.url | relative_url %}
+{% assign project_url   = project.name | slugify %}
 {% assign project_external = project.external_url %}
 
 {% if project.external_url %}
