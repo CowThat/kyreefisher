@@ -1,4 +1,24 @@
 ---
 layout: default
 ---
-{{content}}
+
+{% for project in site.projects %}
+
+{% include assign.html %}
+
+    {% if project_url == page.url %}
+        <div class="project-hero">
+            <div class="project-hero_desc">
+                <h2>{{ page.full_name }}</h2>
+                <h6>{{ page.date_sem }} {{ page.year }}  |  {{ page.medium }}{% if page.dimensions %}  |  {{ page.dimensions }}{% endif %}</h6>
+            </div>
+            <div class="project-hero_image">
+                <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
+            </div>
+        </div>
+        <div class="project-content_container">
+            {{ content }}
+        </div>
+    {% endif %}
+
+{% endfor %}
