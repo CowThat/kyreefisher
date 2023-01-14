@@ -454,6 +454,8 @@
     </div>
 
     <div class="home-other_wrapper">
+      <div class="scrollLeftBtn"><img src="assets/images/scroll-arrow-01.png"></div>
+      <div class="scrollRightBtn"><img src="assets/images/scroll-arrow-01.png"></div>
       <div class="home-other_scroll">
         <div class="home-other_child">
         
@@ -524,7 +526,7 @@
         <h6>See More</h6>
       </div>
     </div>
-    <!-- <div class="home-other_card-shadow pink-bkgd"></div> -->
+    <div class="home-other_card-shadow pink-bkgd"></div>
   </a>
 
   
@@ -552,6 +554,25 @@
 
 
 
+
+  
+  <a href="/projects/chattycatty" class="home-other">
+    <div class="home-other_card" id="chattycatty">
+      <div class="dash-blue-mini"></div>
+      <h3>ChattyCatty</h3>
+      <p>Quick branding and mockups created as a part of an agile project.</p>
+      
+      <!-- <p id="chattycatty-roles">My roles: web design</p> -->
+<p id="chattycatty-tools">
+    <span class="tool figma">Figma</span>
+    <span class="tool illustrator">Illustrator</span></p>
+
+      <div>
+        <h6>See More</h6>
+      </div>
+    </div>
+    <div class="home-other_card-shadow blue-bkgd"></div>
+  </a>
 
   
 
@@ -582,7 +603,7 @@
   
   <a href="/projects/dr-yasmiyn-irizarry" class="home-other">
     <div class="home-other_card" id="dr-yasmiyn-irizarry">
-      <div class="dash-blue-mini"></div>
+      <div class="dash-seafoam-mini"></div>
       <h3>Dr. Yasmiyn Irizarry</h3>
       <p>Website mockups for university professor</p>
       
@@ -594,7 +615,7 @@
         <h6>See More</h6>
       </div>
     </div>
-    <!-- <div class="home-other_card-shadow blue-bkgd"></div> -->
+    <div class="home-other_card-shadow seafoam-bkgd"></div>
   </a>
 
   
@@ -652,7 +673,7 @@
   
   <a href="/projects/kyrees-squishies" class="home-other">
     <div class="home-other_card" id="kyrees-squishies">
-      <div class="dash-seafoam-mini"></div>
+      <div class="dash-pink-mini"></div>
       <h3>Kyrees Squishies</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed massa nulla.</p>
       
@@ -667,7 +688,7 @@
         <h6>See More</h6>
       </div>
     </div>
-    <!-- <div class="home-other_card-shadow seafoam-bkgd"></div> -->
+    <div class="home-other_card-shadow pink-bkgd"></div>
   </a>
 
   
@@ -699,7 +720,7 @@
   
   <a href="/projects/the-world-of-asteria" class="home-other">
     <div class="home-other_card" id="the-world-of-asteria">
-      <div class="dash-pink-mini"></div>
+      <div class="dash-blue-mini"></div>
       <h3>The World of Asteria</h3>
       <p>information architecture, layout design, and graphics for Dungeons & Dragons campaign booklet</p>
       
@@ -712,7 +733,7 @@
         <h6>See More</h6>
       </div>
     </div>
-    <!-- <div class="home-other_card-shadow pink-bkgd"></div> -->
+    <div class="home-other_card-shadow blue-bkgd"></div>
   </a>
 
   
@@ -808,7 +829,58 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="http://localhost:4000/assets/js/jquery-ui.js"></script> -->
 
+
 <script>
+  let scrolling = false;
+  let scrollSpeed = 1000;
+
+  $(".scrollLeftBtn").mousedown(() => {
+    scrolling = true;
+    scrollLeft();
+  });
+  $(".scrollRightBtn").mousedown(() => {
+    scrolling = true;
+    scrollRight();
+  });
+  $("body").mouseup(() => {
+    scrolling = false;
+  });
+
+  function scrollLeft() {
+    if (scrolling) {
+      $(".home-other_scroll").scrollLeft($(".home-other_scroll").scrollLeft() - scrollSpeed);
+      setTimeout(scrollLeft, 5000);
+    }
+  }
+  function scrollRight() {
+    if (scrolling) {
+      $(".home-other_scroll").scrollLeft($(".home-other_scroll").scrollLeft() + scrollSpeed);
+      setTimeout(scrollRight, 5000);
+    }
+  }
+</script>
+
+
+<!-- <script>
+  const container = $(".home-other_scroll");
+  const scrollLeftBtn = $("<button class='scroll-btn left-btn'>Scroll Left</button>");
+  const scrollRightBtn = $("<button class='scroll-btn right-btn'>Scroll Right</button>");
+
+  // Append the buttons to the container's parent
+  // container.parent().prepend(scrollLeftBtn);
+  // container.parent().append(scrollRightBtn);
+
+  // Add event listeners to the buttons to scroll the container
+  scrollLeftBtn.on("mousedown", function() {
+    container.animate({ scrollLeft: "-=100px" }, 100);
+  });
+  scrollRightBtn.on("mousedown", function() {
+    container.animate({ scrollLeft: "+=100px" }, 100);
+  });
+</script> -->
+
+
+<!-- <script>
   const container = $(".home-other_scroll"),
         child = container.find('.home-other_child'),
         clone = child.clone();
@@ -821,7 +893,7 @@
       left: -this.scrollLeft
     });
   });
-  </script>
+  </script> -->
   
 
 <!-- <script>

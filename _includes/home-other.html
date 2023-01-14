@@ -2,7 +2,7 @@
 
 {% include assign.html %}
 
-  {% if project_id == "chatty-catty" or project_id == "billionaires-and-the-wealth-gap" or project_id == "kyrees-squishies"  or project_id == "dr-yasmiyn-irizarry" or project_id == "the-world-of-asteria"%}
+  {% if project_id == "chatty-catty" or project_id == "billionaires-and-the-wealth-gap" or project_id == "kyrees-squishies"  or project_id == "dr-yasmiyn-irizarry" or project_id == "the-world-of-asteria" or project_id == "chattycatty"%}
   <a href="{{ project_url }}" class="home-other">
     <div class="home-other_card" id="{{ project_id }}">
       <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
@@ -15,7 +15,7 @@
         <h6>See More</h6>
       </div>
     </div>
-    <!-- <div class="home-other_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div> -->
+    <div class="home-other_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
   </a>
 
   {% endif %}

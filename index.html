@@ -42,6 +42,8 @@ title: Home
     </div>
 
     <div class="home-other_wrapper">
+      <div class="scrollLeftBtn"><img src="assets/images/scroll-arrow-01.png"></div>
+      <div class="scrollRightBtn"><img src="assets/images/scroll-arrow-01.png"></div>
       <div class="home-other_scroll">
         <div class="home-other_child">
         {% include home-other.html %}
@@ -69,7 +71,58 @@ title: Home
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-ui.js"></script> -->
 
+
 <script>
+  let scrolling = false;
+  let scrollSpeed = 1000;
+
+  $(".scrollLeftBtn").mousedown(() => {
+    scrolling = true;
+    scrollLeft();
+  });
+  $(".scrollRightBtn").mousedown(() => {
+    scrolling = true;
+    scrollRight();
+  });
+  $("body").mouseup(() => {
+    scrolling = false;
+  });
+
+  function scrollLeft() {
+    if (scrolling) {
+      $(".home-other_scroll").scrollLeft($(".home-other_scroll").scrollLeft() - scrollSpeed);
+      setTimeout(scrollLeft, 5000);
+    }
+  }
+  function scrollRight() {
+    if (scrolling) {
+      $(".home-other_scroll").scrollLeft($(".home-other_scroll").scrollLeft() + scrollSpeed);
+      setTimeout(scrollRight, 5000);
+    }
+  }
+</script>
+
+
+<!-- <script>
+  const container = $(".home-other_scroll");
+  const scrollLeftBtn = $("<button class='scroll-btn left-btn'>Scroll Left</button>");
+  const scrollRightBtn = $("<button class='scroll-btn right-btn'>Scroll Right</button>");
+
+  // Append the buttons to the container's parent
+  // container.parent().prepend(scrollLeftBtn);
+  // container.parent().append(scrollRightBtn);
+
+  // Add event listeners to the buttons to scroll the container
+  scrollLeftBtn.on("mousedown", function() {
+    container.animate({ scrollLeft: "-=100px" }, 100);
+  });
+  scrollRightBtn.on("mousedown", function() {
+    container.animate({ scrollLeft: "+=100px" }, 100);
+  });
+</script> -->
+
+
+<!-- <script>
   const container = $(".home-other_scroll"),
         child = container.find('.home-other_child'),
         clone = child.clone();
@@ -82,7 +135,7 @@ title: Home
       left: -this.scrollLeft
     });
   });
-  </script>
+  </script> -->
   
 
 <!-- <script>
