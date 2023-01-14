@@ -5,8 +5,10 @@ layout: default
 {% for project in site.projects %}
 
 {% include assign.html %}
-
+ 
     {% if project_url == page.url %}
+
+    <h1>{{project_url}} {{page.url}}</h1>
         <div class="project-hero">
             <div class="project-hero_desc">
                 <h2>{{ page.full_name }}</h2>
