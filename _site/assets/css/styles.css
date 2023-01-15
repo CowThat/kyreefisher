@@ -611,7 +611,7 @@ a.current#gallery:hover {
 .scrollRightBtn {
   right: 4vw;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -50%);
 }
 .scrollRightBtn img {
   transform: rotate(-90deg);
