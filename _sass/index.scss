@@ -192,7 +192,7 @@
 .scrollLeftBtn {
   left: 4vw;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   img {
     transform: rotate(90deg);
@@ -208,7 +208,7 @@
 .scrollRightBtn {
   right: 4vw;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(-50%, -50%);
 
   img {
     transform: rotate(-90deg);

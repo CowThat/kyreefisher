@@ -1,21 +1,23 @@
 footer {
-    background: $dark-gray-3;
-    width: 100vw;
-    height: 60px;
+    background: $gray-2;
+    border-radius: 24px;
+    width: calc(100vw - 40px);
+    height: 80px;
+    padding: 0 60px;
+    margin: 0 auto;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     p {
-        margin: auto 20px;
     }
 
     a {
         color: $black;
         background: $pink;
-        padding: 0 4px;
-        margin: auto 20px;
+        padding: 0 8px;
     }
 }
