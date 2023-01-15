@@ -7,13 +7,11 @@ footer {
     margin: 0 auto;
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    p {
-    }
+    transform: translatex(-50%);
 
     a {
         color: $black;

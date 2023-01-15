@@ -5,7 +5,8 @@
   {% include assign.html %}
 
     {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "guide-to-gdes" %}
-
+    </h1>
+      <a href="{{ base.url }}{{ project.url }}">
       <div href="{{ project_url }}" class="home-featured {% if project_order == 2 %}reverse-order{% endif %} {% if project_order == 1 %}first-div{% endif %}">
 
         <div class="home-featured_card" id="{{ project_id }}">
@@ -15,16 +16,18 @@
           <h3 class="home-featured_project-title">{{ project_name }}</h3>
           <p class="home-featured_project-desc">{{ project_desc }}</p>
           {% include role-tools.html %}
-          <div>
-            <a class="white">See More</a>
-          </div>
+
+          {% include project-button.html %}
+
         </div>
+      </a>   
+
 
         <a class="home-featured_image" href="/projects/{{ project_url }}">
           <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
         </a>
 
-      </div>      
+      </div>   
       
     {% endif %}
 

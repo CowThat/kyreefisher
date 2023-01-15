@@ -10,8 +10,11 @@ layout: default
 
         <div class="project-hero">
             <div class="project-hero_desc">
+                <div class="{% cycle 'dash-pink-h2', 'dash-blue-h2', 'dash-seafoam-h2' %}"></div>
                 <h2>{{ page.full_name }}</h2>
-                <h6>{{ page.date_sem }} {{ page.year }}  |  {{ page.medium }}{% if page.dimensions %}  |  {{ page.dimensions }}{% endif %}</h6>
+                <!-- <h6>{{ page.date_sem }} {{ page.year }}  |  {{ page.medium }}{% if page.dimensions %}  |  {{ page.dimensions }}{% endif %}</h6> -->
+                <h6>{{ project.blurb }}</h6>
+                <div class="project-hero_desc-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
             </div>
             <div class="project-hero_image">
                 <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
