@@ -2,15 +2,14 @@
     min-height: 90vh;
 }
 
-.home-contact {
-    min-height: 40vh;
-}
-
 .about-page {
     min-height: calc(100vh - 200px);
     margin: 100px 0;
+    position: relative;
+    bottom: 4vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -18,13 +17,47 @@
     max-width: 1200px;
     padding: 100px;
 
+    .text {
+        margin: 40px 0;
+    }
+
     .project-button{
         .project-button_content, .project-button_underline {
             width: 132px;
+
+            h6 {
+                color: $seafoam;
+                transition: color ease .25s;
+            }
         }
 
         &:hover .project-button_underline {
         transform: translateY(-16px);
         }
+
+        &:hover h6 {
+            color: $white;
+        }
+    }
+
+    #resume-button {
+        margin-right: 100px;
+
+        .project-button_content, .project-button_underline {
+            width: 200px;
+        }
+
+        h6 {
+            color: $blue;
+            transition: color ease .25s;
+        }
+
+        &:hover h6 {
+            color: $white;
+        }
+    }
+
+    .button-container {
+        display: flex;
     }
 }

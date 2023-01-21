@@ -6,7 +6,7 @@
 
     {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "guide-to-gdes" %}
     </h1>
-      <a href="{{ site.baseurl }}{{ project.url }}">
+      <a href="{{ project.url }}">
       <div class="home-featured {% if project_order == 2 %}reverse-order{% endif %} {% if project_order == 1 %}first-div{% endif %}">
 
         <div class="home-featured_card" id="{{ project_id }}">

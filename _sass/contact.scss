@@ -1,0 +1,56 @@
+.home-contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-left: 12.5%;
+    min-height: 24vh;
+
+    .subhead {
+        right: 0;
+    }
+
+    .home-contact-button {
+        height: 58px;
+        overflow: hidden;
+        position: relative;
+        top: 40px;
+        left: 40px;
+        
+        img {
+          height: 36px;
+          padding-left: 12px;
+        }
+    
+      
+        #contact-button {
+            height: 60px;
+            width: auto;
+        
+            #contact_content {
+            width: 400px;
+            }
+        
+            #contact_underline {
+            width: 580px;
+            height: 20px;
+            }
+
+            h3 {
+                color: $blue;
+                transition: ease .3s;
+            }
+
+            .project-button_content {
+                width: 800;
+            }
+        
+            &:hover #contact_underline{
+            transform: translateY(-20px);
+            }
+
+            &:hover h3 {
+                color: white;
+            }
+
+        }
+    }
+}

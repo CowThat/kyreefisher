@@ -83,28 +83,28 @@
         margin-top: 64px;
     }
 
-    .subhead {
-        font-family: $arvo;
-        font-weight: 400;
-        font-style: italic;
-        border-left: 4px $blue solid;
-        padding: 0 0 0 20px;
-        margin-top: 20px;
-        position: relative;
-        right: 40px;
-    }
-
-    .pull-quote {
-        font-family: $arvo;
-        font-style: italic;
-        // background: $gray-2;
-        margin: 40px 80px 40px 40px;
-    }
-
     // p:first-of-type {
     //     margin-top: 32px
     // }
 
+}
+
+.subhead {
+    font-family: $arvo;
+    font-weight: 400;
+    font-style: italic;
+    border-left: 4px $blue solid;
+    padding: 0 0 0 20px;
+    margin-top: 20px;
+    position: relative;
+    right: 40px;
+}
+
+.pull-quote {
+    font-family: $arvo;
+    font-style: italic;
+    // background: $gray-2;
+    margin: 40px 80px 40px 40px;
 }
 
 .project_gallery {

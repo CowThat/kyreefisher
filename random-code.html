@@ -119,7 +119,7 @@ $(".container").on('scroll', function() {
 
 
   <!-- <div class="nav-logo">
-    <a href="{{ site.url }}{{ site.baseurl }}"><h4 class="nav-logo-name">Kyree Fisher</h4></a>
+    <a href="{{ site.url }}"><h4 class="nav-logo-name">Kyree Fisher</h4></a>
   </div>
 
   <div class="nav-button-container">
@@ -130,7 +130,7 @@ $(".container").on('scroll', function() {
     {% assign variable = variable | plus: 1 %}
 
 
-    <a href="{{ site.url }}{{ site.baseurl }}{{ item.link }}" class="nav-button {% if page.url == item.link or item.name == "portfolio" and item.link == "/#home-featured_container" %}current{% endif
+    <a href="{{ site.url }}{{ item.link }}" class="nav-button {% if page.url == item.link or item.name == "portfolio" and item.link == "/#home-featured_container" %}current{% endif
       %}" id="{{ page_name }}">{{ item.name }}</a>
     {% endfor %}
   </div> -->

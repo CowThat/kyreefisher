@@ -380,18 +380,18 @@
     transition: ease .3s;
     z-index: 1;
   }
-  
-  img {
-    height: 50%;
-    padding-left: 12px;
-  }
 }
 
 #see-more-button {
   height: 58px;
 
+  img {
+    height: 36px;
+    padding-left: 12px;
+  }
+
   #see-more-button_content {
-    width: 400px;
+    width: 440px;
   }
 
   #see-more-button_underline {

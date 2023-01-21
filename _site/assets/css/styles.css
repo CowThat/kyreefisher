@@ -659,16 +659,16 @@ a.current#gallery:hover {
   transition: ease 0.3s;
   z-index: 1;
 }
-.home-see-more img {
-  height: 50%;
-  padding-left: 12px;
-}
 
 #see-more-button {
   height: 58px;
 }
+#see-more-button img {
+  height: 36px;
+  padding-left: 12px;
+}
 #see-more-button #see-more-button_content {
-  width: 400px;
+  width: 440px;
 }
 #see-more-button #see-more-button_underline {
   width: 400px;
@@ -681,15 +681,14 @@ a.current#gallery:hover {
   min-height: 90vh;
 }
 
-.home-contact {
-  min-height: 40vh;
-}
-
 .about-page {
   min-height: calc(100vh - 200px);
   margin: 100px 0;
+  position: relative;
+  bottom: 4vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -697,15 +696,91 @@ a.current#gallery:hover {
   max-width: 1200px;
   padding: 100px;
 }
+.about-page_content .text {
+  margin: 40px 0;
+}
 .about-page_content .project-button .project-button_content, .about-page_content .project-button .project-button_underline {
   width: 132px;
+}
+.about-page_content .project-button .project-button_content h6, .about-page_content .project-button .project-button_underline h6 {
+  color: #59c9a5;
+  transition: color ease 0.25s;
 }
 .about-page_content .project-button:hover .project-button_underline {
   transform: translateY(-16px);
 }
+.about-page_content .project-button:hover h6 {
+  color: white;
+}
+.about-page_content #resume-button {
+  margin-right: 100px;
+}
+.about-page_content #resume-button .project-button_content, .about-page_content #resume-button .project-button_underline {
+  width: 200px;
+}
+.about-page_content #resume-button h6 {
+  color: #13d0ff;
+  transition: color ease 0.25s;
+}
+.about-page_content #resume-button:hover h6 {
+  color: white;
+}
+.about-page_content .button-container {
+  display: flex;
+}
+
+.home-contact {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 12.5%;
+  min-height: 24vh;
+}
+.home-contact .subhead {
+  right: 0;
+}
+.home-contact .home-contact-button {
+  height: 58px;
+  overflow: hidden;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+.home-contact .home-contact-button img {
+  height: 36px;
+  padding-left: 12px;
+}
+.home-contact .home-contact-button #contact-button {
+  height: 60px;
+  width: auto;
+}
+.home-contact .home-contact-button #contact-button #contact_content {
+  width: 400px;
+}
+.home-contact .home-contact-button #contact-button #contact_underline {
+  width: 580px;
+  height: 20px;
+}
+.home-contact .home-contact-button #contact-button h3 {
+  color: #13d0ff;
+  transition: ease 0.3s;
+}
+.home-contact .home-contact-button #contact-button .project-button_content {
+  width: 800;
+}
+.home-contact .home-contact-button #contact-button:hover #contact_underline {
+  transform: translateY(-20px);
+}
+.home-contact .home-contact-button #contact-button:hover h3 {
+  color: white;
+}
 
 .portfolio-page {
   margin: 100px 0 120px 0;
+}
+
+.portfolio-header {
+  width: 1000px;
+  margin: 120px auto 80px auto;
 }
 
 .portfolio-body {
@@ -854,7 +929,8 @@ span.photoshop {
   right: 40px;
   margin-top: 64px;
 }
-.project_text .subhead {
+
+.subhead {
   font-family: Arvo, sans-serif;
   font-weight: 400;
   font-style: italic;
@@ -864,7 +940,8 @@ span.photoshop {
   position: relative;
   right: 40px;
 }
-.project_text .pull-quote {
+
+.pull-quote {
   font-family: Arvo, sans-serif;
   font-style: italic;
   margin: 40px 80px 40px 40px;
@@ -1055,6 +1132,10 @@ footer .resume {
   color: black;
   background: #ff6b6b;
   padding: 0 8px;
+  transition: ease 0.3s;
+}
+footer .resume:hover {
+  background: #13d0ff;
 }
 footer .hide {
   transition: ease 0.3s;

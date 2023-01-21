@@ -64,6 +64,11 @@ footer {
         color: $black;
         background: $pink;
         padding: 0 8px;
+        transition: ease .3s;
+
+        &:hover {
+            background: $blue;
+        }
     }
 
     .hide {
