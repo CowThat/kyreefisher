@@ -2,3 +2,24 @@
 layout: default
 title: About
 ---
+
+<div class="about-page">
+    <div class="about-page_content">
+        <h1>👋 hey!</h1>
+        <p>My name is Kyree, and I'm passionate about changing experiences to make them easier, more accesible, and more enjoyable for everyone. My interest areas are web design & development, UI/UX design, and </p>
+        <p>I'm currently a student at Virginia Commonwealth University (VCU) studying graphic design and computer science. I have focused my schoolwork and personal projects on my passions, designing for the web and best usability.</p>
+        <p>My work experience includes a 3 year internship with the VCUarts Development team, my current internship at a design studio in Richmond, VA, circle S studio, and more.</p>
+        <p>keep scrolling</p>
+        <p>download resume</p>
+
+        <a target="_blank" href="mailto:kyreefisher@gmail.com">
+            <div class="project-button">
+                <div class="project-button_content {{ page.name | slugify }}-button">
+                    <h6>email me</h6>
+                    <img src="../assets/images/small-arrow-white.png">
+                </div>
+                <div class="project-button_underline {{ page.name | slugify }}-button {% cycle 'blue-underline', 'seafoam-underline', 'pink-underline' %}"></div>
+            </div>            
+        </a>
+    </div>
+</div>

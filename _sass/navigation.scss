@@ -45,7 +45,7 @@
   a {
     color: $white;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 0 2px 0 $dark-gray-2-50;
+    box-shadow: 4px 0 8px 0 $dark-gray-2-50;
     font-size: 18px;
     padding: 15px 20px;
     margin: 0 5px;
@@ -55,7 +55,7 @@
 
 
     &:not(.current) {
-      background: $med-gray-1;
+      background: $gray-3;
       height: 80px;
     }
   }
@@ -98,7 +98,7 @@ a.current {
   }
   
   &#gallery {
-    background: $purple;
+    background: $seafoam;
   
     &:hover {
       background: $white;
@@ -126,7 +126,7 @@ a.current {
 }
 
 #gallery:not(.current):hover {
-  background: $purple;
+  background: $seafoam;
   color: $dark-gray-2;
   transform: translateY(10px);
 }

@@ -1,0 +1,68 @@
+.project-content_split {
+    width: auto;
+    min-height: 30vh;
+    max-height: calc(100vh - 100px);
+    margin: 0 0 60px 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    .project-content_split-highlight {
+        background: $gray-2;
+        border-radius: 24px;
+        width: 50%;
+        height: 100%;
+        padding: 40px 20px 40px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        span:not(.tool) {
+            font-family: $ralewayBold;
+            text-decoration: underline;
+        }
+
+        div:not(.project-button) {
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-right: 12px;
+            }
+        }
+
+        p {
+            margin: 8px 0;
+            font-size: 20px;
+        }
+    }
+
+    .project-content_split-summary {
+        width: 40%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        div {
+            width: 200px;
+            height: 12px;
+            position: relative;
+            bottom: 4px;
+            z-index: -1;
+            margin-bottom: 12px;
+        }
+    }
+
+    .home-radar-button {
+        width: 332px;
+    }
+
+    .vcuarts-alumni-gift-guide-button {
+        width: 380px;
+    }
+
+    .project-button {
+        margin-top: 12px;
+    }
+}

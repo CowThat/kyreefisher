@@ -13,9 +13,77 @@ footer {
     align-items: center;
     transform: translatex(-50%);
 
-    a {
+    .contact {
+        display: flex;
+        transition: all 0.3s ease;
+
+        a {
+            height: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 4px 10px;
+            margin: 0 4px;
+            overflow: hidden;
+            transition: ease .3s;
+
+            p {
+                color: $black;
+                margin: 0 12px;
+                transition: ease .3s;
+            }
+        }
+
+        img {
+            width: auto;
+            height: 20px;
+        }
+    }
+
+    .email {
+        width: 45px;
+        transition: ease .3s;
+    }
+
+    .linkedin {
+        width: 38px;
+        transition: ease .3s;
+    }
+
+    .instagram {
+        width: 40px;
+        transition: ease .3s;
+    }
+
+    .github {
+        width: 41px;
+        transition: ease .3s;
+    }
+
+    .resume {
         color: $black;
         background: $pink;
         padding: 0 8px;
+    }
+
+    .hide {
+        transition: ease .3s;
+        // display: none;
+    }
+
+    .email:hover {
+        width: 254px;
+    }
+
+    .linkedin:hover {
+        width: 120px;
+    }
+
+    .instagram:hover {
+        width: 128px;
+    }
+
+    .github:hover {
+        width: 108px;
     }
 }

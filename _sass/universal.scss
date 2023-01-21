@@ -70,6 +70,12 @@ img {
   font-family: $jost;
 }
 
+
+
+
+
+
+
 .pink {
   color: $pink;
 }
@@ -90,6 +96,17 @@ img {
   color: $white;
 }
 
+.black {
+  color: $black;
+}
+
+
+
+
+
+
+
+
 .pink-bkgd {
   background-color: $pink;
 }
@@ -102,9 +119,18 @@ img {
   background-color: $seafoam;
 }
 
-.underline {
-  text-decoration: underline dotted;
+.purple-bkgd {
+  background-color: $purple;
 }
+
+
+
+
+
+
+
+
+
 
 .dash-pink {
   border-top: 12px solid $pink;
@@ -133,6 +159,15 @@ img {
   margin-right: 4px
 }
 
+
+
+
+
+
+
+
+
+
 .dash-pink-mini {
   border-top: 8px solid $pink;
   width: 28px;
@@ -160,6 +195,12 @@ img {
   margin: 15px 0 5px;
 }
 
+
+
+
+
+
+
 .dash-pink-h2 {
   border-top: 8px solid $pink;
   width: 36px;
@@ -181,10 +222,22 @@ img {
   margin-right: 4px
 }
 
-.none {
-  display: none;
+
+
+.dash-blue-h5 {
+  border-top: 6px solid $blue;
+  width: 24px;
+  margin-bottom: 8px;
+  margin-right: 4px
 }
 
-img {
-  pointer-events: none
+
+
+
+
+
+
+
+.none {
+  display: none;
 }

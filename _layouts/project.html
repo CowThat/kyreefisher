@@ -11,9 +11,10 @@ layout: default
         <div class="project-hero">
             <div class="project-hero_desc">
                 <div class="{% cycle 'dash-pink-h2', 'dash-blue-h2', 'dash-seafoam-h2' %}"></div>
-                <h2>{{ page.full_name }}</h2>
-                <!-- <h6>{{ page.date_sem }} {{ page.year }}  |  {{ page.medium }}{% if page.dimensions %}  |  {{ page.dimensions }}{% endif %}</h6> -->
-                <h6>{{ project.blurb }}</h6>
+                <h2>{{ project_fullname }}</h2>
+                {% if project.subtitle %}
+                    <h6 class="subtitle">{{ project_subtitle }}</h6>
+                {% endif %}
                 <div class="project-hero_desc-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
             </div>
             <div class="project-hero_image">

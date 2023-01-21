@@ -104,7 +104,7 @@
   border-radius: 24px;
   width: 88%;
   max-height: 50vh;
-  padding: 50px 50px 30px 50px;
+  padding: 50px 50px 40px 50px;
   margin: 0 2vw;
   position: relative;
   transition: ease .7s;
@@ -217,7 +217,7 @@
 
 .home-other_wrapper {
   margin: 0 auto;
-  height: 48vh;
+  height: 50vh;
   width: 100vw;   
   max-width: 100%;    
   position: relative;
@@ -249,12 +249,12 @@
   min-width: 300px;
   min-width: 380px;
   width: 20%;
-  height: calc(100% - 10px);
+  height: calc(100% - 24px);
   background: $gray-2;
   // outline: 20px solid $dark-gray-2;
   border-radius: 24px;
   padding: 50px;
-  margin: 12px 12px;
+  margin: 16px;
   scroll-behavior: smooth;
   scroll-snap-type: none;
   position: relative;

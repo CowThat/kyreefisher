@@ -6,15 +6,14 @@
 {% assign project_url   = project.name | slugify %}
 {% assign project_external = project.external_url %}
 
-{% if project.external_url %}
-  {% assign external    = true %}
+{% if project.full_name %}
+  {% assign project_fullname  = project.full_name %}
 {% else %}
-  {% assign external    = false %}
+  {% assign project_fullname  = project.name %}
 {% endif %}
 
-{% assign project_fullname  = project.full_name %}
-{% assign project_datesem   = project.date_sem %}
-{% assign project_year      = project.year %}
+{% assign project_start   = project.date_sem %}
+{% assign project_end      = project.year %}
 {% assign project_med       = project.medium %}
 {% assign project_dim       = project.dimensions %}
 {% assign project_role      = project.role %}
@@ -29,6 +28,13 @@
   {% assign priority        = "phase4" %}
 {% endif %}
 
+{% if project.external_url %}
+  {% assign external    = true %}
+{% else %}
+  {% assign external    = false %}
+{% endif %}
+
 {% assign project_order      = project.sort_order %}
-{% assign project_featured      = project.featured_image %}
+{% assign project_featured   = project.featured_image %}
 {% assign project_blurb      = project.blurb %}
+{% assign project_subtitle      = project.subtitle %}

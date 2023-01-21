@@ -1,4 +1,34 @@
 <div class="project-content_split">
-    <div class="project-content_split-highlight {% cycle 'blue-bkgd', 'seafoam-bkgd', 'pink-bkgd' %}"></div>
-    <p>During the last sprint, SCKS decided are research plans and goals, and decided to focus on researching housing around Richmond and housing laws, as well as the current housing options available. We gathered local, statewide, and federal laws on housing, and tenants rights when renting. We also created a survey and made posters which we posted around different parts around campus.</p>
+    <div class="project-content_split-highlight {% cycle 'blue-bkgd', 'seafoam-bkgd', 'pink-bkgd' %}">
+        <p><span>outcome:</span> {{ page.medium }}</p>
+        <p><span>role:</span> {{ page.role }}</p>
+        <div>
+            <p><span>tools:</span></p> 
+            <p id="{{ page.name | slugify }}-tools">
+                {%- for tool in page.tools -%}
+                    {% assign tool_class = tool | downcase | replace: ' ', '-' %}
+                    <span class="tool {{ tool_class }}">{{ tool }}</span>
+                {%- endfor -%}
+            </p>        
+        </div>
+        <p><span>time period:</span> {{ page.date_sem }} – {{ page.year }}</p>
+        {% if page.external_url %}
+            <a target="_blank" href="{{ page.external_url }}">
+                <div class="project-button">
+                    <div class="project-button_content {{ page.name | slugify }}-button">
+                        <h6>{{ page.external_url_blurb }}</h6>
+                        <img src="../assets/images/small-arrow-white.png">
+                    </div>
+                    <div class="project-button_underline {{ page.name | slugify }}-button {% cycle 'blue-underline', 'seafoam-underline', 'pink-underline' %}"></div>
+                </div>            
+            </a>
+        {% endif %}
+    </div>
+
+    <div class="project-content_split-summary">
+        <h5>project summary:</h5>
+        <div class="{% cycle 'dash-blue-mini', 'dash-seafoam-mini', 'dash-pink-mini' %}"></div>
+        <h4>{{ page.blurb }}</h4>
+    </div>
 </div>
+

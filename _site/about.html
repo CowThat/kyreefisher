@@ -8,6 +8,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -47,11 +50,6 @@
 
     
 
-    <a href="http://localhost:4000/contact.html" class="nav-button " id="contact">contact</a>
-    
-
-    
-
     <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
     
 
@@ -59,13 +57,64 @@
 
 </nav>
     <div class="content">
-      
+      <div class="about-page">
+    <div class="about-page_content">
+        <h1>👋 hey!</h1>
+        <p>My name is Kyree, and I'm passionate about changing experiences to make them easier, more accesible, and more enjoyable for everyone. My interest areas are web design & development, UI/UX design, and </p>
+        <p>I'm currently a student at Virginia Commonwealth University (VCU) studying graphic design and computer science. I have focused my schoolwork and personal projects on my passions, designing for the web and best usability.</p>
+        <p>My work experience includes a 3 year internship with the VCUarts Development team, my current internship at a design studio in Richmond, VA, circle S studio, and more.</p>
+        <p>keep scrolling</p>
+        <p>download resume</p>
+
+        <a target="_blank" href="mailto:kyreefisher@gmail.com">
+            <div class="project-button">
+                <div class="project-button_content about-html-button">
+                    <h6>email me</h6>
+                    <img src="../assets/images/small-arrow-white.png">
+                </div>
+                <div class="project-button_underline about-html-button blue-underline"></div>
+            </div>            
+        </a>
+    </div>
+</div>
       <footer>
-    <p class="last-updated">last updated: 1-14-2023</p>
+    <p class="last-updated">last updated: 1-21-2023</p>
+    <div class="contact">
+        <a class="email pink-bkgd" target="_blank" href="mailto:kyreefisher@gmail.com">        
+            <img src="../assets/images/email_icon.png" alt="email: kyreefisher01@gmail.com">
+            <p class="hide">kyreefisher01@gmail.com</p>
+        </a>
+        <a class="linkedin blue-bkgd" target="_blank" href="https://www.linkedin.com/in/kyree-fisher-942b68153">        
+            <img src="../assets/images/linkedin_icon.png" alt="linkedin link">
+            <p class="hide">LinkedIn</p>
+        </a>
+        <a class="instagram seafoam-bkgd" target="_blank" href="https://www.instagram.com/cowthatdesign/">        
+            <img src="../assets/images/instagram_icon.png" alt="instagram link">
+            <p class="hide">instagram</p>
+        </a>
+        <a class="github purple-bkgd" target="_blank" href="https://www.github.com/cowthat">        
+            <img src="../assets/images/github_icon.png" alt="github link">
+            <p class="hide">github</p>
+        </a>
+    </div>
     <div>
-        <a class="resume">download resume</a>
+        <a class="resume">resume</a>
     </div>
 </footer>
+
+<!-- <script>
+    $(document).ready(function(){
+  $('.contact a').hover(
+    function() {
+      $(this).find('p').removeClass('hide');
+    },
+    function() {
+      $(this).find('p').addClass('hide');
+    }
+  );
+});
+
+</script> -->
     </div>
   </body>
 </html>

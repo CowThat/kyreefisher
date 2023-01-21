@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&family=Raleway:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: "Jost-Regular";
   src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
@@ -102,6 +102,10 @@ img {
   color: white;
 }
 
+.black {
+  color: black;
+}
+
 .pink-bkgd {
   background-color: #ff6b6b;
 }
@@ -114,8 +118,8 @@ img {
   background-color: #59c9a5;
 }
 
-.underline {
-  text-decoration: underline dotted;
+.purple-bkgd {
+  background-color: #b379fa;
 }
 
 .dash-pink {
@@ -193,12 +197,15 @@ img {
   margin-right: 4px;
 }
 
-.none {
-  display: none;
+.dash-blue-h5 {
+  border-top: 6px solid #13d0ff;
+  width: 24px;
+  margin-bottom: 8px;
+  margin-right: 4px;
 }
 
-img {
-  pointer-events: none;
+.none {
+  display: none;
 }
 
 .navigation {
@@ -242,7 +249,7 @@ img {
 .nav-button-container a {
   color: white;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 0 2px 0 rgba(17, 17, 17, 0.4588235294);
+  box-shadow: 4px 0 8px 0 rgba(17, 17, 17, 0.4588235294);
   font-size: 18px;
   padding: 15px 20px;
   margin: 0 5px;
@@ -251,7 +258,7 @@ img {
   transition: ease 0.3s;
 }
 .nav-button-container a:not(.current) {
-  background: #212121;
+  background: #2f2f2f;
   height: 80px;
 }
 
@@ -286,7 +293,7 @@ a.current#contact:hover {
   background: white;
 }
 a.current#gallery {
-  background: #b379fa;
+  background: #59c9a5;
 }
 a.current#gallery:hover {
   background: white;
@@ -311,7 +318,7 @@ a.current#gallery:hover {
 }
 
 #gallery:not(.current):hover {
-  background: #b379fa;
+  background: #59c9a5;
   color: #111111;
   transform: translateY(10px);
 }
@@ -414,7 +421,7 @@ a.current#gallery:hover {
   border-radius: 24px;
   width: 88%;
   max-height: 50vh;
-  padding: 50px 50px 30px 50px;
+  padding: 50px 50px 40px 50px;
   margin: 0 2vw;
   position: relative;
   transition: ease 0.7s;
@@ -513,7 +520,7 @@ a.current#gallery:hover {
 
 .home-other_wrapper {
   margin: 0 auto;
-  height: 48vh;
+  height: 50vh;
   width: 100vw;
   max-width: 100%;
   position: relative;
@@ -537,11 +544,11 @@ a.current#gallery:hover {
   min-width: 300px;
   min-width: 380px;
   width: 20%;
-  height: calc(100% - 10px);
+  height: calc(100% - 24px);
   background: #2b2b2b;
   border-radius: 24px;
   padding: 50px;
-  margin: 12px 12px;
+  margin: 16px;
   scroll-behavior: smooth;
   scroll-snap-type: none;
   position: relative;
@@ -678,8 +685,27 @@ a.current#gallery:hover {
   min-height: 40vh;
 }
 
+.about-page {
+  min-height: calc(100vh - 200px);
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-page_content {
+  max-width: 1200px;
+  padding: 100px;
+}
+.about-page_content .project-button .project-button_content, .about-page_content .project-button .project-button_underline {
+  width: 132px;
+}
+.about-page_content .project-button:hover .project-button_underline {
+  transform: translateY(-16px);
+}
+
 .portfolio-page {
-  margin-top: 80px;
+  margin: 100px 0 120px 0;
 }
 
 .portfolio-body {
@@ -772,8 +798,8 @@ span.photoshop {
   flex-direction: column;
   justify-content: center;
 }
-.project-hero_desc h2 {
-  padding-bottom: 16px;
+.project-hero_desc h6 {
+  padding-top: 16px;
 }
 
 .project-hero_desc-shadow {
@@ -802,32 +828,173 @@ span.photoshop {
   width: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.subtitle {
+  font-family: Arvo, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 20px;
 }
 
 .project-content_container {
   width: 80vw;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 140px auto;
   height: 100%;
-  margin-bottom: 100px;
+}
+
+.project_text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.project_text h3 {
+  position: relative;
+  right: 40px;
+  margin-top: 64px;
+}
+.project_text .subhead {
+  font-family: Arvo, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  border-left: 4px #13d0ff solid;
+  padding: 0 0 0 20px;
+  margin-top: 20px;
+  position: relative;
+  right: 40px;
+}
+.project_text .pull-quote {
+  font-family: Arvo, sans-serif;
+  font-style: italic;
+  margin: 40px 80px 40px 40px;
+}
+
+.project_gallery {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.project_gallery img {
+  border-radius: 16px;
+  margin: 0 0 2% 0;
+  max-width: 49%;
+  flex: 50%;
+  transition: ease 0.5s;
+}
+
+.project_image-info {
+  max-width: 1000px;
+  height: 250px;
+  margin: 40px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.project_image-info img {
+  border-radius: 16px;
+  max-width: 48%;
+  min-width: 400px;
+  transition: ease 0.5s;
+}
+.project_image-info .project_image-info_text {
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.project_image-info p {
+  margin-top: 20px;
+}
+
+.info-reverse {
+  flex-direction: row-reverse;
+}
+
+.project_image-center {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.project_image-center img {
+  max-width: 100%;
+  border-radius: 24px;
+}
+
+.project-content_split-highlight:hover .project-button_underline {
+  transform: translateY(-16px);
+}
+
+button {
+  background: green;
+  position: absolute;
+  z-index: 1;
 }
 
 .project-content_split {
   width: auto;
-  height: 20vh;
+  min-height: 30vh;
+  max-height: calc(100vh - 100px);
+  margin: 0 0 60px 0;
   position: relative;
   display: flex;
+  justify-content: space-between;
 }
-.project-content_split p {
-  width: 50%;
-  margin: 0;
-}
-
-.project-content_split-highlight {
+.project-content_split .project-content_split-highlight {
+  background: #2b2b2b;
   border-radius: 24px;
   width: 50%;
   height: 100%;
+  padding: 40px 20px 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.project-content_split .project-content_split-highlight span:not(.tool) {
+  font-family: "Raleway-Bold", Raleway, sans-serif;
+  text-decoration: underline;
+}
+.project-content_split .project-content_split-highlight div:not(.project-button) {
+  display: flex;
+  align-items: center;
+}
+.project-content_split .project-content_split-highlight div:not(.project-button) p {
+  margin-right: 12px;
+}
+.project-content_split .project-content_split-highlight p {
+  margin: 8px 0;
+  font-size: 20px;
+}
+.project-content_split .project-content_split-summary {
+  width: 40%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project-content_split .project-content_split-summary div {
+  width: 200px;
+  height: 12px;
+  position: relative;
+  bottom: 4px;
+  z-index: -1;
+  margin-bottom: 12px;
+}
+.project-content_split .home-radar-button {
+  width: 332px;
+}
+.project-content_split .vcuarts-alumni-gift-guide-button {
+  width: 380px;
+}
+.project-content_split .project-button {
+  margin-top: 12px;
 }
 
 footer {
@@ -845,10 +1012,64 @@ footer {
   align-items: center;
   transform: translatex(-50%);
 }
-footer a {
+footer .contact {
+  display: flex;
+  transition: all 0.3s ease;
+}
+footer .contact a {
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  margin: 0 4px;
+  overflow: hidden;
+  transition: ease 0.3s;
+}
+footer .contact a p {
+  color: black;
+  margin: 0 12px;
+  transition: ease 0.3s;
+}
+footer .contact img {
+  width: auto;
+  height: 20px;
+}
+footer .email {
+  width: 45px;
+  transition: ease 0.3s;
+}
+footer .linkedin {
+  width: 38px;
+  transition: ease 0.3s;
+}
+footer .instagram {
+  width: 40px;
+  transition: ease 0.3s;
+}
+footer .github {
+  width: 41px;
+  transition: ease 0.3s;
+}
+footer .resume {
   color: black;
   background: #ff6b6b;
   padding: 0 8px;
+}
+footer .hide {
+  transition: ease 0.3s;
+}
+footer .email:hover {
+  width: 254px;
+}
+footer .linkedin:hover {
+  width: 120px;
+}
+footer .instagram:hover {
+  width: 128px;
+}
+footer .github:hover {
+  width: 108px;
 }
 
 @keyframes arrow {
