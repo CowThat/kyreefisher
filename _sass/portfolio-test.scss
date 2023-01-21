@@ -1,0 +1,79 @@
+.portfolio-page {
+  margin: 100px 0 120px 0;
+}
+
+.portfolio-body {
+  margin: 40px 0 80px 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1 1 33%;
+}
+
+.portfolio-container{
+  width: 100%;
+  max-width: 1200px;
+  max-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  // column-count: 3;
+  // column-gap: 16px;
+
+  .portfolio-card {
+    background: $gray-2;
+    border: 1px solid $dark-gray-2;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    min-width: 200px;
+    height: min-content;
+    margin: 16px 0;
+    position: relative;
+    flex: 1 1 160px;
+    break-inside: avoid;
+    // display: block;
+    // align-items: stretch;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .portfolio-card-body {
+      margin: 20px;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+span.tool {
+  font-size: 16px;
+  border: 1px solid $blue;
+  border-radius: 16px;
+  padding: 2px 12px;
+  margin: 4px 2px;
+  display: inline-block;
+}
+
+span.illustrator {
+  border: 1px solid $illustrator !important;
+}
+
+span.indesign {
+  border: 1px solid $indesign !important;
+}
+
+span.photoshop {
+  border: 1px solid $photoshop !important;
+}
