@@ -21,8 +21,14 @@ layout: default
                 <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
             </div>
         </div>
-        <div class="project-content_container project-text">
+        <div class="project-content_container">
+            {% include project-details.html %}
+
+
+            <div class="project_text">
             {{ content }}
+            </div>
+
         </div>
     {% endif %}
 

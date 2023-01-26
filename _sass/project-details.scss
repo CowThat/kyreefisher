@@ -62,7 +62,38 @@
         width: 400px;
     }
 
+    .chattycatty-button {
+        width: 316px;
+
+        &.project-button_underline {
+            background: $blue;
+        }
+    }
+
+    .kyrees-squishies-button {
+        width: 340px;
+
+        // &.project-button_underline {
+        //     background: $blue;
+        // }
+    }
+
+    .dr-yasmiyn-irizarry-button {
+        width: 312px;
+
+        &.project-button_underline {
+            background: $seafoam;
+        }
+    }
+
     .project-button {
         margin-top: 12px;
     }
+
+    .scroll-down {
+        position: absolute;
+        bottom: -120px;
+        left: 54%;
+    }
 }
+

@@ -1163,8 +1163,28 @@ video {
 .project-content_split .vcuarts-alumni-gift-guide-button {
   width: 400px;
 }
+.project-content_split .chattycatty-button {
+  width: 316px;
+}
+.project-content_split .chattycatty-button.project-button_underline {
+  background: #13d0ff;
+}
+.project-content_split .kyrees-squishies-button {
+  width: 340px;
+}
+.project-content_split .dr-yasmiyn-irizarry-button {
+  width: 312px;
+}
+.project-content_split .dr-yasmiyn-irizarry-button.project-button_underline {
+  background: #59c9a5;
+}
 .project-content_split .project-button {
   margin-top: 12px;
+}
+.project-content_split .scroll-down {
+  position: absolute;
+  bottom: -120px;
+  left: 54%;
 }
 
 footer {
