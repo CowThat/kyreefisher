@@ -2,6 +2,7 @@
 {% assign project_img   = project.image %}
 {% assign project_name  = project.name %}
 {% assign project_desc  = project.description %}
+{% assign project_blurb  = project.blurb %}
 {% assign project_tools = project.tools %}
 {% assign project_url   = project.name | slugify %}
 {% assign project_external = project.external_url %}
@@ -12,8 +13,8 @@
   {% assign project_fullname  = project.name %}
 {% endif %}
 
-{% assign project_start   = project.date_sem %}
-{% assign project_end      = project.year %}
+{% assign project_start   = project.start %}
+{% assign project_end      = project.end %}
 {% assign project_med       = project.medium %}
 {% assign project_dim       = project.dimensions %}
 {% assign project_role      = project.role %}

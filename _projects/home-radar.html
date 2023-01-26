@@ -11,10 +11,10 @@ featured_image: home-radar_featured-image.png
 
 medium: Hand-coded Website
 dimensions: 
-tools: [CSS, HTML, JS, Jekyll, GitHub Pages]
+tools: [Figma, CSS, HTML, JS, Jekyll, GitHub Pages]
 role: web design, UX design, front and back end development
-date_sem: August, 2022
-year: December, 2022
+start: August
+end: December, 2022
 external_url: "https://home-radar.github.io"
 external_url_blurb: view the Home Radar website
 
@@ -24,10 +24,12 @@ sort_order: 1
 {% include project-details.html %}
 
 <div class="project_text">
-    <h3>
-        <div class="dash-blue-mini"></div>
-        the problem
-    </h3>
+
+    <div class="project_section">
+        <h3>
+            <div class="dash-blue-mini"></div>
+            the problem
+        </h3>
         <h6 class="subhead">
             what are the problems students of VCU facing when looking for adequate housing?
         </h6>
@@ -48,67 +50,220 @@ sort_order: 1
             "Unsafe, unhealthy, and unaffordable housing options plague Richmond."
         </h5>
 
-    <h3>
-        <div class="dash-blue-mini"></div>
-        initial research
-    </h3>
-
         <p>
-            First, my team and I created a research plan of action, beginning with desk research, then moving on to surveys and interviews with possible users. I began with researching housing options around Richmond and VCU campus and compiled them into a google sheet
+            Throughtout this project, we used agile methods and sprints to complete our work.
         </p> 
 
-        <div class="project_image-info">
-            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_planning_google-sheet.png" alt="Google sheet with information about apartments in Richmond">
-            <div class="project_image-info_text">
-                <!-- <div>
-                    <div class="dash-blue-h5"></div>
-                    <h5>information title</h5>
-                </div> -->
-                <p>
-                    For each apartment, I collected information about the average cost of rent for each of their bedroom options from studio to four bed. I also took note of other things that would be a monthly cost, such as whether utilities or wifi were covered in the rent.
-                </p>
-            </div>
-        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="project_section">
+        <h3>
+            <div class="dash-blue-mini"></div>
+            initial research
+        </h3>
 
         <p>
-            I looked at important factors for many people when selecting an apartment, such as AC, in-unit laundry machines versus laundry facilities, or whether they provide parking (or charge additionally for it). I also took note of amenities each apartment provided, such as pets, secure entry, fitness centers, balconies, natural lighting, space, proximity to campus, and more. 
+            To start our research, my team and I created a research plan of action, beginning with desk research, then moving on to surveys and interviews with possible users. I began with researching housing options around Richmond and the VCU campus and compiled them into a Google Sheet.
             <br><br>
-            When I was unable to find specific information online, I called the apartment management and acted like a potential resident. If they didn't answer multiple of my calls or return my call from voicemaills, I also factored that into the quality of the management.
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_planning_google-sheet.png" alt="Google sheet with information about apartments in Richmond">
+            For each apartment, I collected information about the average cost of rent for each of their bedroom options, from studio to four-bed. I also took note of other recurring costs, such as whether or not utilities or wifi were covered by rent.
             <br><br>
-            Then, I went through multiple sites to find reviews for each apartment and narrowed them down to only reviews posted in the past few years. I took note of changes in their reviews over the years, whether they improved or worsened, and what problems were consistent. I wrote down common problems people mentioned in their reviews and took extra care to interpret the quality of the management, the expediency and quality of maintenance and repairs, and the presence of problems of health and safety such as leaks and pests.  
+            I assessed factors that are frequently important to renters, such as AC, laundry facilities and whether or not they were in-unit, and whether or not they provide parking, charge for parking, or have no parking available. I also took note of amenities each apartment provided, such as pets, secure entry, fitness centers, balconies, natural lighting, space, proximity to campus, and more.
+            <br><br>
+            If there was a lack of information about a listing online, I called the apartment manager for that location. If they didn't answer multiple calls or respond to my voicemail, I factored that into the quality of the management.
+            <br><br>
+            Then, I researched multiple websites to find recent reviews for each apartment. I took note of changes in their reviews over the years, whether they improved or not, and what problems were consistent. I focused primarily on interpreting the quality of the management, the expediency and quality of maintenance, and the presence of problems of health and safety, such as leaks and pests.
+            <br><br>
+            During this time when I was doing this, my teammates completed research on laws and housing/tenants rights in Richmond, VA, compiling all of their research in one place.
         </p> 
 
         <h6 class="subhead">
             surveys and interviews
         </h6>
 
-    <h3>
-        <div class="dash-blue-mini"></div>
-        what does the user need? 
-    </h3>
+        <p>
+            The next phase of our research involved surveying and interviewing current renters. We developed a flier with a QR code that brought users to a survey, which had over 25 respondents. We also conducted over 50 in-person interviews on-campus, recording their answers, emotions, and comments surrounding safety, cleanliness, and affordability. 
+            <br><br>
+            We asked questions about what type of housing the interviewee lived in, as well as how they felt about the security, price, initial condition of the building, and process for having things repaired. We compiled this data to show what issues were prevalent in what apartment buildings, as well as what buildings did certain things well. 
+        </p>
 
-    <h3>
-        <div class="dash-blue-mini"></div>
-        the MVP
-    </h3>
+    </div>
 
-    <h3>
-        <div class="dash-blue-mini"></div>
-        prototypes
-    </h3>
 
-    <h3>
-        <div class="dash-blue-mini"></div>
-        final outcome
-    </h3>
 
-    <div class="project_image-center home-radar-slick">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_cover-photo.png" alt="{{ project_name }}: {{project_desc}}">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_apartment-page.png" alt="{{ project_name }}: {{project_desc}}">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_about-us_hero.png" alt="{{ project_name }}: {{project_desc}}">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_about-us_map.png" alt="{{ project_name }}: {{project_desc}}">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_FAQ_hero.png" alt="{{ project_name }}: {{project_desc}}">
-        <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_FAQ_accordian.png" alt="{{ project_name }}: {{project_desc}}">
+
+
+
+
+    <div class="project_section">
+        <h3>
+            <div class="dash-blue-mini"></div>
+            what does the user need? 
+        </h3>
+        <p>
+            The original outcomes we were pursuing are increasing education on tenants rights, improving effectiveness in finding housing, and helping to make consumers aware of potentially unsafe housing. After our surveys and interviews, we slightly shifted our goals. These were some of our realizations of tenants needs:
+        </p>
+        <ol class="project_list">
+            <li>
+                There is a lot of misinformation and incorrect advertisement for apartments in the area.
+            </li>
+            <li>
+                Most tenants don’t know their rights when it comes to repairs, rent, etc.
+            </li>
+            <li>
+                Many people have problems with getting proper repairs in their apartments, especially for leaks or major repairs. When people do get repairs, they are often bandaid fixes.
+            </li>
+            <li>
+                Most people feel their apartments are too expensive for the services they get.
+            </li>
+            <li>
+                Most tenants feel secure in their apartments. While there of course were outliers, this was not a major issue experienced by people living on and around campus.
+            </li>
+        </ol>
+
+        <p>
+            While we knew we couldn’t resolve these issues in the given time period, we found the idea of misinformation and advertisement to be extremely prevalent among tenants. Many thought their apartments would be nice, but once they moved in, they realized it wasn’t the case. Many apartments put on a good face, but in reality, had poor quality management, maintenance, or cleanliness. Many tenants also were unaware of what their rights actually were, and we thought these two things were a glaring problem with students being taken advantage of. 
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project_section">
+        <h3>
+            <div class="dash-blue-mini"></div>
+            the MVP & prototypes
+        </h3>
+
+        <p>
+            Next, we explored possible outcomes for our project that would help address these issues faced by renters, or at least help with making more informed decisions. We considered options such as creating petitions or shared documents with students on campus, creating handouts with information about tenant's rights/apartments in the area, or working with current VCU housing and apartment hunting websites to address misinformation. 
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_outcomes.png" alt="{{ project_name }}: {{project_desc}}" class="right">In the end, we decided to create a website with our own information, because we thought that having all of our information in one place and doing our own research might be more effective than getting other websites/the school to change their policies. We also figured a website may be timeless – it will always exist as a resource, whereas pamphlets or anything physical may be lost by users.
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_product-backlog.png" alt="{{ project_name }}: {{project_desc}}">
+            <br><br>
+            Then, we started focusing on what things would be helpful features to impliment in our website. We wanted it to be familiar, similar to other websites that people use to learn information about apartments, but also have its own unique style and way of presenting information. We knew that we wanted to have a section on tenant's rights and information that is important for renters specific to Richmond and VA laws (as well as federal laws). We also wanted to have a visual way to see the apartments locations since distance to campus is important for students, so a map was high on our list of important features. Some other things we were considering early on were a table for people to sort information by what was important to them, mobile and web compatability, and more. Not all of these features ended up in the final product, and we ended up with features outside of these as well, but it was a good jumping off point for our product.
+            <br><br>
+            The Minimum Viable Product for our project was originally a webpage where people could learn about tenant’s rights, due to a lack of knowledge in the community about the rights they have as renters. We altered our MVP after further assessment to be a map where users could find reliable information about specific apartment buildings in the area.
+        </p>
+
+        <div class="project_gallery">
+            <!-- <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_prototype1.png" alt="{{ project_name }}: {{project_desc}}"> -->
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_prototype3.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_prototype2.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+        
+        <p>
+            After multiple rounds of low-fidelity prototyping, we began to figure out what style that we wanted the website to have, its brand. We looked for inspiration until we came up with a color pallete and brand that we loved, keeping the design light and airy instead of too serious. We used this style to design our final website, and then moved on to actual production.
+        </p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="project_section">
+
+        <h3>
+            <div class="dash-blue-mini"></div>
+            final outcome
+        </h3>
+
+        <h6 class="subhead">
+            the final website can be viewed at <a href="https://home-radar.github.io" target="_blank">this link</a>
+        </h6>
+
+        <!-- <div class="project-button">
+            <div class="project-button_content">
+                <h6>view homeradar</h6>
+                <img src="../assets/images/small-arrow-white.png">
+            </div>
+            <div class="project-button_underline blue-underline"></div>
+        </div> -->
+
+        <p>
+            In order to achieve our final product, I began hand-coding the website. This process included learning Jekyll, a program that works with Github Pages to build out websites. I built a functional map, set up a sortable table with the data we accumulated in the research phase, a responsive design for mobile, tablet, and computers, and multiple web browser compatibility (Safari, Chrome, IE, etc).
+        </p>
+
+        <div class="project_image-center">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_cover-photo.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_home_apartment-page.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+        <p class="caption">home page and apartment page</p>
+
+        <p>
+            The map functionality allowed for hovering over data points to display names of locations, which users could click on to pull up our data page for that apartment building. I implemented ratings for each location based on data from our interviews and research, scoring each rental with an overall score as well as a score for maintenance, management, and pest control. I also added general information about the location, such as distance from the VCU Compass, the address, the management company, and links to the rental company’s website. We also have a functional FAQ page, which utilized accordions for easier readability. We focused on information that people were more often unaware of during interviews. We also included a section where users could submit a review for their current rental. 
+            <br><br>
+            After doing another round of user testing, we made a few updates based on their feedback. We updated the website reviews from being out of 3 stars to being out of 5 stars. We also made some tweaks to the design such as increasing the font size, left-aligning all of the text, and redirecting the user towards the map.
+        </p>
+
+        <div class="project_image-center">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_about-us_hero.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_about-us_map.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+
+        <p class="caption">about us page that gives a little information about the project</p>
+
+        <div class="project_image-center">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_FAQ_hero.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_FAQ_accordian.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+
+        <p class="caption">frequently asked questions on tenants rights</p>
+
+        <p>
+            We also created posters, zines, and social media posts to promote the website. The posters and zines were put all around campus and nearby apartments. I wasn't the primary designer for the poster or zines, but did help to critique the designs and promote the site. In all, we printed over 400 zines and 200 posters to place around campus.
+        </p>
+
+        <div class="project_gallery">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_poster1.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_poster2.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_poster4.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_poster3.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+        <p class="caption">images of posters made to promote final website</p>
+
+        <div class="project_gallery">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_zines.png" alt="{{ project_name }}: {{project_desc}}">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_zines2.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
+        <p class="caption">images of zines</p>
+    </div>
+
+    <div class="project_section">
+        <h3>
+            <div class="dash-blue-mini"></div>
+            results
+        </h3>
+        <p>
+            In the end, we had over 79 users in the initial 3 weeks of the product launch (the flat week in the graph is from Thanksgiving break when students were off campus). The zines were highly effective in getting spikes of traffic, but posters have helped us maintain low number since then. While we haven't promoted the website since Decemeber, we still have posters up around campus and have a few visitors per week.
+        </p>
+        <div class="project_image-center">
+            <img src="../assets/portfolio/phase{{ page.priority }}/{{ page.name | slugify }}/home-radar_results.png" alt="{{ project_name }}: {{project_desc}}">
+        </div>
     </div>
 </div>
 

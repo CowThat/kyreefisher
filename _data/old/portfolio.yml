@@ -4,8 +4,8 @@
     visible: yes
     name: Home Radar 1234
     full_name: Home Radar – VCU Apartment Hunting
-    date_sem: Nov,
-    year: 2022
+    start: Nov,
+    end: 2022
     image: 
     medium: Hand-coded Website
     dimensions: 
@@ -18,8 +18,8 @@
     visible: yes
     name: VCUarts Alumni Gift Guide
     full_name: VCUarts Alumni Gift Guide
-    date_sem: Oct. 14,
-    year: 2022
+    start: Oct. 14,
+    end: 2022
     image: 
     medium: Website
     dimensions: 
@@ -32,8 +32,8 @@
     visible: yes
     name: Guide to GDES
     full_name: The Survival Guide to GDES
-    date_sem: Oct,
-    year: 2021
+    start: Oct,
+    end: 2021
     image: guide-to-gdes.png
     medium: Pamphlet
     dimensions: 11" x 17" (unfolded)
@@ -46,8 +46,8 @@
     visible: yes
     name: Billionaires and the Wealth Gap
     full_name: Billionaires and the Wealth Gap in America
-    date_sem: Fall
-    year: 2021
+    start: Fall
+    end: 2021
     image: 
     medium: Pamphlet
     dimensions: 
@@ -60,8 +60,8 @@
     visible: yes
     name: Chatty Catty
     full_name: Chatty Catty
-    date_sem: Fall
-    year: 2022
+    start: Fall
+    end: 2022
     image: 
     medium: Website mockup
     dimensions:  
@@ -74,8 +74,8 @@
     visible: yes
     name: Dr. Yasmiyn Irizarry
     full_name: Dr. Yasmiyn Irizarry Website
-    date_sem: Spring
-    year: 2022
+    start: Spring
+    end: 2022
     image: 
     medium: Website mockup
     dimensions: 
@@ -88,8 +88,8 @@
     visible: yes
     name: 'Kyrees Squishies'
     full_name: 'Kyree''s Squishies – Passion Website'
-    date_sem: Spring
-    year: 2022
+    start: Spring
+    end: 2022
     image: 
     medium: Hand-coded website
     dimensions: 
@@ -102,8 +102,8 @@
     visible: yes
     name: The World of Asteria
     full_name: Bill
-    date_sem: May
-    year: 2022
+    start: May
+    end: 2022
     image: 
     medium: Book publication
     dimensions: 5.5" x 8.5"
@@ -116,8 +116,8 @@
     visible: yes
     name: VCUarts Internship
     full_name: VCUarts Internship
-    date_sem: 2019 –
-    year: 2021
+    start: 2019 –
+    end: 2021
     image: 
     medium: 
     dimensions: 
@@ -130,8 +130,8 @@
     visible: yes
     name: Plants and Mankind
     full_name: Plants and Mankind
-    date_sem: Fall
-    year: 2020
+    start: Fall
+    end: 2020
     image: 
     medium: Book publication
     dimensions: 5.5" x 8.5"
@@ -144,8 +144,8 @@
     visible: yes
     name: sitting alone at a rave.
     full_name: sitting alone at a rave.
-    date_sem: Spring
-    year: 2021
+    start: Spring
+    end: 2021
     image: 
     medium: Collage posters
     dimensions: Size varies
@@ -158,8 +158,8 @@
     visible: yes
     name: Corporate Zine
     full_name: Corporate Zine
-    date_sem: Spring
-    year: 2021
+    start: Spring
+    end: 2021
     image: 
     medium: Book publication
     dimensions: 5.5" x 8.5"
@@ -172,8 +172,8 @@
     visible: no
     name: Collaborative Dialogue
     full_name: Collaborative Dialogue
-    date_sem: Spring
-    year: 2022
+    start: Spring
+    end: 2022
     image: 
     medium: Digital collages
     dimensions: 8" x 8"
@@ -186,8 +186,8 @@
     visible: no
     name: Flawless
     full_name: Flawless Font
-    date_sem: 
-    year: 
+    start: 
+    end: 
     image: 
     medium: Font design
     dimensions: 
@@ -200,8 +200,8 @@
     visible: no
     name: FUG
     full_name: FUG
-    date_sem: Spring
-    year: 2022
+    start: Spring
+    end: 2022
     image: 
     medium: Digital drawing
     dimensions: 
@@ -214,8 +214,8 @@
     visible: no
     name: ASL
     full_name: ASL
-    date_sem: Spring
-    year: 2022
+    start: Spring
+    end: 2022
     image: 
     medium: 
     dimensions: 
@@ -228,8 +228,8 @@
     visible: no
     name: Portraits
     full_name: Portraits
-    date_sem: 2020 –
-    year: 2021
+    start: 2020 –
+    end: 2021
     image: 
     medium: Portrait drawings
     dimensions: 
@@ -242,8 +242,8 @@
     visible: no
     name: Flowerboy
     full_name: Flowerboy
-    date_sem: Spring
-    year: 2021
+    start: Spring
+    end: 2021
     image: 
     medium: Album cover redesign
     dimensions: 
@@ -256,8 +256,8 @@
     visible: no
     name: Home Alone, Together
     full_name: Home Alone, Together
-    date_sem: Spring
-    year: 2021
+    start: Spring
+    end: 2021
     image: 
     medium: Zine, poster, and website
     dimensions: 
@@ -270,8 +270,8 @@
     visible: no
     name: NDC internship
     full_name: NDC internship
-    date_sem: 2019 –
-    year: 2020
+    start: 2019 –
+    end: 2020
     image: 
     medium: 
     dimensions: 
@@ -284,8 +284,8 @@
     visible: no
     name: 'Depillars Commemoration'
     full_name: 
-    date_sem: Dec,
-    year: 2021
+    start: Dec,
+    end: 2021
     image: 
     medium: 
     dimensions: 

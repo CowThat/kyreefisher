@@ -54,7 +54,7 @@ h6 {
   font-size: 20px;
 }
 
-p {
+p, ol, ul, li {
   font-size: 18px;
   font-family: $jost;
   color: $white;
@@ -64,6 +64,7 @@ a {
   font-size: 18px;
   font-family: $raleway;
   text-decoration: none;
+  color: $white;
 }
 
 img {
@@ -230,10 +231,6 @@ img {
   margin-bottom: 8px;
   margin-right: 4px
 }
-
-
-
-
 
 
 

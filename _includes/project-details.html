@@ -1,6 +1,7 @@
 <div class="project-content_split">
     <div class="project-content_split-highlight {% cycle 'blue-bkgd', 'seafoam-bkgd', 'pink-bkgd' %}">
         <p><span>outcome:</span> {{ page.medium }}</p>
+        {% if page.dimensions %} <p><span>dimensions:</span> {{ page.dimensions }}</p> {% endif %}
         <p><span>role:</span> {{ page.role }}</p>
         <div>
             <p><span>tools:</span></p> 
@@ -11,7 +12,7 @@
                 {%- endfor -%}
             </p>        
         </div>
-        <p><span>time period:</span> {{ page.date_sem }} – {{ page.year }}</p>
+        <p><span>time period:</span> {{ page.start }}{% if page.end %} – {{ page.end }}{% endif %}</p>
         {% if page.external_url %}
             <a target="_blank" href="{{ page.external_url }}">
                 <div class="project-button">

@@ -66,7 +66,7 @@ h6 {
   font-size: 20px;
 }
 
-p {
+p, ol, ul, li {
   font-size: 18px;
   font-family: Jost, "JostRegular", sans-serif;
   color: white;
@@ -76,6 +76,7 @@ a {
   font-size: 18px;
   font-family: Raleway, "Raleway", sans-serif;
   text-decoration: none;
+  color: white;
 }
 
 img {
@@ -357,6 +358,11 @@ a.current#gallery:hover {
   margin: 60px 0 40px 0;
 }
 
+p.scroll-text {
+  position: absolute;
+  bottom: 4px;
+}
+
 .scroll-down {
   border-radius: 50%;
   width: 60px;
@@ -383,6 +389,10 @@ a.current#gallery:hover {
   width: 65px;
   height: 65px;
   bottom: 15px;
+}
+
+.scroll-down:hover .scroll-text {
+  color: #ff6b6b;
 }
 
 #arrow1 {
@@ -921,13 +931,49 @@ span.photoshop {
 }
 
 .project_text {
-  max-width: 800px;
   margin: 0 auto;
 }
-.project_text h3 {
+
+.project_section {
+  padding: 100px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.project_section:nth-child(even) {
+  background: #2b2b2b;
+  border-radius: 24px;
+}
+.project_section > *:not(h3):not(h6) {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project_section h3, .project_section h6 {
   position: relative;
-  right: 40px;
-  margin-top: 64px;
+  left: 12.5%;
+}
+.project_section p > img {
+  float: left;
+  margin: 20px 40px 20px 0;
+  border-radius: 16px;
+  max-width: 48%;
+  min-width: 400px;
+}
+.project_section p img.right {
+  float: right;
+  margin: 20px 0 20px 40px;
+  border-radius: 16px;
+  max-width: 48%;
+  min-width: 400px;
+}
+.project_section a {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: ease 0.2s;
+}
+.project_section a:hover {
+  color: #13d0ff;
 }
 
 .subhead {
@@ -944,7 +990,9 @@ span.photoshop {
 .pull-quote {
   font-family: Arvo, sans-serif;
   font-style: italic;
-  margin: 40px 80px 40px 40px;
+  margin: 40px;
+  padding: 0 40px;
+  max-width: 700px;
 }
 
 .project_gallery {
@@ -977,7 +1025,6 @@ span.photoshop {
   border-radius: 16px;
   max-width: 48%;
   min-width: 400px;
-  transition: ease 0.5s;
 }
 .project_image-info .project_image-info_text {
   width: 48%;
@@ -1003,16 +1050,48 @@ span.photoshop {
 .project_image-center img {
   max-width: 100%;
   border-radius: 24px;
+  margin: 10px 0;
 }
 
 .project-content_split-highlight:hover .project-button_underline {
   transform: translateY(-16px);
 }
 
-button {
-  background: green;
+ol {
+  list-style: none;
+  counter-reset: my-counter;
+  position: relative;
+}
+ol li {
+  counter-increment: my-counter;
+  min-height: 80px;
+  max-width: 600px;
+  padding: 20px 20px;
+}
+ol li::before {
+  content: counter(my-counter) ".";
+  color: black;
+  background: #13d0ff;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  z-index: 1;
+  left: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  border-radius: 24px;
+  position: relative;
+  z-index: 100;
+}
+
+.caption {
+  font-size: 16px;
+  font-style: italic;
 }
 
 .project-content_split {
@@ -1068,7 +1147,7 @@ button {
   width: 332px;
 }
 .project-content_split .vcuarts-alumni-gift-guide-button {
-  width: 380px;
+  width: 400px;
 }
 .project-content_split .project-button {
   margin-top: 12px;
