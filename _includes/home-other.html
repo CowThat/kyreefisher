@@ -4,7 +4,7 @@
 
   {% if project_id == "chatty-catty" or project_id == "billionaires-and-the-wealth-gap" or project_id == "kyrees-squishies"  or project_id == "dr-yasmiyn-irizarry" or project_id == "the-world-of-asteria" or project_id == "chattycatty"%}
   <a href="{{ project.url }}" class="home-other">
-    <div class="home-other_card" id="{{ project_id }}">
+    <div class="home-other_card" id="home-other_{{ project_id }}">
       <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
       <h3>{{ project_name }}</h3>
       <p>{{ project_blurb }}</p>
