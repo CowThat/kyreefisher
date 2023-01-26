@@ -22,6 +22,7 @@
     min-width: 500px;
     position: relative;
     bottom: 4vh;
+    padding-right: 250px;
   }
 }
 
@@ -35,6 +36,15 @@
 
 .home-blurb {
   margin: 60px 0 40px 0;
+}
+
+.home-desc {
+  margin-bottom: 40px;
+}
+
+h5.home-desc2 {
+  font-weight: 300;
+  font-size: 20px;
 }
 
 p.scroll-text {
