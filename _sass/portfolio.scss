@@ -38,6 +38,7 @@
     break-inside: avoid;
     // display: block;
     // align-items: stretch;
+    transition: ease .5s;
 
     img {
       width: 100%;
@@ -56,11 +57,16 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &:hover {
+      transform: translateY(-8px);
+    }
   }
 }
 
 span.tool {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   border: 1px solid $blue;
   border-radius: 16px;
   padding: 2px 12px;
@@ -68,14 +74,14 @@ span.tool {
   display: inline-block;
 }
 
-span.illustrator {
-  border: 1px solid $illustrator !important;
-}
+// span.illustrator {
+//   border: 1px solid $illustrator !important;
+// }
 
-span.indesign {
-  border: 1px solid $indesign !important;
-}
+// span.indesign {
+//   border: 1px solid $indesign !important;
+// }
 
-span.photoshop {
-  border: 1px solid $photoshop !important;
-}
+// span.photoshop {
+//   border: 1px solid $photoshop !important;
+// }

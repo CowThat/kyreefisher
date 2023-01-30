@@ -836,6 +836,7 @@ p.scroll-text {
   position: relative;
   flex: 1 1 160px;
   break-inside: avoid;
+  transition: ease 0.5s;
 }
 .portfolio-container .portfolio-card img {
   width: 100%;
@@ -851,26 +852,18 @@ p.scroll-text {
 .portfolio-container .portfolio-card:last-child {
   margin-bottom: 0;
 }
+.portfolio-container .portfolio-card:hover {
+  transform: translateY(-8px);
+}
 
 span.tool {
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
   border: 1px solid #13d0ff;
   border-radius: 16px;
   padding: 2px 12px;
   margin: 4px 2px;
   display: inline-block;
-}
-
-span.illustrator {
-  border: 1px solid #f8a829 !important;
-}
-
-span.indesign {
-  border: 1px solid #ff3366 !important;
-}
-
-span.photoshop {
-  border: 1px solid #4fccfe !important;
 }
 
 .project-hero {
@@ -1176,7 +1169,7 @@ video {
   width: 312px;
 }
 .project-content_split .dr-yasmiyn-irizarry-button.project-button_underline {
-  background: #59c9a5;
+  background: #ff6b6b;
 }
 .project-content_split .project-button {
   margin-top: 12px;
