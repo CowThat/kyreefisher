@@ -32,107 +32,14 @@ layout: default
     <div class="scroll-item">3</div>
     <div class="scroll-item">4</div>
     <div class="scroll-item">5</div>
-  </div>
-
-
-
-<!-- ---
-
-<style>
-    body {
-        overflow-x: hidden;
-    }
-
-    .wrapper {
-        margin: 0 auto;
-        height: 200px;
-        width: 90vw;       
-        position: relative;
-    }
-
-    .container {
-        margin: 0 auto;
-        height: 150px;
-        width: 90vw;
-        border: solid red 0px;
-        overflow-x: scroll;
-        z-index: 10;
-    }
-
-    .child {
-        height: 100px;
-        width: 150%;
-        position: relative;
-        display: flex;
-    }
-
-    .card {
-        background: pink;
-        height: 100px;
-        width: 100px;
-        margin: 10px;
-    }
-
-    .clone {
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 0;
-    }
-
-    .transparent {
-        background: transparent;
-    }
-</style>
-
-<div class="wrapper">
-    <div class="container">
-        <div class="child">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-        </div>
-    </div>
 </div>
 
-<script type="text/javascript" src="{{ site.url | prepend: baseurl }}/assets/js/jquery-3.6.0.js"></script>
 
-<script>
-const container = $(".container")
-const child = container.find('.child');
-const clone = child.clone();
-const border = 0;
 
-clone.addClass('clone');
-child.addClass('transparent');
-container.css('border-width', border);
-container.before(clone)
-
-$(".container").on('scroll', function() {
-  const offset = $(this).scrollLeft() - border;
-  clone.css({
-    left: - offset
-  })
-})
-</script> -->
+<div class="underline-button">
+    <div class="underline-button_content">
+        <h6>now it works for any length of text</h6>
+        <img src="../assets/images/small-arrow-white.png">
+    </div>
+    <div class="underline-button_underline {% cycle 'pink-underline', 'blue-underline', 'seafoam-underline' %}"></div>
+</div>

@@ -2,7 +2,7 @@
   link: /#home-featured_container
 - name: about
   link: /about.html
-# - name: contact
-#   link: /contact.html
 - name: gallery
   link: /gallery.html
+# - name: contact
+#   link: mailto:kyreefisher@gmail.com

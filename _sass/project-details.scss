@@ -35,6 +35,10 @@
             margin: 8px 0;
             font-size: 20px;
         }
+
+        a {
+            margin: 12px 0 0 0;
+        }
     }
 
     .project-content_split-summary {
@@ -54,46 +58,70 @@
         }
     }
 
-    .home-radar-button {
-        width: 332px;
-    }
 
-    .vcuarts-alumni-gift-guide-button {
-        width: 400px;
-    }
 
-    .chattycatty-button {
-        width: 316px;
 
-        &.project-button_underline {
-            background: $blue;
-        }
-    }
 
-    .kyrees-squishies-button {
-        width: 340px;
 
-        // &.project-button_underline {
-        //     background: $blue;
-        // }
-    }
 
-    .dr-yasmiyn-irizarry-button {
-        width: 312px;
 
-        &.project-button_underline {
-            background: $pink;
-        }
-    }
+    // .home-radar-button {
+    //     width: 332px;
+    // }
 
-    .project-button {
-        margin-top: 12px;
-    }
+    // .vcuarts-alumni-gift-guide-button {
+    //     width: 400px;
+    // }
 
-    .scroll-down {
+    // .chattycatty-button {
+    //     width: 316px;
+
+    //     &.project-button_underline {
+    //         background: $blue;
+    //     }
+    // }
+
+    // .kyrees-squishies-button {
+    //     width: 340px;
+
+    //     // &.project-button_underline {
+    //     //     background: $blue;
+    //     // }
+    // }
+
+    // .dr-yasmiyn-irizarry-button {
+    //     width: 312px;
+
+    //     &.project-button_underline {
+    //         background: $pink;
+    //     }
+    // }
+
+    // .project-button {
+    //     margin-top: 12px;
+    // }
+
+    .scroll {
+        width: 40px;
+        height: 40px;
         position: absolute;
-        bottom: -120px;
-        left: 54%;
+        bottom: -60px;
+        left: 51%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg);
+        transition: ease .25s;
+
+        img {
+            height: 20px;
+        }
+
+
+        &:hover {
+            animation: bounce 2s;
+        }
     }
+
 }
 

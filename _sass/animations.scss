@@ -40,3 +40,21 @@
         max-height: 75%;
     }
 }
+
+@keyframes bounce {
+    0% {
+        transform: rotate(90deg) translateX(4px);
+    }
+    12% {
+        transform: rotate(90deg) translateX(-6px);
+    }
+    20% {
+        transform: rotate(90deg) translateX(4px);
+    }
+    25% {
+        transform: rotate(90deg) translateX(-2px);
+    }
+    28% {
+        transform: rotate(90deg) translateX(1px);
+    }
+}

@@ -131,7 +131,7 @@
         transition: ease .2s;
 
         &:hover {
-            color: $blue;
+            color: $pink;
         }
     }
 }
@@ -140,11 +140,13 @@
     font-family: $arvo;
     font-weight: 400;
     font-style: italic;
-    border-left: 4px $blue solid;
     padding: 0 0 0 20px;
     margin-top: 20px;
     position: relative;
     right: 40px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
 }
 
 

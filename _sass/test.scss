@@ -1,0 +1,49 @@
+.underline-button {
+    height: 32px;
+    width: auto;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+  
+    .underline-button_content {
+      display: flex;
+      align-items: center;
+      z-index: 10;
+      position: relative;
+      
+      &>* {
+        margin-right: 8px;
+      }
+    
+      img {
+        width: auto;
+        height: 18px;
+      }
+    }
+    
+    .underline-button_underline {
+      width: 100%;
+      height: 12px;
+      position: relative;
+      top: 12px;
+      transition: ease .3s;
+      z-index: 1;
+    }
+  
+    .pink-underline {
+      background: $pink;
+    }
+  
+    .blue-underline {
+      background: $blue;
+    }
+  
+    .seafoam-underline {
+      background: $seafoam;
+    }
+}
+
+.underline-button:hover .underline-button_underline {
+    transform: translateY(-16px);
+}

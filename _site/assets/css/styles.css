@@ -205,6 +205,18 @@ img {
   margin-right: 4px;
 }
 
+.pink-border {
+  border: 4px #ff6b6b solid;
+}
+
+.blue-border {
+  border: 4px #13d0ff solid;
+}
+
+.seafoam-border {
+  border: 4px #59c9a5 solid;
+}
+
 .none {
   display: none;
 }
@@ -450,10 +462,10 @@ p.scroll-text {
 .project-button {
   height: 32px;
   position: relative;
+  display: inline-block;
   overflow: hidden;
 }
 .project-button .project-button_content {
-  width: 160px;
   display: flex;
   align-items: center;
   z-index: 10;
@@ -467,7 +479,7 @@ p.scroll-text {
   height: 18px;
 }
 .project-button .project-button_underline {
-  width: 160px;
+  width: 100%;
   height: 12px;
   position: relative;
   top: 12px;
@@ -504,6 +516,9 @@ p.scroll-text {
 }
 .home-featured_card:hover .project-button_underline {
   transform: translateY(-16px);
+}
+.home-featured_card:hover .project-button_content {
+  color: #ff6b6b;
 }
 
 .home-featured_image {
@@ -681,17 +696,14 @@ p.scroll-text {
 }
 
 #see-more-button {
-  height: 58px;
+  height: 56px;
 }
 #see-more-button img {
-  height: 36px;
+  height: 28px;
   padding-left: 12px;
 }
-#see-more-button #see-more-button_content {
-  width: 440px;
-}
 #see-more-button #see-more-button_underline {
-  width: 400px;
+  height: 40px;
 }
 #see-more-button:hover #see-more-button_underline {
   transform: translateY(-20px);
@@ -980,18 +992,20 @@ span.tool {
   transition: ease 0.2s;
 }
 .project_section a:hover {
-  color: #13d0ff;
+  color: #ff6b6b;
 }
 
 .subhead {
   font-family: Arvo, sans-serif;
   font-weight: 400;
   font-style: italic;
-  border-left: 4px #13d0ff solid;
   padding: 0 0 0 20px;
   margin-top: 20px;
   position: relative;
   right: 40px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 .pull-quote {
@@ -1135,6 +1149,9 @@ video {
   margin: 8px 0;
   font-size: 20px;
 }
+.project-content_split .project-content_split-highlight a {
+  margin: 12px 0 0 0;
+}
 .project-content_split .project-content_split-summary {
   width: 40%;
   margin: 20px;
@@ -1150,34 +1167,23 @@ video {
   z-index: -1;
   margin-bottom: 12px;
 }
-.project-content_split .home-radar-button {
-  width: 332px;
-}
-.project-content_split .vcuarts-alumni-gift-guide-button {
-  width: 400px;
-}
-.project-content_split .chattycatty-button {
-  width: 316px;
-}
-.project-content_split .chattycatty-button.project-button_underline {
-  background: #13d0ff;
-}
-.project-content_split .kyrees-squishies-button {
-  width: 340px;
-}
-.project-content_split .dr-yasmiyn-irizarry-button {
-  width: 312px;
-}
-.project-content_split .dr-yasmiyn-irizarry-button.project-button_underline {
-  background: #ff6b6b;
-}
-.project-content_split .project-button {
-  margin-top: 12px;
-}
-.project-content_split .scroll-down {
+.project-content_split .scroll {
+  width: 40px;
+  height: 40px;
   position: absolute;
-  bottom: -120px;
-  left: 54%;
+  bottom: -60px;
+  left: 51%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+  transition: ease 0.25s;
+}
+.project-content_split .scroll img {
+  height: 20px;
+}
+.project-content_split .scroll:hover {
+  animation: bounce 2s;
 }
 
 footer {
@@ -1300,6 +1306,23 @@ footer .github:hover {
     max-height: 75%;
   }
 }
+@keyframes bounce {
+  0% {
+    transform: rotate(90deg) translateX(4px);
+  }
+  12% {
+    transform: rotate(90deg) translateX(-6px);
+  }
+  20% {
+    transform: rotate(90deg) translateX(4px);
+  }
+  25% {
+    transform: rotate(90deg) translateX(-2px);
+  }
+  28% {
+    transform: rotate(90deg) translateX(1px);
+  }
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1320,6 +1343,49 @@ footer .github:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #3e3e3e;
   border-radius: 10px;
+}
+
+.underline-button {
+  height: 32px;
+  width: auto;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.underline-button .underline-button_content {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+.underline-button .underline-button_content > * {
+  margin-right: 8px;
+}
+.underline-button .underline-button_content img {
+  width: auto;
+  height: 18px;
+}
+.underline-button .underline-button_underline {
+  width: 100%;
+  height: 12px;
+  position: relative;
+  top: 12px;
+  transition: ease 0.3s;
+  z-index: 1;
+}
+.underline-button .pink-underline {
+  background: #ff6b6b;
+}
+.underline-button .blue-underline {
+  background: #13d0ff;
+}
+.underline-button .seafoam-underline {
+  background: #59c9a5;
+}
+
+.underline-button:hover .underline-button_underline {
+  transform: translateY(-16px);
 }
 
 /*# sourceMappingURL=styles.css.map */

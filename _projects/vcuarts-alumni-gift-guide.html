@@ -12,7 +12,7 @@ featured_image: vcuarts-gift-guide_featured-image.png
 
 medium: website design
 dimensions: 
-tools: [adobe XD, CSS/Sass, HTML, PHP, Wordpress, Figma]
+tools: [adobe XD, CSS/SCSS, HTML, PHP, Wordpress, Figma]
 role: web design, UI/UX design
 start: May
 end: October 14, 2022
@@ -25,9 +25,10 @@ external_url_blurb2: view the VCUarts Gift Guide website
 
 
 sort_order: 2
+color: blue
 ---
 
-<div class="project_section">
+<div class="project_section" id="{{ page.name | slugify }}_first">
     <p>
         In my internship with VCUarts, I spent the summer of 2022 to October planning, designing, and developing the website for the inaugural VCUarts Alumni Gift Guide, which launched on Oct. 14th, 2022. The guide displays artwork from Alumni business from all walks of VCUarts.
         <br><br>
@@ -42,7 +43,7 @@ sort_order: 2
 
 <div class="project_section">
     <h3>
-        <div class="dash-blue-mini"></div>
+        <div class="dash-{{ project.color }}-mini"></div>
         low-fidelity mockups
     </h3>
 
@@ -70,7 +71,7 @@ sort_order: 2
 <div class="project_section">
 
     <h3>
-        <div class="dash-blue-mini"></div>
+        <div class="dash-{{ project.color }}-mini"></div>
         high-fidelity mockups
     </h3>
 
@@ -110,7 +111,7 @@ sort_order: 2
 <div class="project_section">
 
     <h3>
-        <div class="dash-blue-mini"></div>
+        <div class="dash-{{ project.color }}-mini"></div>
         wip files & wireframes
     </h3>
 
