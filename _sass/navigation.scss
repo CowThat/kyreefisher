@@ -109,25 +109,25 @@ a.current {
 
 #portfolio:not(.current):hover {
   background: $pink;
-  color: $dark-gray-2;
+  color: $black;
   transform: translateY(10px);
 }
 
 #about:not(.current):hover {
   background: $blue;
-  color: $dark-gray-2;
+  color: $black;
   transform: translateY(10px);
 }
 
 #contact:not(.current):hover {
   background: $seafoam;
-  color: $dark-gray-2;
+  color: $black;
   transform: translateY(10px);
 }
 
 #gallery:not(.current):hover {
   background: $seafoam;
-  color: $dark-gray-2;
+  color: $black;
   transform: translateY(10px);
 }
 

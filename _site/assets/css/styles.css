@@ -314,25 +314,25 @@ a.current#gallery:hover {
 
 #portfolio:not(.current):hover {
   background: #ff6b6b;
-  color: #111111;
+  color: black;
   transform: translateY(10px);
 }
 
 #about:not(.current):hover {
   background: #13d0ff;
-  color: #111111;
+  color: black;
   transform: translateY(10px);
 }
 
 #contact:not(.current):hover {
   background: #59c9a5;
-  color: #111111;
+  color: black;
   transform: translateY(10px);
 }
 
 #gallery:not(.current):hover {
   background: #59c9a5;
-  color: #111111;
+  color: black;
   transform: translateY(10px);
 }
 
@@ -373,6 +373,14 @@ a.current#gallery:hover {
 
 .home-desc {
   margin-bottom: 40px;
+}
+
+#fun:hover {
+  text-decoration: underline wavy rgba(89, 201, 165, 0);
+  transition: text-decoration ease 0.1s;
+}
+#fun:hover:hover {
+  text-decoration: underline wavy rgb(89, 201, 165);
 }
 
 h5.home-desc2 {
@@ -556,6 +564,7 @@ p.scroll-text {
 .home-other_wrapper {
   margin: 0 auto;
   height: 48vh;
+  min-height: 480px;
   width: 100vw;
   max-width: 100%;
   position: relative;
@@ -576,7 +585,6 @@ p.scroll-text {
 
 .home-other {
   color: black;
-  min-width: 300px;
   min-width: 380px;
   width: 20%;
   height: calc(100% - 24px);

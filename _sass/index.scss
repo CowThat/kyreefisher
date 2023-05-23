@@ -42,6 +42,33 @@
   margin-bottom: 40px;
 }
 
+// #effective {
+//   text-decoration: underline dashed rgba(255, 107, 107, 0);
+//   transition: text-decoration ease .1s;
+
+//   &:hover {
+//     text-decoration: underline dashed rgba(255, 107, 107, 1);
+//   }
+// }
+
+// #accesible {
+//   text-decoration: underline double rgba(19, 208, 255, 0);
+//   transition: text-decoration ease .1s;
+
+//   &:hover {
+//     text-decoration: underline double rgba(19, 208, 255, 1);
+//   }
+// }
+
+#fun:hover {
+  text-decoration: underline wavy rgba(89, 201, 165, 0);
+  transition: text-decoration ease .1s;
+
+  &:hover {
+    text-decoration: underline wavy rgba(89, 201, 165, 1);
+  }
+}
+
 h5.home-desc2 {
   font-weight: 300;
   font-size: 20px;
@@ -242,6 +269,7 @@ p.scroll-text {
 .home-other_wrapper {
   margin: 0 auto;
   height: 48vh;
+  min-height: 480px;
   width: 100vw;   
   max-width: 100%;    
   position: relative;
@@ -270,7 +298,6 @@ p.scroll-text {
 
 .home-other {
   color: $black;
-  min-width: 300px;
   min-width: 380px;
   width: 20%;
   height: calc(100% - 24px);
