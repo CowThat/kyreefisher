@@ -19,19 +19,21 @@ title: Home
         <div class="dash-seafoam"></div>
       </div>
 
-      <h1 class="home-hello">Hey, I'm <span class="blue">Kyree!:)</span></h1>
-      <h1 class="home-blurb">I'm a web, UI/UX,<br>& graphic designer,</h1>
-      <h4 class="home-desc">
+      <h1 class="hero home-hello">Hey, I'm <span class="blue">Kyree!:)</span></h1>
+      <h1 class="hero home-blurb">I'm a web, UI/UX, & graphic designer,</h1>
+      <h5 class="home-desc">
         and I have a love for <span class="pink" id="effective">effective</span>, <span class="blue" id="accesible">accessible</span>, and <span class="seafoam" id="fun">fun</span> design.
-      </h4>
-      
-      <h5 class="home-desc2">
-        This portfolio site is still a <strong>work in progress</strong>. It's coded by hand using <span class="tool">SCSS</span> <span class="tool">HTML</span> <span class="tool">JavaScript</span> <span class="tool">Jekyll</span> and a whole lot of long nights. Coming soon: full responsiveness & more project information.
       </h5>
+      
+      <h6 class="home-desc2">
+        This portfolio site is still a <strong>work in progress</strong>. It's coded by hand using <span class="tool">HTML</span> <span class="tool">Sass</span> <span class="tool">JavaScript</span> <span class="tool">Jekyll</span> and a whole lot of long nights. Coming soon: full responsiveness & more project information.
+      </h6>
     </div>
 
-    <!-- <p class="scroll-text">scroll</p> -->
-    <a class="scroll-down" href="#home-featured_container"><img src="assets/images/scroll-arrow-01.png" id="arrow1"><img src="assets/images/scroll-arrow-01.png" id="arrow2"></a>
+    <div class="scroll-container">
+      <a class="scroll-button" href="#home-featured_container"><img src="assets/images/scroll-arrow-01.png" id="arrow1"><img src="assets/images/scroll-arrow-01.png" id="arrow2"></a>
+      <!-- <p class="scroll-text">scroll</p> -->
+    </div>
 
   </div>
 
@@ -42,13 +44,16 @@ title: Home
 
 
   <div class="home-featured_container" id="home-featured_container">
+    <div class="home-featured_content">
 
     <div class="home-featured_title">
       <div class="dash-pink-mini"></div>
-      <h2><span class="blue">featured</span> projects</h2>
+      <h1><span class="blue">featured</span> projects</h1>
     </div>
 
     {% include home-featured.html %}
+
+  </div>
 
   </div>
 
@@ -58,7 +63,7 @@ title: Home
 
 
 
-  <div class="home-other_container">
+  <!-- <div class="home-other_container">
     <div class="home-other_title">
       <div class="dash-pink-mini"></div>
       <h2><span class="seafoam">other</span> projects</h2>
@@ -74,14 +79,14 @@ title: Home
         <div class="home-see-more">
             <a href="/gallery.html" class="project-button" id="see-more-button">
               <div class="project-button_content" id="see-more-button_content">
-                  <h3>see more projects</h3>
+                  <h4>see more projects</h4>
                   <img src="assets/images/small-arrow-white.png">
               </div>
               <div class="project-button_underline seafoam-underline" id="see-more-button_underline"></div>
           </a>
         </div>
       </div>
-  </div>
+  </div> -->
 
 
 

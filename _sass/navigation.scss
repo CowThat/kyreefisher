@@ -18,14 +18,15 @@
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 5px 0 $dark-gray-2-50;
   height: 70px;
-  padding: 10px 25px;
+  padding: 15px 20px;
   display: flex;
   align-items: flex-end;
   transition: ease .3s;
 
-  h4 {
+  .nav-logo-name {
     color: $dark-gray-2;
     font-family: $raleway;
+    font-weight: 700;
   }
 
   &:hover {

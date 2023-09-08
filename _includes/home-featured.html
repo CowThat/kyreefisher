@@ -5,7 +5,7 @@
   {% include assign.html %}
 
     {% if project_id == "home-radar" or project_id == "vcuarts-alumni-gift-guide" or project_id == "overworld" %}
-    </h1>
+
       <a href="{{ project.url }}">
       <div class="home-featured {% if project_order == 2 %}reverse-order{% endif %} {% if project_order == 1 %}first-div{% endif %}">
 
@@ -13,7 +13,7 @@
           <div class="home-featured_card-shadow {% cycle 'pink-bkgd', 'blue-bkgd', 'seafoam-bkgd' %}"></div>
 
           <div class="{% cycle 'dash-pink-mini', 'dash-blue-mini', 'dash-seafoam-mini' %}"></div>
-          <h3 class="home-featured_project-title">{{ project_name }}</h3>
+          <h2 class="home-featured_project-title">{{ project_name }}</h2>
           <p class="home-featured_project-desc">{{ project_blurb }}</p>
           {% include role-tools.html %}
 
@@ -23,9 +23,7 @@
       </a>   
 
 
-        <a class="home-featured_image" href="/projects/{{ project_url }}">
-          <img class="featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
-        </a>
+        <img class=" home-featured_image featured-img" id="{{ project_id }}_featured-img" src="assets/images/{{ project_featured }}">
 
       </div>   
       

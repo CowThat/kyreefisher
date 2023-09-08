@@ -4,10 +4,6 @@
     margin-left: 12.5%;
     min-height: 24vh;
 
-    .subhead {
-        right: 0;
-    }
-
     .home-contact-button {
         height: 58px;
         overflow: hidden;
@@ -20,7 +16,6 @@
           padding-left: 12px;
         }
     
-      
         #contact-button {
             height: 60px;
             width: auto;
@@ -34,7 +29,7 @@
             height: 20px;
             }
 
-            h3 {
+            h4 {
                 color: $blue;
                 transition: ease .3s;
             }
@@ -47,7 +42,7 @@
             transform: translateY(-20px);
             }
 
-            &:hover h3 {
+            &:hover h4 {
                 color: white;
             }
 

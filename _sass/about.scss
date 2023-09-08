@@ -25,7 +25,7 @@
         .project-button_content, .project-button_underline {
             width: 132px;
 
-            h6 {
+            h7 {
                 color: $seafoam;
                 transition: color ease .25s;
             }
@@ -35,7 +35,7 @@
         transform: translateY(-16px);
         }
 
-        &:hover h6 {
+        &:hover h7 {
             color: $white;
         }
     }
@@ -47,12 +47,12 @@
             width: 200px;
         }
 
-        h6 {
+        h7 {
             color: $blue;
             transition: color ease .25s;
         }
 
-        &:hover h6 {
+        &:hover h7 {
             color: $white;
         }
     }
