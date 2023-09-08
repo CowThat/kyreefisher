@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+{% for project in site.projects %}
+
+    {% include assign.html %}
+ 
+    {% if page.url contains project_id %}
+
+        <div class="project-hero">
+            <div class="project-hero_desc">
+                <div class="dash-{{ project.color }}-h3"></div>
+                <h3>{{ project_fullname }}</h3>
+                {% if project.subtitle %}
+                    <h6 class="subtitle">{{ project_subtitle }}</h6>
+                {% endif %}
+                <div class="project-hero_desc-shadow {{ project.color }}-bkgd"></div>
+            </div>
+            <div class="project-hero_image">
+                <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
+            </div>
+        </div>
+        <div class="project-content_container">
+            {% include project-details.html %}
+
+
+            <div class="project_text">
+            {{ content }}
+            </div>
+
+        </div>
+    {% endif %}
+
+{% endfor %}

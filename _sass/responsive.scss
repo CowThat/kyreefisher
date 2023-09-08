@@ -1,3 +1,11 @@
+@media only screen and (max-width: 1050px) {
+    .home-intro-container {
+        .home-intro-content {
+            padding-right: 0;
+        }
+    }
+}
+
 @media only screen and (max-width: 900px) {
 
     h1.hero {
@@ -28,76 +36,83 @@
     font-size: 18px;
     }
 
+    .nav-logo-name {
+        font-size: 20px;
+    }
 
     .home-featured {
-        width: 100%;
-        max-width: 1220px;
-        // padding: 0 24px;
-        margin: 20vh auto;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
         flex-direction: column-reverse;
+        gap: 2vh;
+    }
+
+    .home-featured_card {
+        width: 100%;
+    }
+
+    .home-featured_image {
+        width: 92%;
     }
 
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
 
     h1.hero {
-    font-size: 48px;
-    }
-    
-    h1 {
     font-size: 40px;
     }
     
+    h1 {
+    font-size: 36px;
+    }
+    
     h2 {
-    font-size: 32px;
+    font-size: 28px;
     }
     
     h3 {
-    font-size: 28x;
+    font-size: 26x;
     }
     
     h4 {
-    font-size: 24px;
+    font-size: 22px;
     }
     
     h5 {
     font-size: 20px;
     }
     
-    h6 {
-    font-size: 18px;
+    p {
+        font-size: 16px;
+    }
+
+    .navigation {
+        padding: 0 28px;
     }
 
 
-    .home-intro-container {
-        // width: 100%;
-        // max-width: 1440px;
-        // height: calc(100vh - 60px);
-        // margin: 0 auto;
-        // position: relative;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: flex-start;
-        // overflow: visible;
-      
+    .home-intro-container {      
         .home-intro-content {
-        //   max-width: 900px;
           margin: 0 28px;
-        //   position: relative;
-        //   bottom: 4vh;
+        }
+        .scroll-container {  
+            bottom: 0%
         }
     }
 
+    .home-featured_container {     
+        .home-featured_content {
+          margin: 0 28px;
+        }
+      }
+
+
     .home-blurb {
         margin: 28px 0 20px 0;
+    }
+
+    .home-featured_card {
+        padding: 28px 28px 20px;
     }
 
 }
