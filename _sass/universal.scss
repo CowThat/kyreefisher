@@ -261,15 +261,18 @@ img {
 
 
 .pink-border {
-  border: 4px $pink solid;
+  border-left: 4px $pink solid;
+  padding-left: 12px;
 }
 
 .blue-border {
-  border: 4px $blue solid;
+  border-left: 4px $blue solid;
+  padding-left: 12px;
 }
 
 .seafoam-border {
-  border: 4px $seafoam solid;
+  border-left: 4px $seafoam solid;
+  padding-left: 12px;
 }
 
 

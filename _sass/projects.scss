@@ -30,19 +30,20 @@
 }
 
 .project-hero_content {
-    width: 100%;
-    max-width: 1220px;
-    margin: 0 auto;
+    max-width: 100%;
+    // max-width: 1220px;
+    margin: 0 108px;
     position: relative;
     bottom: 12%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 8%;
 
 
     .project-hero_desc {
         border-radius: 24px;
-        width: min-content;
+        width: max-content;
         max-width: 900px;
         height: auto;
         padding: 40px 120px 40px 40px;
