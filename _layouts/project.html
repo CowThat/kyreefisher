@@ -4,44 +4,45 @@ layout: default
 
 {% for project in site.projects %}
 
-    {% include assign.html %}
- 
-    {% if page.url contains project_id %}
+{% include assign.html %}
 
-        <div class="project-hero">
-            <div class="project-hero_image">
-                <img class="cover-img" id="{{ project_id }}_cover-img" src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}" alt="{{ project_name }}: {{project_desc}}" />
-            </div>
-            <div class="project-hero_content">
-                <div class="project-hero_desc {{ project.color }}-bkgd">
-                    <div class="project-hero_desc-text">
-                        <div class="dash-{{ project.color }}-h2"></div>
-                        <h1>{{ project_fullname }}</h1>
-                        {% if project.subtitle %}
-                            <h6 class="subtitle">{{ project_subtitle }}</h6>
-                        {% endif %}
-                    </div>
-                    <div class="project-hero_desc-shadow"></div>
+{% if page.url contains project_id %}
+
+<div class="project-hero">
+    <div class="project-hero_image">
+        <img class="cover-img" id="{{ project_id }}_cover-img"
+            src="../assets/portfolio/{{ priority }}/{{ project_id }}/{{ project_img }}"
+            alt="{{ project_name }}: {{project_desc}}" />
+    </div>
+    <div class="project-hero_container">
+        <div class="project-hero_content">
+            <div class="project-hero_desc {{ project.color }}-bkgd">
+                <div class="project-hero_desc-text">
+                    <div class="dash-{{ project.color }}-h2"></div>
+                    <h1>{{ project_fullname }}</h1>
+                    {% if project.subtitle %}
+                    <h6 class="subtitle">{{ project_subtitle }}</h6>
+                    {% endif %}
                 </div>
-
-                <a class="scroll-container" href="#{{ project_id }}_details">
-                    <!-- <img src="../assets/images/small-arrow-white.png"> -->
-                    <p>scroll</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none" class="scroll">
-                        <path d="M11.25 2C11.25 1.30964 10.6904 0.75 10 0.75C9.30964 0.75 8.75 1.30964 8.75 2L11.25 2ZM9.11612 26.8839C9.60427 27.372 10.3957 27.372 10.8839 26.8839L18.8388 18.9289C19.327 18.4408 19.327 17.6493 18.8388 17.1612C18.3507 16.673 17.5592 16.673 17.0711 17.1612L10 24.2322L2.92893 17.1612C2.44078 16.673 1.64932 16.673 1.16116 17.1612C0.673009 17.6493 0.673009 18.4408 1.16116 18.9289L9.11612 26.8839ZM8.75 2L8.75 26L11.25 26L11.25 2L8.75 2Z" fill="white"/>
-                        </svg>
-                </a>
-            </div>
-        </div>
-        <div class="project-content_container">
-            {% include project-details.html %}
-
-
-            <div class="project_text">
-            {{ content }}
+                <div class="project-hero_desc-shadow"></div>
             </div>
 
+            <a class="scroll-container" href="#{{ project_id }}_details">
+                <!-- <img src="../assets/images/small-arrow-white.png"> -->
+                <p>scroll</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none"
+                    class="scroll">
+                    <path
+                        d="M11.25 2C11.25 1.30964 10.6904 0.75 10 0.75C9.30964 0.75 8.75 1.30964 8.75 2L11.25 2ZM9.11612 26.8839C9.60427 27.372 10.3957 27.372 10.8839 26.8839L18.8388 18.9289C19.327 18.4408 19.327 17.6493 18.8388 17.1612C18.3507 16.673 17.5592 16.673 17.0711 17.1612L10 24.2322L2.92893 17.1612C2.44078 16.673 1.64932 16.673 1.16116 17.1612C0.673009 17.6493 0.673009 18.4408 1.16116 18.9289L9.11612 26.8839ZM8.75 2L8.75 26L11.25 26L11.25 2L8.75 2Z"
+                        fill="white" />
+                </svg>
+            </a>
         </div>
-    {% endif %}
+    </div>
+</div>
+    {% include project-details.html %}
+    {{ content }}
+</div>
+{% endif %}
 
 {% endfor %}

@@ -53,6 +53,65 @@
         width: 92%;
     }
 
+
+    .project-content_split {
+       flex-direction: column;
+       gap: 20px;
+       padding: 60px 0;
+
+        .project-content_split-highlight {
+            width: 100%;
+        }
+    
+        .project-content_split-summary {
+            width: 80%;
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+        // .home-radar-button {
+        //     width: 332px;
+        // }
+    
+        // .vcuarts-alumni-gift-guide-button {
+        //     width: 400px;
+        // }
+    
+        // .chattycatty-button {
+        //     width: 316px;
+    
+        //     &.project-button_underline {
+        //         background: $blue;
+        //     }
+        // }
+    
+        // .kyrees-squishies-button {
+        //     width: 340px;
+    
+        //     // &.project-button_underline {
+        //     //     background: $blue;
+        //     // }
+        // }
+    
+        // .dr-yasmiyn-irizarry-button {
+        //     width: 312px;
+    
+        //     &.project-button_underline {
+        //         background: $pink;
+        //     }
+        // }
+    
+        // .project-button {
+        //     margin-top: 12px;
+        // }
+    }
+    
+    
 }
 
 

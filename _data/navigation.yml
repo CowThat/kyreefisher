@@ -2,7 +2,7 @@
   link: /
 - name: about
   link: /about.html
-# - name: gallery
-#   link: /gallery.html
+- name: gallery
+  link: /gallery.html
 - name: contact
   link: mailto:kyreefisher@gmail.com

@@ -92,7 +92,7 @@ a.current {
   }
   
   &#contact {
-    background: $seafoam;
+    background: $purple;
   
     &:hover {
       background: $white;
@@ -122,7 +122,7 @@ a.current {
 }
 
 #contact:not(.current):hover {
-  background: $seafoam;
+  background: $purple;
   color: $black;
   transform: translateY(10px);
 }
