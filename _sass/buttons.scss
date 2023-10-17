@@ -1,0 +1,66 @@
+.highlight-button {
+    margin: 32px 0 0;
+    position: relative;
+    overflow: hidden;
+    
+    
+    a {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .highlight-button_effect-container {
+            // border-radius: 100px;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+            padding: 0 20px 0 16px;
+            height: 40px;
+            width: min-content;
+            position: relative;
+            overflow: hidden;
+    
+            h6 {
+                color: $dark-gray-2;
+                white-space: nowrap;
+                z-index: 100;
+
+            }
+    
+            .highlight-button_effect {
+                background-color: white;
+                position: absolute; 
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0%;
+                // border-radius: 100px;
+                // z-index: -1;
+                transition: ease .3s;
+            }
+    
+        }
+    
+        svg {
+            position: relative;
+            right: 8px;
+            fill: white;
+            transition: ease .3s;
+        }
+
+        &:hover {
+
+            .highlight-button_effect {
+                left: 0;
+                width: 100%;
+            }
+
+            svg {
+                fill: $pink;
+                transform: translateX(16px);
+            }
+        }
+    }
+}
+

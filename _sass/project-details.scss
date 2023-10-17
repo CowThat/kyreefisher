@@ -53,15 +53,21 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 8px;
 
-        div {
-            width: 200px;
-            height: 12px;
-            position: relative;
-            bottom: 4px;
-            z-index: -1;
-            margin-bottom: 12px;
+        h5 {
+            width: max-content;
+            border-bottom: $pink 8px solid;
         }
+
+        // div {
+        //     width: 200px;
+        //     height: 12px;
+        //     position: relative;
+        //     bottom: 4px;
+        //     z-index: -1;
+        //     margin-bottom: 12px;
+        // }
     }
 
 

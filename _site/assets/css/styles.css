@@ -1258,14 +1258,11 @@ video {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 8px;
 }
-.project-content_split .project-content_split-summary div {
-  width: 200px;
-  height: 12px;
-  position: relative;
-  bottom: 4px;
-  z-index: -1;
-  margin-bottom: 12px;
+.project-content_split .project-content_split-summary h5 {
+  width: max-content;
+  border-bottom: #ff6b6b 8px solid;
 }
 
 footer {
@@ -1425,6 +1422,55 @@ footer .github:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #3e3e3e;
   border-radius: 10px;
+}
+
+.highlight-button {
+  margin: 32px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.highlight-button a {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.highlight-button a .highlight-button_effect-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 16px;
+  height: 40px;
+  width: min-content;
+  position: relative;
+  overflow: hidden;
+}
+.highlight-button a .highlight-button_effect-container h6 {
+  color: #111111;
+  white-space: nowrap;
+  z-index: 100;
+}
+.highlight-button a .highlight-button_effect-container .highlight-button_effect {
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  transition: ease 0.3s;
+}
+.highlight-button a svg {
+  position: relative;
+  right: 8px;
+  fill: white;
+  transition: ease 0.3s;
+}
+.highlight-button a:hover .highlight-button_effect {
+  left: 0;
+  width: 100%;
+}
+.highlight-button a:hover svg {
+  fill: #ff6b6b;
+  transform: translateX(16px);
 }
 
 @media only screen and (max-width: 1050px) {
