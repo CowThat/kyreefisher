@@ -1,4 +1,4 @@
-<div class= "project_container">
+<div class= "project-details_container">
     <div class="project-content_split" id="{{ page.name | slugify }}_details">
         <div class="project-content_split-summary">
             <h5>project summary:</h5>
@@ -22,18 +22,18 @@
         
         <div class="project-content_split-highlight {{ project.color }}-bkgd">
             <h6 class="light">outcome</h6>
-            <p>{{ page.medium }}</p>
+            <p class="body-large">{{ page.medium }}</p>
 
             {% if page.dimensions %} 
                 <h6 class="light">dimensions</h6>
-                <p>{{ page.dimensions }}</p> 
+                <p class="body-large">{{ page.dimensions }}</p> 
             {% endif %}
 
             <h6 class="light">role</h6>
-            <p>{{ page.role }}</p>
+            <p class="body-large">{{ page.role }}</p>
 
             <h6 class="light tools">tools</h6>
-            <p id="{{ page.name | slugify }}-tools">
+            <p class="body-large" id="{{ page.name | slugify }}-tools">
                 {%- for tool in page.tools -%}
                     {% assign tool_class = tool | downcase | replace: ' ', '-' %}
                     <span class="tool {{ tool_class }}">{{ tool }}</span>
@@ -41,7 +41,7 @@
             </p>  
 
             <h6 class="light">time period</h6>      
-            <p>{{ page.start }}{% if page.end %} – {{ page.end }}{% endif %}</p>
+            <p class="body-large">{{ page.start }}{% if page.end %} – {{ page.end }}{% endif %}</p>
         </div>
 
     </div>

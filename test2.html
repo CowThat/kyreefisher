@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+  <link rel="stylesheet" type="text/css" href="assets/javascript/slick-1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/javascript/slick-1.8.1/slick/slick-theme.css"/>
+
+  <div>
+    <div class="project_carousel"
+        style="width: 50%;
+              height: 600px;
+              margin: 200px auto;">
+    <div><img src="assets/portfolio/phase1/home-radar/home-radar_planning_customer-map.png"></div>
+    <div><img src="assets/portfolio/phase1/home-radar/home-radar_planning_customer-map.png"></div>
+    <div><img src="assets/portfolio/phase1/home-radar/home-radar_planning_customer-map.png"></div>
+  </div>
+
+  <div
+    style="width: 50%;
+    height: 600px;
+    margin: 200px auto;">
+    <ul>
+      <li class="prev"></li>
+      <li class="next"></li>
+    </ul>
+  </div>
+
+</div>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/slick-1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+ $(document).ready(function(){
+    $('.project_carousel').slick({
+        infinite: true,
+        dots: true,
+        speed: 300,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        prevArrow: $('.prev'),
+        nextArrow: $('.next'),   
+    });
+});
+  </script>
