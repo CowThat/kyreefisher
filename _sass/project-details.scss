@@ -7,7 +7,7 @@
         // width: 100%;
         border-radius: 24px;
         // max-width: 1220px;
-        // margin: 0 108px;
+        // margin: 0 $large-margin;
     }
 }
 
@@ -16,7 +16,7 @@
     max-width: 1220px;
     min-height: 30vh;
     max-height: calc(100vh - 100px);
-    margin: 0 108px;
+    margin: 0 $large-margin;
     padding: 120px 0 40px;
     position: relative;
     display: flex;

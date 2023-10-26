@@ -191,7 +191,7 @@
 }
 
 .home-featured_card:hover {
-  background-color: $gray-1;
+  background-color: $color-lightgray;
   box-shadow: 0 0 5px 0 $dark-gray-2;
 
   .home-featured_card-shadow {
@@ -423,7 +423,7 @@
 .home-other:hover {
 
   .home-other_card {
-    background: $gray-1;
+    background: $color-lightgray;
     transform: translate(-12px, -12px);
     box-shadow: 0 0 5px 0 $dark-gray-2;
   }

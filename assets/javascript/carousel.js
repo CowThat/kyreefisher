@@ -1,10 +1,12 @@
-$(document).ready(function(){
-    // Initialize Slick without dots
-    $('.project_carousel').slick({
+$(document).ready(function() {
+    var $carousel = $('.project_carousel');
+    var isPlaying = true;
+
+    $carousel.slick({
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        autoplay: true,
+        autoplay: isPlaying,
         autoplaySpeed: 5000,
         variableWidth: true,
         dots: true,
@@ -12,8 +14,22 @@ $(document).ready(function(){
         prevArrow: $('.prev'),
         nextArrow: $('.next'),
         pauseOnDotsHover: true,
-        
+    });
+
+    $('.pause-play').click(function() {
+        if (isPlaying) {
+            $carousel.slick('slickPause');
+            isPlaying = false;
+
+            $('.pause-play .play').show();
+            $('.pause-play .pause').hide();
+
+        } else {
+            $carousel.slick('slickPlay');
+            isPlaying = true;
+
+            $('.pause-play .pause').show();
+            $('.pause-play .play').hide();
+        }
     });
 });
-
-

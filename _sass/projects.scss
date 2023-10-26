@@ -26,20 +26,25 @@
 }
 
 .project-hero_container {
-    max-width: 1440px;
-    margin: 0 auto;
-    position: relative;
-    bottom: 12%;
+    width: 100vw;
+    // max-width: 1440px;
+    // margin: 0 auto;
+    position: absolute;
+    bottom: -12%;
 }
 
 .project-hero_content {
     // max-width: 100%;
     max-width: 1220px;
-    margin: 0 108px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 8%;
+
+    @media only screen and (max-width: $full-width) {
+        margin: 0 $large-margin;
+    }
 
 
     .project-hero_desc {
@@ -114,7 +119,7 @@
         // width: 100%;
         border-radius: 24px;
         // max-width: 1220px;
-        // margin: 0 108px;
+        // margin: 0 $large-margin;
     }
 }
 
@@ -145,7 +150,7 @@
 .project_text-block {
     max-width: 1220px;
     padding: 20px 0;
-    margin: 0 108px;
+    margin: 0 $large-margin;
 
     // & > * {
     //     margin-bottom: 12px;
@@ -169,7 +174,7 @@
 
 .project_text-image {
     padding: 20px 0;
-    margin: 0 108px;
+    margin: 0 $large-margin;
     display: flex;
     flex-wrap: wrap;
     // gap: 60px;
@@ -205,7 +210,7 @@
 .project_grid {
     max-width: 1220px;
     padding: 20px 0;
-    margin: 0 108px;
+    margin: 0 $large-margin;
     display: flex;
     flex-wrap: wrap;
     // gap: 20px;
@@ -216,6 +221,10 @@
         position: relative;
         flex: 1 1 25%;
         padding-right: 20px;
+
+        @media only screen and (max-width: 1343px) {
+            flex: 1 1 50%;
+        }
 
         svg {
             margin-left: 8px;
@@ -283,7 +292,7 @@
 .project_accordion {
     max-width: 1220px;
     height: 650px;
-    margin: 30px 108px;
+    margin: 30px $large-margin;
     display: flex;
     gap: 60px;
     position: relative;

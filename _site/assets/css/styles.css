@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Jost-Regular";
+  src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway-Bold";
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+}
 @font-face {
   font-family: "Jost-Regular";
   src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
@@ -107,7 +120,7 @@ img {
 }
 
 .subhead {
-  font-family: Arvo, sans-serif;
+  font-family: Arvo, "Raleway-Bold", Raleway, monospace;
   font-weight: 400;
   font-style: italic;
   margin-top: 12px;
@@ -982,19 +995,23 @@ span.tool {
 }
 
 .project-hero_container {
-  max-width: 1440px;
-  margin: 0 auto;
-  position: relative;
-  bottom: 12%;
+  width: 100vw;
+  position: absolute;
+  bottom: -12%;
 }
 
 .project-hero_content {
   max-width: 1220px;
-  margin: 0 108px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   gap: 8%;
+}
+@media only screen and (max-width: 1436px) {
+  .project-hero_content {
+    margin: 0 108px;
+  }
 }
 .project-hero_content .project-hero_desc {
   border-radius: 24px;
@@ -1057,7 +1074,7 @@ span.tool {
 }
 
 .subtitle {
-  font-family: Arvo, sans-serif;
+  font-family: Arvo, "Raleway-Bold", Raleway, monospace;
   font-weight: 400;
   font-style: italic;
   font-size: 20px;
@@ -1134,6 +1151,11 @@ span.tool {
   position: relative;
   flex: 1 1 25%;
   padding-right: 20px;
+}
+@media only screen and (max-width: 1343px) {
+  .project_grid div.featured-info {
+    flex: 1 1 50%;
+  }
 }
 .project_grid div.featured-info svg {
   margin-left: 8px;
@@ -1342,7 +1364,7 @@ div.header-underline h4 {
 }
 
 .pull-quote {
-  font-family: Arvo, sans-serif;
+  font-family: Arvo, "Raleway-Bold", Raleway, monospace;
   font-style: italic;
   margin: 20px;
   padding: 0 40px;
@@ -1597,6 +1619,11 @@ li.slick-active .dot-style {
 }
 .pause-play .play {
   display: none;
+  margin-left: 4px;
+  transform: scale(0.75);
+}
+.pause-play .pause {
+  transform: scaleY(0.9) scaleX(0.95);
 }
 
 footer {
@@ -1807,11 +1834,6 @@ footer .github:hover {
   transform: translateX(16px);
 }
 
-@media only screen and (max-width: 1343px) {
-  .project_grid div.featured-info {
-    flex: 1 1 50%;
-  }
-}
 @media only screen and (max-width: 1050px) {
   .home-intro-container .home-intro-content {
     padding-right: 0;
