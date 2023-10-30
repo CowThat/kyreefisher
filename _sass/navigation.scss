@@ -1,5 +1,5 @@
 .navigation {
-  // background: $dark-gray-2;
+  // background: $darkgray;
   // box-shadow: 0 0 10px 0 $purple;
   width: 100vw;
   height: 60px;
@@ -10,13 +10,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 999999999999;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 0 28px;
+  }
 }
 
 .nav-logo {
   background: $blue;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 0 5px 0 $dark-gray-2-50;
+  box-shadow: 0 0 5px 0 $darkgray-50;
   height: 70px;
   padding: 15px 20px;
   display: flex;
@@ -24,10 +28,14 @@
   transition: ease .3s;
 
   .nav-logo-name {
-    color: $dark-gray-2;
+    color: $darkgray;
     font-family: $raleway;
     font-weight: 700;
     white-space: nowrap;
+
+    @media only screen and (max-width: $tablet) {
+      font-size: 20px;
+    }
   }
 
   &:hover {
@@ -47,7 +55,7 @@
   a {
     color: $white;
     border-radius: 0 0 10px 10px;
-    box-shadow: 4px 0 8px 0 $dark-gray-2-50;
+    box-shadow: 4px 0 8px 0 $darkgray-50;
     font-size: 18px;
     padding: 15px 20px;
     margin: 0 5px;
@@ -57,7 +65,7 @@
 
 
     &:not(.current) {
-      background: $gray-3;
+      background: $mediumgray;
       height: 80px;
     }
   }
@@ -65,11 +73,11 @@
 
 a.current {
   background: $pink;
-  color: $dark-gray-2;
+  color: $darkgray;
   font-family: $ralewayBold;
   font-size: 20px;
   border-radius: 0 0 10px 10px;
-  box-shadow: 0 0 5px 0 $dark-gray-2-50;
+  box-shadow: 0 0 5px 0 $darkgray-50;
   height: 80px;
   padding: 15px 20px;
   position: relative;

@@ -21,6 +21,14 @@
     position: relative;
     bottom: 4vh;
 
+    @media only screen and (max-width: $laptop) {
+      padding-right: 0;
+    }
+
+    @media only screen and (max-width: $mobile) {
+      margin: 0 28px
+    }
+
     .home-dash {
       display: flex;
     }
@@ -31,6 +39,10 @@
     
     .home-blurb {
       margin: 40px 0;
+
+      @media only screen and (max-width: $mobile) {
+        margin: 28px 0 20px 0;
+      }
     }
     
     .home-desc {
@@ -50,6 +62,10 @@
     justify-content: center;
     align-items: center;
     transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: $mobile) {
+      bottom: 0%;
+    }
 
     .scroll-button {
       border-radius: 50%;
@@ -140,6 +156,10 @@
     max-width: 1220px;
     margin: 0 80px;
     position: relative;
+
+    @media only screen and (max-width: $mobile) {
+      margin: 0 28px;
+    }
     
     .home-featured_title, .home-other_title {
       margin: 0 auto;
@@ -160,6 +180,11 @@
   justify-content: center;
   align-items: center;
   gap: 4%;
+
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+    gap: 2vh;
+  }
 }
 
 .home-featured.first-div {
@@ -167,7 +192,7 @@
 }
 
 .home-featured_card {
-  background: $gray-2;
+  background: $mediumgray;
   // background: $pink;
   border-radius: 24px;
   width: 40%;
@@ -177,6 +202,14 @@
   margin: 0;
   position: relative;
   transition: ease .7s;
+
+  @media only screen and (max-width: $tablet) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    padding: 28px 28px 20px;
+  }
 }
 
 .home-featured_card-shadow {
@@ -191,8 +224,8 @@
 }
 
 .home-featured_card:hover {
-  background-color: $color-lightgray;
-  box-shadow: 0 0 5px 0 $dark-gray-2;
+  background-color: $lightgray;
+  box-shadow: 0 0 5px 0 $darkgray;
 
   .home-featured_card-shadow {
     transform: translate(-8px, 8px);
@@ -212,6 +245,10 @@
   max-height: 100%;
   overflow: auto;
   transition: ease 2s;
+
+  @media only screen and (max-width: $tablet) {
+    width: 92%;
+  }
 
   img {
     width: 100%;
@@ -264,7 +301,7 @@
   flex-wrap: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  background: $dark-gray-2;
+  background: $darkgray;
 }
 
 // .home-other_child {
@@ -279,8 +316,8 @@
   min-width: 380px;
   width: 20%;
   height: calc(100% - 24px);
-  background: $gray-2;
-  // outline: 20px solid $dark-gray-2;
+  background: $mediumgray;
+  // outline: 20px solid $darkgray;
   border-radius: 24px;
   padding: 50px;
   margin: 16px;
@@ -299,7 +336,7 @@
 }
 
 .home-other_card {
-  background: $gray-2;
+  background: $mediumgray;
   border-radius: 24px;
   min-width: 300px;
   width: 100%;
@@ -333,7 +370,7 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  box-shadow: 0 0 5px 0 $dark-gray-2-50;
+  box-shadow: 0 0 5px 0 $darkgray-50;
   transition: ease .3s;
 
   z-index: 10;
@@ -423,9 +460,9 @@
 .home-other:hover {
 
   .home-other_card {
-    background: $color-lightgray;
+    background: $lightgray;
     transform: translate(-12px, -12px);
-    box-shadow: 0 0 5px 0 $dark-gray-2;
+    box-shadow: 0 0 5px 0 $darkgray;
   }
 
   .project-button_underline {
@@ -513,7 +550,7 @@
 //     display: flex;
 //     flex-wrap: nowrap;
 //     overflow-x: scroll;
-//     background: $dark-gray-2;
+//     background: $darkgray;
 // }
 
 // .home-other_child {

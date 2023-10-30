@@ -1,5 +1,5 @@
 footer {
-    background: $gray-2;
+    background: $mediumgray;
     border-radius: 24px;
     width: calc(100vw - 40px);
     height: 80px;
@@ -12,6 +12,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     transform: translatex(-50%);
+    flex-wrap: wrap;
 
     .contact {
         display: flex;
@@ -89,6 +90,6 @@ footer {
     }
 
     .github:hover {
-        width: $large-margin;
+        width: 108px;
     }
 }

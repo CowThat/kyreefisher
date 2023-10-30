@@ -7,7 +7,7 @@ $(document).ready(function() {
         speed: 300,
         slidesToShow: 1,
         autoplay: isPlaying,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3800,
         variableWidth: true,
         dots: true,
         appendDots: ".dots-container",

@@ -4,19 +4,19 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: $dark-gray-2;
-    border: 1px solid $dark-gray-2;
+    background: $darkgray;
+    border: 1px solid $darkgray;
     border-radius: 0px;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: $med-color-lightgray;
+    background: $mediumgray;
     border-radius: 10px;
     width: 5px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: $color-lightgray;
+    background: $lightgray;
     border-radius: 10px;
   }
   

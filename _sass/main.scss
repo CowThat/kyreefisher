@@ -1,6 +1,5 @@
-@import "fonts.scss",
-        "_variables.scss",
-        "universal.scss",
+@import "_variables.scss",
+        "_global.scss",
         "navigation.scss",
         "index.scss",
         "about.scss",
@@ -11,8 +10,7 @@
         "individual-projects.scss",
         "carousel.scss",
         "footer.scss",
-        "animations.scss",
         "scrollbar.scss",
         "buttons.scss",
-        "responsive.scss",
+        "animations.scss",
         "test.scss";

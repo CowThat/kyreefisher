@@ -1420,8 +1420,8 @@ var jQuery = $;
 		} ],
 
 	// jQuery.Color( )
-	color = jQuery.Color = function( color, green, blue, alpha ) {
-		return new jQuery.Color.fn.parse( color, green, blue, alpha );
+	color = jQuery.Color = function( color, green, color-blue, alpha ) {
+		return new jQuery.Color.fn.parse( color, green, color-blue, alpha );
 	},
 	spaces = {
 		rgba: {
@@ -1434,7 +1434,7 @@ var jQuery = $;
 					idx: 1,
 					type: "byte"
 				},
-				blue: {
+				color-blue: {
 					idx: 2,
 					type: "byte"
 				}
@@ -1581,7 +1581,7 @@ function stringParse( string ) {
 }
 
 color.fn = jQuery.extend( color.prototype, {
-	parse: function( red, green, blue, alpha ) {
+	parse: function( red, green, color-blue, alpha ) {
 		if ( red === undefined ) {
 			this._rgba = [ null, null, null, null ];
 			return this;
@@ -1595,9 +1595,9 @@ color.fn = jQuery.extend( color.prototype, {
 			type = getType( red ),
 			rgba = this._rgba = [];
 
-		// more than 1 argument specified - assume ( red, green, blue, alpha )
+		// more than 1 argument specified - assume ( red, green, color-blue, alpha )
 		if ( green !== undefined ) {
-			red = [ red, green, blue, alpha ];
+			red = [ red, green, color-blue, alpha ];
 			type = "array";
 		}
 
@@ -1909,7 +1909,7 @@ each( spaces, function( spaceName, space ) {
 		}
 	};
 
-	// makes red() green() blue() alpha() hue() saturation() lightness()
+	// makes red() green() color-blue() alpha() hue() saturation() lightness()
 	each( props, function( key, prop ) {
 
 		// alpha is included in more than one space
@@ -2024,7 +2024,7 @@ colors = jQuery.Color.names = {
 	// 4.1. Basic color keywords
 	aqua: "#00ffff",
 	black: "#000000",
-	blue: "#0000ff",
+	color-blue: "#0000ff",
 	fuchsia: "#ff00ff",
 	gray: "#808080",
 	green: "#008000",
