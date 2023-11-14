@@ -3,7 +3,7 @@
   // box-shadow: 0 0 10px 0 $purple;
   width: 100vw;
   height: 60px;
-  padding: 0 80px;
+  padding: 0 8px 0 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
 }
 
 .nav-logo {
-  background: $blue;
+  background: white;
   border-radius: 0 0 10px 10px;
   box-shadow: 0 0 5px 0 $darkgray-50;
   height: 70px;
@@ -45,15 +45,21 @@
 
 .nav-button-container {
   font-family: $raleway;
-  height: 80%;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-start;
 
   // top: 20px;
 
-  a {
-    color: $white;
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+
+  .nav-button {
+    color: $darkgray;
+    height: 80px;
     border-radius: 0 0 10px 10px;
     box-shadow: 4px 0 8px 0 $darkgray-50;
     font-size: 18px;
@@ -66,7 +72,28 @@
 
     &:not(.current) {
       background: $mediumgray;
-      height: 80px;
+      color: white;
+    }
+  }
+
+  .nav-button-main {
+    margin-top: 32px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $tablet) {
+      flex-direction: column;
+      gap: 8px;
+      left: 40px;
+    }
+
+    .nav-button {
+      @media only screen and (max-width: $tablet) {
+        height: auto;
+        padding-right: 50px;
+        border-radius: 10px 0 0 10px;
+      }
     }
   }
 }
@@ -83,62 +110,119 @@ a.current {
   position: relative;
   top: 10px;
   
-  &#portfolio {
+  &#home:hover, &#about:hover, &#contact:hover, &#gallery:hover {
+    background: white;
+  }
+
+  &#home {
     background: $pink;
-  
-    &:hover {
-      background: $white;
-    }
   }
   
   &#about {
     background: $blue;
-  
-    &:hover {
-      background: $white;
-    }
   }
   
   &#contact {
     background: $purple;
-  
-    &:hover {
-      background: $white;
-    }
   }
   
   &#gallery {
     background: $seafoam;
-  
-    &:hover {
-      background: $white;
-    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    transform: translateX(-10px);
+    top: 0;
   }
   
 }
 
-#portfolio:not(.current):hover {
+#home:not(.current):hover {
   background: $pink;
   color: $black;
   transform: translateY(10px);
+
+  @media only screen and (max-width: $tablet) {
+    transform: translateX(-10px)
+  }
 }
 
 #about:not(.current):hover {
   background: $blue;
   color: $black;
   transform: translateY(10px);
+
+  @media only screen and (max-width: $tablet) {
+    transform: translateX(-10px)
+  }
 }
 
 #contact:not(.current):hover {
   background: $purple;
   color: $black;
   transform: translateY(10px);
+
+  @media only screen and (max-width: $tablet) {
+    transform: translateX(-10px)
+  }
 }
 
 #gallery:not(.current):hover {
   background: $seafoam;
   color: $black;
   transform: translateY(10px);
+
+  @media only screen and (max-width: $tablet) {
+    transform: translateX(-10px)
+  }
+}
+
+#mobile-menu {
+  height: 120px !important;
+  position: relative;
+  top: 0;
+  display: none;
+  gap: 5px;
+  padding-top: 20px;
+  margin-bottom: 8px;
+
+
+  .menu-line {
+    width: 30px;
+    border: solid 1.5px $white;
+    transition: border ease .2s;
+  } 
+
+  .menu-text {
+    font-family: $ralewayBold;
+    font-size: 10px;
+    margin: 0;
+    transition: color ease .2s;
+  }
+
+  &:hover {
+    background: $white;
+    color: $darkgray;
+    padding-top: 28px;
+    margin-bottom: 0;
+
+    .menu-line {
+      border-color: $darkgray;
+    }
+
+    .menu-text {
+      color: $darkgray;
+    }
+  }
+
+  @media only screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+
 }
 
 // .nav-button {

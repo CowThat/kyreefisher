@@ -4,14 +4,33 @@
     <a href="{{ site.url }}"><h6 class="nav-logo-name">Kyree Fisher</h6></a>
   </div>
 
+
+
   <div class="nav-button-container">
-    {% for item in site.data.navigation %}
 
-    {% assign page_name = item.name | slugify %}
+    <div class="nav-button" id="mobile-menu">
+      <div class="menu-line line1"></div>
+      <div class="menu-line line1"></div>
+      <div class="menu-line line3"></div>
+      <p class="menu-text">MENU</p>
+    </div>
 
-    <a href="{{ site.url }}{{ item.link }}" class="nav-button {% if page.url == item.link or (item.name == "portfolio" and item.link == "/#home-featured_container" and page.url == "/") %}current{% endif %}" id="{{ page_name }}">{{ item.name }}</a>
-    {% endfor %}
+    <div class="nav-button-main">
+
+      {% for item in site.data.navigation %}
+
+      {% assign page_name = item.name | slugify %}
+
+      <a href="{{ site.url }}{{ item.link }}" class="nav-button {% if page.url == item.link or (item.name == "portfolio" and item.link == "/#home-featured_container" and page.url == "/") %}current{% endif %}" id="{{ page_name }}">{{ item.name }}</a>
+      
+      {% endfor %}
+
+    </div>
 
   </div>
 
 </nav>
+
+<script>
+  
+</script>
