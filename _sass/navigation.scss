@@ -3,7 +3,7 @@
   // box-shadow: 0 0 10px 0 $purple;
   width: 100vw;
   height: 60px;
-  padding: 0 8px 0 20px;
+  padding: 0 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,9 +12,10 @@
   align-items: center;
   z-index: 999999999999;
 
-  @media only screen and (max-width: $mobile) {
-    padding: 0 28px;
+  @media only screen and (max-width: $tablet) {
+    padding: 0 20px 0 20px;
   }
+
 }
 
 .nav-logo {
