@@ -264,6 +264,10 @@
   @extend .home-featured;
   flex-direction: row-reverse;
 
+  @media only screen and (max-width: $tablet) {
+    flex-direction: column-reverse;
+  }
+
   .home-featured_card-shadow {
     right: -8px;
   }

@@ -38,11 +38,11 @@
 <link rel="canonical" href="http://localhost:4000/gallery/collab-dialogue" />
 <meta property="og:url" content="http://localhost:4000/gallery/collab-dialogue" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-11-15T09:12:54-05:00" />
+<meta property="article:published_time" content="2023-11-15T09:59:37-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Collab Dialogue" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-15T09:12:54-05:00","datePublished":"2023-11-15T09:12:54-05:00","headline":"Collab Dialogue","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gallery/collab-dialogue"},"url":"http://localhost:4000/gallery/collab-dialogue"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-11-15T09:59:37-05:00","datePublished":"2023-11-15T09:59:37-05:00","headline":"Collab Dialogue","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/gallery/collab-dialogue"},"url":"http://localhost:4000/gallery/collab-dialogue"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -51,16 +51,16 @@
     <nav class="navigation">
 
   <div class="nav-logo">
-    <a href="http://localhost:4000"><h6 class="nav-logo-name">Kyree Fisher</h6></a>
+    <a href="http://localhost:4000">
+      <h6 class="nav-logo-name">Kyree Fisher</h6>
+    </a>
   </div>
-
-
 
   <div class="nav-button-container">
 
-    <div class="nav-button" id="mobile-menu">
+    <div class="nav-button" id="mobile-menu" onclick="toggleMobileMenu()">
       <div class="menu-line line1"></div>
-      <div class="menu-line line1"></div>
+      <div class="menu-line line2"></div>
       <div class="menu-line line3"></div>
       <p class="menu-text">MENU</p>
     </div>
@@ -69,39 +69,75 @@
 
       
 
-      
+        
 
-      <a href="http://localhost:4000/" class="nav-button " id="home">home</a>
-      
-      
-
-      
-
-      <a href="http://localhost:4000/about.html" class="nav-button " id="about">about</a>
-      
-      
+        <a
+          href="http://localhost:4000/"
+          class="nav-button "
+          id="home">home</a>
 
       
 
-      <a href="http://localhost:4000/gallery.html" class="nav-button " id="gallery">gallery</a>
-      
-      
+        
+
+        <a
+          href="http://localhost:4000/about.html"
+          class="nav-button "
+          id="about">about</a>
 
       
 
-      <a href="http://localhost:4000mailto:kyreefisher@gmail.com" class="nav-button " id="contact">contact</a>
+        
+
+        <a
+          href="http://localhost:4000/gallery.html"
+          class="nav-button "
+          id="gallery">gallery</a>
+
       
+
+        
+
+        <a
+          href="http://localhost:4000mailto:kyreefisher@gmail.com"
+          class="nav-button "
+          id="contact">contact</a>
+
       
 
     </div>
-
   </div>
-
 </nav>
 
 <script>
-  
+  document.addEventListener('DOMContentLoaded', function () {
+    var mobileMenuButton = document.getElementById('mobile-menu');
+    var navButtonMain = document.querySelector('.nav-button-main');
+
+    function toggleMobileMenu() {
+      mobileMenuButton.classList.toggle('open');
+      navButtonMain.classList.toggle('show');
+    }
+
+    function closeMobileMenu() {
+      if (mobileMenuButton.classList.contains('open')) {
+        toggleMobileMenu();
+      }
+    }
+
+    mobileMenuButton.addEventListener('click', function () {
+      toggleMobileMenu();
+    });
+
+    document.body.addEventListener('click', function (event) {
+      var isClickInsideNavigation = event.target.closest('.navigation');
+      if (!isClickInsideNavigation) {
+        closeMobileMenu();
+      }
+    });
+  });
 </script>
+
     <div class="content">
       
       <footer>

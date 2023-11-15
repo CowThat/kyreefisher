@@ -83,10 +83,16 @@
     display: flex;
     align-items: flex-end;
 
+    &.show {
+      transform: translateX(0);
+    }
+
     @media only screen and (max-width: $tablet) {
       flex-direction: column;
       gap: 8px;
       left: 40px;
+      transform: translateX(100%);
+    transition: ease .5s;
     }
 
     .nav-button {
@@ -110,23 +116,26 @@ a.current {
   padding: 15px 20px;
   position: relative;
   top: 10px;
-  
-  &#home:hover, &#about:hover, &#contact:hover, &#gallery:hover {
+
+  &#home:hover,
+  &#about:hover,
+  &#contact:hover,
+  &#gallery:hover {
     background: white;
   }
 
   &#home {
     background: $pink;
   }
-  
+
   &#about {
     background: $blue;
   }
-  
+
   &#contact {
     background: $purple;
   }
-  
+
   &#gallery {
     background: $seafoam;
   }
@@ -135,7 +144,7 @@ a.current {
     transform: translateX(-10px);
     top: 0;
   }
-  
+
 }
 
 #home:not(.current):hover {
@@ -179,33 +188,32 @@ a.current {
 }
 
 #mobile-menu {
+  background-color: $mediumgray;
   height: 120px !important;
   position: relative;
   top: 0;
   display: none;
   gap: 5px;
   padding-top: 20px;
-  margin-bottom: 8px;
-
+  margin: 0 0 8px 0;
+  transition: ease 0.5s; /* Add transition property */
 
   .menu-line {
     width: 30px;
     border: solid 1.5px $white;
-    transition: border ease .2s;
-  } 
+    transition: ease 0.2s;
+  }
 
   .menu-text {
     font-family: $ralewayBold;
     font-size: 10px;
     margin: 0;
-    transition: color ease .2s;
+    transition: color ease 0.2s;
   }
 
   &:hover {
     background: $white;
     color: $darkgray;
-    padding-top: 28px;
-    margin-bottom: 0;
 
     .menu-line {
       border-color: $darkgray;
@@ -216,33 +224,66 @@ a.current {
     }
   }
 
+  &.open {
+    background: $white;
+    color: $darkgray;
+    padding-top: 28px;
+    margin-bottom: 0;
+
+    .menu-line {
+      border-color: $darkgray;
+      /* Adjust the transformation properties as needed */
+      transform: rotate(-45deg) translate(-4px, 5px);
+    }
+
+    .menu-text {
+      color: $darkgray;
+    }
+
+    &:hover {
+      background: $pink;
+      color: $darkgray;
+      padding-top: 28px;
+      margin-bottom: 0;
+    }
+  }
+
   @media only screen and (max-width: $tablet) {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
   }
-
-
 }
 
-// .nav-button {
-//   animation-duration: .5s;
-//   animation-name: none;
-// }
 
-// .nav-button.bounce {
-//   animation-name: bounce;
-// }
+#mobile-menu.open {
+  background: $white;
+  color: $darkgray;
+  padding-top: 28px;
+  margin-bottom: 0;
 
-// @keyframes bounce {
-//   0% {
-//     transform: translateY(0);
-//   }
-//   20% {
-//     transform: translateY(-20px);
-//   }
-//   40% {
-//     transform: translateY(0);
-//   }
-// }
+  &>* {
+    color: $darkgray;
+    border-color: $darkgray;
+  }
+
+  &:hover {
+    background: $pink;
+    color: $darkgray;
+    padding-top: 28px;
+    margin-bottom: 0;
+  }
+
+  .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+
+  .line2 {
+    border: 0px;
+  }
+
+  .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}
