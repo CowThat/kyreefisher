@@ -83,7 +83,18 @@
 
         h5 {
             width: max-content;
-            border-bottom: $pink 8px solid;
+
+            &.pink_border-underline {
+                border-bottom: $pink 8px solid;
+            }
+            
+            &.blue_border-underline {
+                border-bottom: $blue 8px solid;
+            }
+
+            &.seafoam_border-underline {
+                border-bottom: $seafoam 8px solid;
+            }
         }
 
         // div {

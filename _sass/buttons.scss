@@ -57,8 +57,19 @@
             }
 
             svg {
-                fill: $pink;
                 transform: translateX(16px);
+            }
+
+            .pink-arrow {
+                fill: $pink;
+            }
+
+            .blue-arrow {
+                fill: $blue;
+            }
+
+            .seafoam-arrow {
+                fill: $seafoam;
             }
         }
     }

@@ -74,6 +74,14 @@ span.tool {
   display: inline-block;
 }
 
+
+.news-column {
+  min-height: 102vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 // span.illustrator {
 //   border: 1px solid $illustrator !important;
 // }

@@ -196,7 +196,7 @@ a.current {
   gap: 5px;
   padding-top: 20px;
   margin: 0 0 8px 0;
-  transition: ease 0.5s; /* Add transition property */
+  transition: ease 0.5s;
 
   .menu-line {
     width: 30px;
@@ -230,14 +230,9 @@ a.current {
     padding-top: 28px;
     margin-bottom: 0;
 
-    .menu-line {
-      border-color: $darkgray;
-      /* Adjust the transformation properties as needed */
-      transform: rotate(-45deg) translate(-4px, 5px);
-    }
-
-    .menu-text {
+    &>* {
       color: $darkgray;
+      border-color: $darkgray;
     }
 
     &:hover {
@@ -246,6 +241,18 @@ a.current {
       padding-top: 28px;
       margin-bottom: 0;
     }
+
+    .line1 {
+      transform: rotate(-45deg) translate(-4px, 5px);
+    }
+  
+    .line2 {
+      border: 0px;
+    }
+  
+    .line3 {
+      transform: rotate(45deg) translate(-4px, -5px);
+    }
   }
 
   @media only screen and (max-width: $tablet) {
@@ -253,37 +260,5 @@ a.current {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-  }
-}
-
-
-#mobile-menu.open {
-  background: $white;
-  color: $darkgray;
-  padding-top: 28px;
-  margin-bottom: 0;
-
-  &>* {
-    color: $darkgray;
-    border-color: $darkgray;
-  }
-
-  &:hover {
-    background: $pink;
-    color: $darkgray;
-    padding-top: 28px;
-    margin-bottom: 0;
-  }
-
-  .line1 {
-    transform: rotate(-45deg) translate(-4px, 5px);
-  }
-
-  .line2 {
-    border: 0px;
-  }
-
-  .line3 {
-    transform: rotate(45deg) translate(-4px, -5px);
   }
 }

@@ -1,18 +1,13 @@
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: margin .25s ease;
 }
 
-html {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   background: $darkgray;
-  padding: 0;
-  margin: 0;
   position: relative;
 
   // & > * {
@@ -20,7 +15,11 @@ body {
   // }
 }
 
-div.content {
+.flex {
+  display: flex;
+}
+
+.content {
   max-width: 100vw;
   min-height: 100vh;
   position: relative;
@@ -29,16 +28,23 @@ div.content {
 }
 
 .full-height {
-  min-height: 102vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
 .padding-top_none {
   padding-top: 0 !important;
 }
+
+.padding-bottom_none {
+  padding-bottom: 0 !important;
+}
+
+
+
+
+
+
+
 
 
 
@@ -138,7 +144,7 @@ p, ol, ul, li {
   }
 }
 
-p.body-large {
+.body-large {
   font-size: 20px;
   margin-bottom: 20px;
 

@@ -12,24 +12,23 @@
   src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
 }
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   transition: margin 0.25s ease;
 }
 
-html {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   background: #111111;
-  padding: 0;
-  margin: 0;
   position: relative;
 }
 
-div.content {
+.flex {
+  display: flex;
+}
+
+.content {
   max-width: 100vw;
   min-height: 100vh;
   position: relative;
@@ -38,15 +37,15 @@ div.content {
 }
 
 .full-height {
-  min-height: 102vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
 .padding-top_none {
   padding-top: 0 !important;
+}
+
+.padding-bottom_none {
+  padding-bottom: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -154,12 +153,12 @@ p, ol, ul, li {
   }
 }
 
-p.body-large {
+.body-large {
   font-size: 20px;
   margin-bottom: 20px;
 }
 @media only screen and (max-width: 650px) {
-  p.body-large {
+  .body-large {
     font-size: 18px;
   }
 }
@@ -531,7 +530,7 @@ a.current#gallery {
   gap: 5px;
   padding-top: 20px;
   margin: 0 0 8px 0;
-  transition: ease 0.5s; /* Add transition property */
+  transition: ease 0.5s;
 }
 #mobile-menu .menu-line {
   width: 30px;
@@ -560,35 +559,6 @@ a.current#gallery {
   padding-top: 28px;
   margin-bottom: 0;
 }
-#mobile-menu.open .menu-line {
-  border-color: #111111;
-  /* Adjust the transformation properties as needed */
-  transform: rotate(-45deg) translate(-4px, 5px);
-}
-#mobile-menu.open .menu-text {
-  color: #111111;
-}
-#mobile-menu.open:hover {
-  background: #ff6b6b;
-  color: #111111;
-  padding-top: 28px;
-  margin-bottom: 0;
-}
-@media only screen and (max-width: 900px) {
-  #mobile-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-  }
-}
-
-#mobile-menu.open {
-  background: white;
-  color: #111111;
-  padding-top: 28px;
-  margin-bottom: 0;
-}
 #mobile-menu.open > * {
   color: #111111;
   border-color: #111111;
@@ -607,6 +577,14 @@ a.current#gallery {
 }
 #mobile-menu.open .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
+}
+@media only screen and (max-width: 900px) {
+  #mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 }
 
 .home-page {
@@ -1221,6 +1199,13 @@ span.tool {
   display: inline-block;
 }
 
+.news-column {
+  min-height: 102vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .project-hero {
   width: 100%;
   height: calc(100vh - 240px);
@@ -1267,7 +1252,7 @@ span.tool {
   align-items: flex-end;
   gap: 8%;
 }
-@media only screen and (max-width: 1436px) {
+@media only screen and (max-width: 1440px) {
   .project-hero_container .project-hero_content {
     margin: 0 108px;
   }
@@ -1932,7 +1917,15 @@ p.caption {
 }
 .project-content_split .project-content_split-summary h5 {
   width: max-content;
+}
+.project-content_split .project-content_split-summary h5.pink_border-underline {
   border-bottom: #ff6b6b 8px solid;
+}
+.project-content_split .project-content_split-summary h5.blue_border-underline {
+  border-bottom: #13d0ff 8px solid;
+}
+.project-content_split .project-content_split-summary h5.seafoam_border-underline {
+  border-bottom: #59c9a5 8px solid;
 }
 
 .project_carousel {
@@ -2081,14 +2074,11 @@ footer {
   width: calc(100vw - 40px);
   height: 80px;
   padding: 0 60px;
-  margin: 0 auto;
-  position: absolute;
-  bottom: 20px;
+  margin: 0 auto 20px;
   left: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transform: translatex(-50%);
   flex-wrap: wrap;
 }
 footer .contact {
@@ -2222,8 +2212,16 @@ footer .github:hover {
   width: 100%;
 }
 .highlight-button a:hover svg {
-  fill: #ff6b6b;
   transform: translateX(16px);
+}
+.highlight-button a:hover .pink-arrow {
+  fill: #ff6b6b;
+}
+.highlight-button a:hover .blue-arrow {
+  fill: #13d0ff;
+}
+.highlight-button a:hover .seafoam-arrow {
+  fill: #59c9a5;
 }
 
 @keyframes arrow {
